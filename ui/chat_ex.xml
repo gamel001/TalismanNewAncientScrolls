@@ -274,7 +274,7 @@
         <OnRClick>self:Hide();</OnRClick>
       </Scripts>
     </HintWidget>
-    <Form Active="true" Inherit="NoTitleBarForm" Location="0,0,564,28" Name="frmChatInput" Show="false" Size="720,28">
+    <Form Active="true" Inherit="NoTitleBarForm" Location="0,0,564,28" Name="frmChatInput" Show="false" Size="564,28">
       <Anchors>
         <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="frmChatChannelMain"/>
         <Anchor point="LEFT" relativeTo="frmChatChannelMain"/>
@@ -396,10 +396,10 @@
         <OnShow>uiRegisterEscWidget(self);</OnShow>
       </Scripts>
     </Form>
-    <Form Inherit="NoTitleBarForm" Level="50" Location="999,999,999,999" Name="frmComic" Show="false" Size="720,375">
+    <Form Inherit="NoTitleBarForm" Level="50" Location="700,488,700,400" Name="frmComic" Show="false" Size="700,400">
       <Anchors>
         <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="frmChatInput"/>
-        <Anchor point="RIGHT" relativeTo="frmChatInput"/>
+        <Anchor point="RIGHT" offset="300,110" relativeTo="frmChatInput"/>
       </Anchors>
       <Button Inherit="TemplateComicButton" Location="0,0,32,32" Name="btComic1" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="1"/>
@@ -488,386 +488,356 @@
       <Button Inherit="TemplateComicButton" Location="128,128,32,32" Name="btComic29" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="29"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="160,128,32,32" Name="btComic30" Show="true" Size="32,32" Text="">
-        <Param key="ID" type="number" value="30"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="0,160,32,32" Name="btComic31" Show="true" Size="32,32" Text="">
+      <Button Inherit="TemplateComicButton" Location="160,128,32,32" Name="btComic31" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="31"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="32,160,32,32" Name="btComic32" Show="true" Size="32,32" Text="">
+      <Button Inherit="TemplateComicButton" Location="0,160,32,32" Name="btComic32" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="32"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="64,160,32,32" Name="btComic33" Show="true" Size="32,32" Text="">
+      <Button Inherit="TemplateComicButton" Location="32,160,32,32" Name="btComic33" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="33"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="96,160,32,32" Name="btComic34" Show="true" Size="32,32" Text="">
+      <Button Inherit="TemplateComicButton" Location="64,160,32,32" Name="btComic34" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="34"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="128,160,32,32" Name="btComic35" Show="true" Size="32,32" Text="">
+      </Button>	 
+      <Button Inherit="TemplateComicButton" Location="96,160,32,32" Name="btComic35" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="35"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="160,160,32,32" Name="btComic36" Show="true" Size="32,32" Text="">
+      </Button>	 
+      <Button Inherit="TemplateComicButton" Location="128,160,32,32" Name="btComic36" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="36"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="0,192,32,32" Name="btComic37" Show="true" Size="32,32" Text="">
+      </Button>		
+      <Button Inherit="TemplateComicButton" Location="160,160,32,32" Name="btComic37" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="37"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="32,192,32,32" Name="btComic38" Show="true" Size="32,32" Text="">
+      </Button>		 
+      <Button Inherit="TemplateComicButton" Location="0,192,32,32" Name="btComic38" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="38"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="64,192,32,32" Name="btComic39" Show="true" Size="32,32" Text="">
+      </Button>		
+      <Button Inherit="TemplateComicButton" Location="32,192,32,32" Name="btComic39" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="39"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="96,192,32,32" Name="btComic40" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="64,192,32,32" Name="btComic40" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="40"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="128,192,32,32" Name="btComic41" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="96,192,32,32" Name="btComic41" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="41"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="160,192,32,32" Name="btComic42" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="128,192,32,32" Name="btComic42" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="42"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="0,224,32,32" Name="btComic43" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="160,192,32,32" Name="btComic43" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="43"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="32,224,32,32" Name="btComic44" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="0,224,32,32" Name="btComic44" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="44"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="64,224,32,32" Name="btComic45" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="32,224,32,32" Name="btComic45" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="45"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="96,224,32,32" Name="btComic46" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="64,224,32,32" Name="btComic46" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="46"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="128,224,32,32" Name="btComic47" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="96,224,32,32" Name="btComic47" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="47"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="160,224,32,32" Name="btComic48" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="128,224,32,32" Name="btComic48" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="48"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="0,256,32,32" Name="btComic49" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="160,224,32,32" Name="btComic49" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="49"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="32,256,32,32" Name="btComic50" Show="true" Size="32,32" Text="">
+      </Button>		
+      <Button Inherit="TemplateComicButton" Location="0,247,32,32" Name="btComic50" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="50"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="64,256,32,32" Name="btComic51" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="32,247,32,32" Name="btComic51" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="51"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="96,256,32,32" Name="btComic52" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="64,247,32,32" Name="btComic52" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="52"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="128,256,32,32" Name="btComic53" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="96,247,32,32" Name="btComic53" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="53"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="160,256,32,32" Name="btComic54" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="128,247,32,32" Name="btComic54" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="54"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="0,288,32,32" Name="btComic55" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="160,247,32,32" Name="btComic55" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="55"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="32,288,32,32" Name="btComic56" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="0,279,32,32" Name="btComic56" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="56"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="64,288,32,32" Name="btComic57" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="32,279,32,32" Name="btComic57" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="57"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="96,288,32,32" Name="btComic58" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="64,279,32,32" Name="btComic58" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="58"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="128,288,32,32" Name="btComic59" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="96,279,32,32" Name="btComic59" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="59"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="160,288,32,32" Name="btComic60" Show="true" Size="32,32" Text="">
+      </Button>	
+      <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic60" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="60"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,0,44,44" Name="btComic61" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="160,0,32,32" Name="btComic61" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="61"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,44,44,44" Name="btComic62" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic62" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="62"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,88,44,44" Name="btComic63" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic63" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="63"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,132,44,44" Name="btComic64" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic64" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="64"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,176,44,44" Name="btComic65" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic65" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="65"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,220,44,44" Name="btComic66" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic66" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="66"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,264,44,44" Name="btComic67" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic67" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="67"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="192,308,44,44" Name="btComic68" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic68" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="68"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,0,44,44" Name="btComic69" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic69" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="69"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,44,44,44" Name="btComic70" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic70" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="70"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,88,44,44" Name="btComic71" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic71" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="71"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,132,44,44" Name="btComic72" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic72" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="72"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,176,44,44" Name="btComic73" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic73" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="73"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,220,44,44" Name="btComic74" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic74" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="74"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,264,44,44" Name="btComic75" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic75" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="75"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="236,308,44,44" Name="btComic76" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic76" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="76"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,0,44,44" Name="btComic77" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic77" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="77"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,44,44,44" Name="btComic78" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic78" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="78"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,88,44,44" Name="btComic79" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic79" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="79"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,132,44,44" Name="btComic80" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic80" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="80"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,176,44,44" Name="btComic81" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic81" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="81"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,220,44,44" Name="btComic82" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic82" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="82"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,264,44,44" Name="btComic83" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic83" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="83"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="280,308,44,44" Name="btComic84" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic84" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="84"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,0,44,44" Name="btComic85" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic85" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="85"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,44,44,44" Name="btComic86" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic86" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="86"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,88,44,44" Name="btComic87" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic87" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="87"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,132,44,44" Name="btComic88" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic88" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="88"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,176,44,44" Name="btComic89" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic89" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="89"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,220,44,44" Name="btComic90" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic90" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="90"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,264,44,44" Name="btComic91" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic91" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="91"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="324,308,44,44" Name="btComic92" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic92" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="92"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,0,44,44" Name="btComic93" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic93" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="93"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,44,44,44" Name="btComic94" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic94" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="94"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,88,44,44" Name="btComic95" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic95" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="95"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,132,44,44" Name="btComic96" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic96" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="96"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,176,44,44" Name="btComic97" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic97" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="97"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,220,44,44" Name="btComic98" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic98" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="98"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,264,44,44" Name="btComic99" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic99" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="99"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="368,308,44,44" Name="btComic100" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic100" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="100"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,0,44,44" Name="btComic101" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic101" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="101"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,44,44,44" Name="btComic102" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic102" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="102"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,88,44,44" Name="btComic103" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic103" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="103"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,132,44,44" Name="btComic104" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic104" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="104"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,176,44,44" Name="btComic105" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic105" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="105"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,220,44,44" Name="btComic106" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic106" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="106"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,264,44,44" Name="btComic107" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic107" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="107"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="412,308,44,44" Name="btComic108" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic108" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="108"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,0,44,44" Name="btComic109" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic109" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="109"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,44,44,44" Name="btComic110" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic110" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="110"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,88,44,44" Name="btComic111" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic111" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="111"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,132,44,44" Name="btComic112" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic112" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="112"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,176,44,44" Name="btComic113" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic113" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="113"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,220,44,44" Name="btComic114" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic114" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="114"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,264,44,44" Name="btComic115" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic115" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="115"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="456,308,44,44" Name="btComic116" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic116" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="116"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,0,44,44" Name="btComic117" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic117" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="117"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,44,44,44" Name="btComic118" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic118" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="118"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,88,44,44" Name="btComic119" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic119" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="119"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,132,44,44" Name="btComic120" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic120" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="120"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,176,44,44" Name="btComic121" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic121" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="121"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,220,44,44" Name="btComic122" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic122" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="122"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,264,44,44" Name="btComic123" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic123" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="123"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="500,308,44,44" Name="btComic124" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic124" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="124"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,0,44,44" Name="btComic125" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic125" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="125"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,44,44,44" Name="btComic126" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic126" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="126"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,88,44,44" Name="btComic127" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic127" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="127"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,132,44,44" Name="btComic128" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic128" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="128"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,176,44,44" Name="btComic129" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic129" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="129"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,220,44,44" Name="btComic130" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic130" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="130"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,264,44,44" Name="btComic131" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic131" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="131"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="544,308,44,44" Name="btComic132" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic132" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="132"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,0,44,44" Name="btComic133" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic133" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="133"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,44,44,44" Name="btComic134" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic134" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="134"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,88,44,44" Name="btComic135" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic135" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="135"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,132,44,44" Name="btComic136" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic136" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="136"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,176,44,44" Name="btComic137" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic137" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="137"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,220,44,44" Name="btComic138" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic138" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="138"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,264,44,44" Name="btComic139" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic139" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="139"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="588,308,44,44" Name="btComic140" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic140" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="140"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,0,44,44" Name="btComic141" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic141" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="141"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,44,44,44" Name="btComic142" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic142" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="142"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,88,44,44" Name="btComic143" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic143" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="143"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,132,44,44" Name="btComic144" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic144" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="144"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,176,44,44" Name="btComic145" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic145" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="145"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,220,44,44" Name="btComic146" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic146" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="146"/>
       </Button>
-      <Button Inherit="TemplateComicButton" Location="632,264,44,44" Name="btComic147" Show="true" Size="44,44" Text="">
+	  <Button Inherit="TemplateComicButton" Location="128,279,32,32" Name="btComic147" Show="true" Size="32,32" Text="">
         <Param key="ID" type="number" value="147"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="632,308,44,44" Name="btComic148" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="148"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,0,44,44" Name="btComic149" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="149"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,44,44,44" Name="btComic150" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="150"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,88,44,44" Name="btComic151" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="151"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,132,44,44" Name="btComic152" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="152"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,176,44,44" Name="btComic153" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="153"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,220,44,44" Name="btComic154" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="154"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,264,44,44" Name="btComic155" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="155"/>
-      </Button>
-      <Button Inherit="TemplateComicButton" Location="676,308,44,44" Name="btComic156" Show="true" Size="44,44" Text="">
-        <Param key="ID" type="number" value="156"/>
       </Button>
       <Scripts>
         <OnShow>uiRegisterEscWidget(self);</OnShow>

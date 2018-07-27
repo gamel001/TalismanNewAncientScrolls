@@ -89,7 +89,7 @@ end
 function RoleSelection_ReceiveServerInfoList()
 	uiGetglobal("laySelectChar.lbLayerSelectChar2.lbContainer"):Hide();
 	uiGetglobal("laySelectChar.lbLayerSelectChar2.lbContainer.btDelRole"):Hide();
-	uiGetglobal("laySelectChar.lbLayerSelectChar2.lbContainer.btCreateRole").AutoEnter = true;
+	uiGetglobal("laySelectChar.lbLayerSelectChar2.lbContainer.btCreateRole").AutoEnter = false;
 end
 
 

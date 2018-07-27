@@ -16,9 +16,9 @@
         <BackgroundImage File="" Source=""/>
       </Label>
       <TitleBarButton Location="0,0,530,28" Text="" TextFont="$L:1$" TextSize="$L:4$"/>
-      <CloseButton Location="495,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="502,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Button Inherit="PushButton" Location="227,399,90,22" Name="btLoginCitywar" Show="true" Text="$L:762$">
         <Scripts>
@@ -32,20 +32,20 @@
       </Button>
       <Label Inherit="bg3" Location="15,147,500,240" Name="1672" Show="true"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="19,50,147,24" Name="lbCityName" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_010" Source="181,351,147,24"/>
       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="34,110,80,18" Name="907" Show="false" Text=""/>
-      <Label Inherit="" Location="425,73,54,52" Name="lbGuildImg" Show="true">
-        <BackgroundImage File="cgz_design4" Source="99,181,147,128"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="34,80,80,18" Name="907" Show="true" Text="$L:756$"/>
+      <Label BackgroundColor="#99000000" Inherit="" Location="66,99,16,16" Name="lbGuildImg" Show="true">
+        <BackgroundImage File="tz_011" Source="1,1,80,19"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="145,80,80,18" Name="1069" Show="true" Text="$L:757$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="273,80,70,18" Name="1091" Show="true" Text="$L:758$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" BackgroundColor="#99000000" Inherit="" Location="145,99,120,20" MouseEvent="true" MouseMove="true" Name="lbCityMasterGuild" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,4,198,33"/>
+        <BackgroundImage File="tz_011" Source="0,0,80,20"/>
         <Hint/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" BackgroundColor="#99000000" Inherit="" Location="273,99,100,20" MouseEvent="true" MouseMove="true" Name="lbCityMasterName" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,4,198,33"/>
+        <BackgroundImage File="tz_011" Source="0,0,80,20"/>
         <Hint/>
       </Label>
       <Button Inherit="PushButton" Location="19,122,76,20" Name="btCitywarTime" Show="true" Text="$L:759$">
@@ -79,11 +79,8 @@
           <OnLClick>layWorld_frmcitywarEx_btGetFlag_OnLClick()</OnLClick>
         </Scripts>
       </Button>
-      <Label Inherit="TemplateNormalTitle" Location="0,1,534,47" Name="lbTitle" Show="true"/>
-	  	<Label Inherit="" Location="205,14,157,18" Name="Name32" Show="true">
-          <BackgroundImage File="cgz_design25" Source="646,381,314,24"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="205,-5,130,68" Name="24661" Show="false" Text="$L:1040$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,532,47" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="205,0,124,68" Name="24661" Show="true" Text="$L:1040$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Scripts>
         <OnLoad>self:RegisterScriptEventNotify("CEV_WAR_RECV_WAR_INFO")
 		self:RegisterScriptEventNotify("CEV_WAR_RECV_UPDATE_WAR_DATA")</OnLoad>

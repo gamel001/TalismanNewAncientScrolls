@@ -3,9 +3,6 @@
   <Script file="frm_Top10_ex.lua">Script</Script>
   <Layer Name="layWorld" Show="true">
     <Form Inherit="" Location="39,123,640,540" Name="frmRankEx" Show="false">
-	  <Label Inherit="" Location="20,103,594,390" Name="1956" Show="true">
-        <BackgroundImage File="cgz_lines_2" Source=""/>
-      </Label>		
       <Label Inherit="bg1" Location="7,18,620,520" Name="lbBackground" Show="true"/>
       <Label Inherit="" Location="7,331,256,224" Name="1622" Show="false">
         <BackgroundImage File="" Source=""/>
@@ -22,9 +19,9 @@
       <Label Inherit="" Location="512,329,200,224" Name="1584" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <CloseButton Location="597,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="605,26,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Form AlignCol="" Inherit="NoTitleBarForm" Location="16,103,605,395" Name="frmRanklist" Show="falsee" TextColor="#ee778899">
         <Label Inherit="bg3" Location="1,-1,600,390" Name="13674" Show="true"/>
@@ -73,67 +70,68 @@
           </Scripts>
         </ListBox>
       </Form>
-      <Label Inherit="TemplateNormalTitle" Location="0,0,634,47" Name="lbTitle" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="-1,0,635,47" Name="lbTitle" Show="true"/>
       <Label Inherit="" Location="446,9,185,25" Name="lbTitle1" Show="false">
         <BackgroundImage File="tz_010" Source="0,109,250,25"/>
       </Label>
-	  	<Label Inherit="" Location="255,14,117,18" Name="Name19" Show="true">
-          <BackgroundImage File="cgz_design25" Source="6,299,235,29"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="255,-5,120,66" Name="lbTitleName" Show="false" Text="$L:852$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="255,0,120,66" Name="lbTitleName" Show="true" Text="$L:852$" TextFont="$L:1$" TextSize="$L:3$"/>
       <TitleBarButton Location="0,7,628,28"/>
-      <CheckButton CheckStyle="false" Inherit="" Location="32,60,80,30" Name="btnLev" Show="true" Text="$L:847$">
-        <NormalImage File="cgz_design" Source="238,255,77,24"/>
-        <CheckImage File="cgz_design" Source="238,284,77,24"/>
-        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="32,60,80,40" Name="btnLev" Show="true" Text="$L:847$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,0);</OnLClick>
         </Scripts>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="112,60,80,30" Name="btngod" Show="true" Text="$L:848$">
-        <NormalImage File="cgz_design" Source="238,255,77,24"/>
-        <CheckImage File="cgz_design" Source="238,284,77,24"/>
-        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="112,60,80,40" Name="btngod" Show="true" Text="$L:848$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
+        <DisabledImage File="tz_010" Source="82,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,1);</OnLClick>
         </Scripts>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="192,60,80,30" Name="btnGuild" Show="true" Text="$L:849$">
-        <NormalImage File="cgz_design" Source="238,255,77,24"/>
-        <CheckImage File="cgz_design" Source="238,284,77,24"/>
-        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="192,60,80,40" Name="btnGuild" Show="true" Text="$L:849$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
+        <DisabledImage File="tz_010" Source="82,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,2);</OnLClick>
         </Scripts>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="272,60,80,30" Name="btMainTrump" Show="true" Text="$L:1037$">
-        <NormalImage File="cgz_design" Source="238,255,77,24"/>
-        <CheckImage File="cgz_design" Source="238,284,77,24"/>
-        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="272,60,80,40" Name="btMainTrump" Show="true" Text="$L:1037$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
+        <DisabledImage File="tz_010" Source="82,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,3);</OnLClick>
         </Scripts>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="352,60,80,30" Name="btDefendEquip" Show="true" Text="$L:1038$">
-        <NormalImage File="cgz_design" Source="238,255,77,24"/>
-        <CheckImage File="cgz_design" Source="238,284,77,24"/>
-        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="352,60,80,40" Name="btDefendEquip" Show="true" Text="$L:1038$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
+        <DisabledImage File="tz_010" Source="82,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,4);</OnLClick>
         </Scripts>
       </CheckButton>
-      <Button Inherit="" Location="440,509,22,21" Name="btPrePage" Show="true">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
-        <DisabledImage File="cgz_design" Source="8,182,22,21"/>
+      <Button Inherit="" Location="447,509,12,14" Name="btPrePage" Show="true">
+        <NormalImage File="tz_010" Source="51,382,12,14"/>
+        <PushedImage File="tz_010" Source="51,399,12,14"/>
+        <DisabledImage File="tz_010" Source="51,382,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btPrePage_OnLClick(self);</OnLClick>
         </Scripts>
       </Button>
-      <Button Inherit="" Location="490,509,22,21" Name="btNextPage" Show="true">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
-        <DisabledImage File="cgz_design" Source=""/>
+      <Button Inherit="" Location="479,509,12,14" Name="btNextPage" Show="true">
+        <NormalImage File="tz_010" Source="77,382,12,14"/>
+        <PushedImage File="tz_010" Source="77,399,12,14"/>
+        <DisabledImage File="" Source=""/>
         <Scripts>
           <OnLClick>layWorld_frmRankEx_btNextPage_OnLClick(self);</OnLClick>
         </Scripts>
@@ -145,7 +143,7 @@
       </Button>
       <Label Inherit="" Location="136,506,40,18" Name="lbRank" Show="true" Text="$L:880$"/>
       <EditBox Inherit="DefaultEdit" Location="177,505,31,20" Name="edtRank" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,20"/>
       </EditBox>
       <Label Inherit="" Location="230,506,44,18" Name="lbName" Show="true" Text="$L:881$"/>
       <EditBox Inherit="DefaultEdit" Location="276,505,80,20" Name="edtName" Show="true">
@@ -156,11 +154,11 @@
         <NormalImage File="" Source=""/>
         <PushedImage File="" Source=""/>
       </Button>
-      <Label Inherit="" Location="13,84,608,10" Name="53501" Show="true">
-        <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      <Label Inherit="" Location="13,94,608,6" Name="53501" Show="true">
+        <BackgroundImage File="tz_010" Source="365,397,6,6"/>
       </Label>
-      <Label Inherit="" Location="466,507,20,17" Name="16212" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      <Label Inherit="" Location="459,507,20,17" Name="16212" Show="true">
+        <BackgroundImage File="tz_010" Source="458,194,31,20"/>
       </Label>
       <Scripts>
         <OnLoad>layWorld_frmRankEx_OnLoad(self);</OnLoad>

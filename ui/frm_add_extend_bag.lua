@@ -14,8 +14,9 @@ end
 function frmAddExtendBag_TemplateAddItemBagLabel_OnLoad(self)
 	local BagButtonMap =
 	{
-		[1] = "1", -- 第一个扩展包
-		[2] = "2", -- 第二个扩展包
+		[1] = "2", -- 第一个扩展包
+		[2] = "3", -- 第二个扩展包
+	    [3] = "4", -- 第二个扩展包
 		default = "unknown",
 		GetName = function (self, index)
 			local name = self.default;

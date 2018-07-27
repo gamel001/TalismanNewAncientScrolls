@@ -4,11 +4,11 @@
   <Layer Name="layWorld" Show="true">
     <Form Inherit="" Location="869,372,326,310" Name="frmNingshen" Show="false" Size="326,310">
       <Label Inherit="bg1" Location="8,19,303,275" Name="23940" Show="true" Transparency=""/>
-      <Label Inherit="TemplateNormalTitle" Location="0,0,318,50" Name="lbTitle" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,0,320,48" Name="lbTitle" Show="true"/>
       <TitleBarButton Location="2,2,316,28"/>
-      <CloseButton Location="282,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="288,27,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Label AlignLine="CENTER" Inherit="" Location="20,52,60,20" Name="lbuserlev" Show="true" Text="$L:1216$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" BackgroundColor="" Inherit="" Location="95,52,30,20" Name="lbuserlevinfo" Show="true"/>
@@ -38,10 +38,7 @@
           <OnLClick>layWorld_frmNingshen_btBegin_OnLClick(self);</OnLClick>
         </Scripts>
       </Button>
-	  	<Label Inherit="" Location="105,14,120,18" Name="Name42" Show="true">
-          <BackgroundImage File="cgz_design25" Source="720,176,240,21"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="100,-5,120,66" Name="6232" Show="false" Text="$L:1217$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="100,0,120,66" Name="6232" Show="true" Text="$L:1217$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Anchors>
         <Anchor offset="300,0" point="LEFT" relativePoint="TOP" relativeTo=""/>
         <Anchor offset="0,200" point="TOP" relativeTo=""/>

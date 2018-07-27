@@ -3,8 +3,8 @@ include "ui/frm_item_use_ex.lua"
 --local Local_Item_CurBag = 0;
 local Local_Item_MinBag = 0;
 local Local_Item_TaskBag = 1;
-local Local_Item_MaxBag = 2;
-local Local_Item_AllowedMaxBag = 4;
+local Local_Item_MaxBag = 5;
+local Local_Item_AllowedMaxBag = 5;
 local Local_Item_MaxLine = 0;
 local Local_Item_MaxCol = 0;
 --local Local_Item_CurMaxLine = 0;
@@ -384,6 +384,7 @@ function TemplateBtnUserEquip_OnEvent(self, event, arg)
 			["btPart11"] = EV_EQUIP_PART_RING1,		--  戒指
 			["btPart12"] = EV_EQUIP_PART_RING2,		--  戒指
 			["btPart13"] = EV_EQUIP_PART_PANTS,		--  戒指
+			["btPart14"] = EV_EQUIP_PART_CLOAK,		--  戒指
 		}
 		local name = self:getShortName();
 		self:Set(EV_UI_EQUIP_PART_KEY, t_equip_part[name]);

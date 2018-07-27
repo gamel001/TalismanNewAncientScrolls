@@ -140,3 +140,49 @@ function layWorld_frmMailTextsEx_frmSendMailTexts_OnHint(self)
     end
 
 end
+
+function layWorld_frmMailTextsEx_frmSendMailTexts1_OnHint(self)
+    --ÏÔÊ¾½ð±ÒµÄHint
+    local m_icurrent;
+    local MailTextsEx = uiGetglobal("layWorld.frmMailTextsEx");
+    m_icurrent=MailTextsEx:Get("ifmAcceptMailCurrent");
+    self:SetHintRichText(0);
+    
+    if MailExItems[m_icurrent] and MailExItems[m_icurrent]["Money"] and MailExItems[m_icurrent]["Money"]["Count"] then
+            local iMoneyCount=tonumber(MailExItems[m_icurrent]["Money"]["Count"]);
+            local ilbNpcgoldnum,ilbNpcsilvernum,ilbNpccoppernum = layWorld_Helper_GoldConvert(iMoneyCount);  
+            if iMoneyCount>0 then
+    
+		    local rtext = EvUiLuaClass_RichText:new();
+		    local line = EvUiLuaClass_RichTextLine:new();
+		    local item = EvUiLuaClass_RichTextItem:new();
+		    local total ="";
+		    if ilbNpcgoldnum>0 then
+		       total=tostring(ilbNpcgoldnum)..uiLanString("MSG_ITEM_GOLD");
+		    end
+		    
+		    if ilbNpcsilvernum>0 then
+		       total=total..tostring(ilbNpcsilvernum)..uiLanString("MSG_ITEM_SILVER");
+		    end
+		    
+		    if ilbNpccoppernum>0 then
+		       total=total..tostring(ilbNpccoppernum)..uiLanString("MSG_ITEM_COPPER");
+		    end
+		    
+		    item.Text = tostring(total);
+		    item.Font = LAN("font_title");
+		    item.FontSize = LAN("font_s_18");
+		    item.Color = "#ff09ff11";
+		    line:InsertItem(item);
+		    rtext:InsertLine(line);  
+		    
+			
+		    self:SetHintRichText(uiCreateRichText("String", rtext:ToRichString()) );
+	    
+	    end
+    
+    end
+
+    
+
+end

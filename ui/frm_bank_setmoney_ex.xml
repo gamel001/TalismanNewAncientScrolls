@@ -19,34 +19,34 @@
         <BackgroundImage File="" Source=""/>
       </Label>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="37,41,60,20" MaxChar="4" Name="EdbGold" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
       </EditBox>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="122,41,30,20" MaxChar="2" Name="EdbAG" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </EditBox>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="177,41,30,20" MaxChar="2" Name="EdbCu" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </EditBox>
       <Anchors>
         <Anchor offset="0,-100" point="BOTTOM"/>
         <Anchor offset="-60,0" point="CENTERH"/>
       </Anchors>
-      <Label Inherit="TemplateNormalTitle" Location="-7,-19,234,50" Name="5906" Show="true">
+      <Label Inherit="TemplateNormalTitle" Location="-7,-19,233,35" Name="5906" Show="true">
         <Label Name="lbTitelText" Show="false"/>
       </Label>
-      <CloseButton Location="189,-5,21,21" Show="ture">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="198,7,13,13" Show="ture">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <TitleBarButton Location="-5,-19,230,35" Show="ture"/>
       <Label Inherit="" Location="12,39,24,22" Name="2554" Show="true">
-        <BackgroundImage File="cgz_design1" Source="204,1,34,33"/>
+        <BackgroundImage File="tz_010" Source="413,488,24,22"/>
       </Label>
       <Label Inherit="" Location="97,39,24,22" Name="2674" Show="true">
-        <BackgroundImage File="cgz_design1" Source="240,1,34,33"/>
+        <BackgroundImage File="tz_010" Source="445,488,24,22"/>
       </Label>
       <Label Inherit="" Location="152,38,24,26" Name="2794" Show="true">
-        <BackgroundImage File="cgz_design1" Source="276,1,34,33"/>
+        <BackgroundImage File="tz_010" Source="476,485,24,26"/>
       </Label>
       <Scripts>
         <OnShow>uiRegisterEscWidget(self)</OnShow>

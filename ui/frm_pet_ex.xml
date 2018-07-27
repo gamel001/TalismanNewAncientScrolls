@@ -11,14 +11,14 @@
       <Label Inherit="" Location="0,317,256,12" Name="2275" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <Label Inherit="TemplateNormalTitle" Location="3,3,294,50" Name="17169" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="3,3,292,50" Name="17169" Show="true"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,56,160,24" Name="lbPlayName" Show="true" Text="111">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_010" Source="181,352,147,24"/>
       </Label>
       <Form Inherit="NoTitleBarForm" Location="33,88,230,215" Name="frmPetList" Show="true">
         <Label Inherit="bg3" Location="0,1,230,210" Name="7725" Show="true"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="5,11,220,20" Name="lbPetMaster" Show="true" Text="$L:480$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+          <BackgroundImage File="tz_012" Source="364,368,149,25"/>
         </Label>
         <Label Inherit="" Location="10,46,104,20" Name="lbPetName" Show="true" Text="$L:481$"/>
         <Label Inherit="" Location="113,46,28,20" Name="lbPetLev" Show="true" Text="$L:482$"/>
@@ -29,7 +29,7 @@
           <BackgroundImage File="tz_010" Source="429,435,66,5"/>
         </ProgressBar>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="5,78,220,20" Name="lbPetSave" Show="true" Text="$L:485$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+          <BackgroundImage File="tz_012" Source="364,368,149,25"/>
         </Label>
         <Label Inherit="" Location="9,109,104,20" Name="lbSavePetName1" Show="true" Text="$L:486$"/>
         <Label Inherit="" Location="112,109,28,20" Name="lbPetLev1" Show="true" Text="$L:487$"/>
@@ -91,17 +91,14 @@
           <OnLClick>layWorld_frPetuiEx_btPetFree_OnLClick()</OnLClick>
         </Scripts>
       </Button>
-	  	<Label Inherit="" Location="135,14,33,20" Name="Name36" Show="true">
-          <BackgroundImage File="cgz_design25" Source="699,299,66,24"/>
-        </Label>
-      <Label AlignCol="CENTER" Inherit="" Location="91,-5,120,72" Name="lbPet" Show="false" Text="$L:501$" TextFont="$L:1$" TextSize="$L:3$" AlignLine="CENTER"/>
+      <Label AlignCol="CENTER" Inherit="" Location="91,0,120,72" Name="lbPet" Show="true" Text="$L:501$" TextFont="$L:1$" TextSize="$L:3$" AlignLine="CENTER"/>
       <Label Inherit="" Location="20,255,218,6" Name="500" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
       <TitleBarButton Location="10,8,280,28"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="265,33,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnLoad>self:RegisterScriptEventNotify("CEV_PET_RECV_PETVIEW_SHOW")

@@ -157,6 +157,9 @@
           <BackgroundImage File="tz_012" Source="227,260,49,60"/>
         </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="502,27,190,24" Name="868" Show="true" Text="$L:745$" TextColor="#EE000000" TextFont="$L:1$" TextSize="20"/>
+        <Label Inherit="" Location="368,461,32,32" Name="1284" Show="true">
+          <BackgroundImage File="tz_012" Source="227,260,49,60"/>
+        </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="367,494,190,24" Name="1438" Show="true" Text="$L:747$" TextColor="#EE000000" TextFont="$L:1$" TextSize="20"/>
         <Label Inherit="" Location="108,249,32,32" Name="2235" Show="true">
           <BackgroundImage File="tz_012" Source="227,260,49,60"/>
@@ -208,7 +211,16 @@
           <BackgroundImage File="tz_012" Source="227,260,49,60"/>
         </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="423,417,200,24" Name="2391" Show="true" Text="$L:749$" TextColor="#EE000000" TextFont="$L:1$" TextSize="20"/>
-       </Form>
+        <Label Inherit="" Location="379,38,32,32" Name="13051" Show="true">
+          <BackgroundImage File="tz_012" Source="227,260,49,60"/>
+        </Label>
+        <Label Inherit="" Location="268,41,32,32" Name="13299" Show="true">
+          <BackgroundImage File="tz_012" Source="227,260,49,60"/>
+        </Label>
+        <Label Inherit="" Location="493,40,32,32" Name="13548" Show="true">
+          <BackgroundImage File="tz_012" Source="227,260,49,60"/>
+        </Label>
+      </Form>
       <Form Inherit="TemplateFormZone" Location="24,88,800,540" Name="frmZone004" Show="false">
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="138,88,340,50" Name="3357" Show="true" Text="$L:670$" TextColor="#EEc74106" TextFont="$L:1$" TextSize="30"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="192,239,300,50" Name="1680" Show="true" Text="$L:671$" TextColor="#EEc74106" TextFont="$L:1$" TextSize="30"/>
@@ -617,15 +629,6 @@
           <Anchor offset="0,55" point="TOP"/>
         </Anchors>
       </Label>
-      <Form Inherit="TemplateFormZone" Location="24,88,800,540" Name="frmZone042" Show="false">
-        <BackgroundImage File="world4_wangcheng"/>
-      </Form>	  
-      <Form Inherit="TemplateFormZone" Location="24,88,800,540" Name="frmZone043" Show="false">
-        <BackgroundImage File="world4_jiabulubu"/>
-      </Form>	  
-      <Form Inherit="TemplateFormZone" Location="24,88,800,540" Name="frmZone044" Show="false">
-        <BackgroundImage File="world4_haian"/>
-      </Form>	  	  
       <Form Inherit="TemplateFormZone" Location="24,88,800,540" Name="frmZone024" Show="false">
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="27,36,300,50" Name="2314" Show="true" Text="$L:1225$" TextColor="#EEc74106" TextFont="$L:1$" TextSize="30"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="456,223,240,24" Name="2318" Show="false" Text="$L:1001$" TextColor="#EE000000" TextFont="$L:1$" TextSize="20"/>

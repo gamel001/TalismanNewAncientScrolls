@@ -1,12 +1,35 @@
 frmTaskListEx={};--DATA REV
 frmTaskListExTreeName={};--Left and Right Tree Name
-local frmTaskListExConsignId=-4;
+
+
+
 
 function layWorld_frmTaskListEx_OnLoad(self)
     self:RegisterScriptEventNotify("ToggleTask");
     self:RegisterScriptEventNotify("event_update_task");
     self:RegisterScriptEventNotify("EVENT_SelfLevelUp");
-    --BindCallBack("task", "locate", "default", tasklocatefun);    
+    BindCallBack("task", "locate", "default", tasklocatefun);    
+end
+
+function layWorld_lbTrackTaskEx_clbtaskhide_OnLClick(self)
+    local ebTask = uiGetglobal("layWorld.lbTrackTaskEx.ebTask");
+    local ebResize = uiGetglobal("layWorld.lbTrackTaskEx.Resize_Bottom");
+	local ebBG = uiGetglobal("layWorld.lbTrackTaskEx.BG");
+	local ebTop = uiGetglobal("layWorld.lbTrackTaskEx.Mid");
+	
+    if ebTask:getVisible()==false then
+       -- uiInfo("abcde");
+        ebTask:Show();
+		ebResize:Show();
+		ebBG:Show();
+		ebTop:Show();
+    else
+        --uiInfo("abcde12345");
+        ebTask:Hide();
+		ebResize:Hide();
+		ebBG:Hide();
+		ebTop:Hide();
+    end
 end
 
 function layWorld_frmTaskListEx_OnEvent(self,event,arg)
@@ -26,7 +49,8 @@ function layWorld_frmTaskListEx_OnEvent(self,event,arg)
         layWorld_frmTaskListEx_Show(self);
         layWorld_frmTaskListEx_tlTask_OnSelect(tlTask);
         layWorld_lbTrackTaskEx_Show();
-    end
+     --ToggleTask
+     end
     
 end
 
@@ -44,9 +68,9 @@ function layWorld_frmTaskListEx_ebTaskText_OnHyperLink(self, hypertype, hyperlin
 end
 
 function layWorld_lbTrackTaskEx_clbtask_OnLClick(self)
-    local ebTask = uiGetglobal("layWorld.lbTrackTaskEx.ebTask");
+    local ebTask = uiGetglobal("layWorld.lbTrackTaskEx");
 
-    local Resize_Bottom= uiGetglobal("layWorld.lbTrackTaskEx.Resize_Bottom");
+    local Resize_Bottom= uiGetglobal("layWorld.lbTrackTaskEx");
 
     if ebTask:getVisible()==false then
        -- uiInfo("abcde");
@@ -151,6 +175,9 @@ function layWorld_frmTaskListEx_Show(self)
     if not CurSelect and selId and selId == -2 then
         CurSelect = head;
     end
+    
+    
+    --高奖励任务  
     head=tlTask:InsertItem(strhighreward_t,0,head);   
     head:Set("TaskId", -3);   
     head:Set("TaskDetail", strhighreward);
@@ -195,6 +222,8 @@ function layWorld_frmTaskListEx_Show(self)
                         Title=Title.."("..tostring(kvalue["RatePerDay"]["Rate"]).."%"..")";
                     end
                 end
+                
+               
 
                 local subnod=tlTask:InsertItem(Title,subhead,0);
 
@@ -203,11 +232,11 @@ function layWorld_frmTaskListEx_Show(self)
                 local PlayerLevel=tonumber(ExpJibie);
                 local TaskLevel=tonumber(kvalue["Level"]);
 
-                if TaskLevel-PlayerLevel>=2 then
+                if TaskLevel-PlayerLevel>=5 then
                     subnod:SetTextColor(0,0,255,255);
-                elseif TaskLevel-PlayerLevel>=0 then
+                elseif TaskLevel-PlayerLevel>=1 then
                     subnod:SetTextColor(0,255,255,255);
-                elseif TaskLevel-PlayerLevel>=-5 then
+                elseif TaskLevel-PlayerLevel>-5 then
                     subnod:SetTextColor(0,255,0,255);
                 else
                     subnod:SetTextColor(170,170,170,255);
@@ -237,12 +266,9 @@ function layWorld_frmTaskListEx_Show(self)
     if CurSelect then
         tlTask:Select(CurSelect);
     end
-
-    
-
-    
     tlTask:Refresh();  
 end
+
 
 function layWorld_frmTaskListEx_ShowRightEditSingle()    
     local self = uiGetglobal("layWorld.frmTaskListEx.tlTask");
@@ -251,7 +277,7 @@ function layWorld_frmTaskListEx_ShowRightEditSingle()
     if sel then
         local id = sel:Get("TaskId");
         local TempTab={};
-        if id == -1 or id == -2 or id == -3 or id == -4 then
+        if id == -1 or id == -2 or id == -3 or id == -4 or id==-5 then
             local richcontent = sel:Get("TaskDetail");
             if richcontent and richcontent ~= "" then
                 ebTaskText:SetRichText(richcontent,false);
@@ -281,22 +307,13 @@ function layWorld_frmTaskListEx_tlTask_OnSelect(self)
     
     local ebTaskText; --RIGHT TASK DETAIL
     ebTaskText = uiGetglobal("layWorld.frmTaskListEx.ebTaskText");
-    local btnCancelTask = uiGetglobal("layWorld.frmTaskListEx.btnCancelTask");
-
     local sel=self:getSelectItem();
     self:Delete("CurSelect");
     if sel then
         local id = sel:Get("TaskId");
-        if id then	   
-	  self:Set("CurSelect", id);	   
+        if id then
+            self:Set("CurSelect", id);
         end
-
-	if id ==-4 or uiConsignIsTaskConsign(id)==true then
-	    btnCancelTask:Disable();
-        else
-	    btnCancelTask:Enable();    
-        end
-
         local richcontent = sel:Get("TaskDetail");
 
         if richcontent and richcontent ~= "" then
@@ -312,7 +329,7 @@ function layWorld_frmTaskListEx_tlTask_OnSelect(self)
    
     local iid=self:Get("CurSelect");
     local ckbTrace=uiGetglobal("layWorld.frmTaskListEx.ckbTrace");
-    if iid and iid ~= -1 and iid ~=-2 and iid ~=-3 and iid~=-4 then
+    if iid and iid ~= -1 and iid ~=-2 and iid ~=-3 and iid~=-4 and iid~=-5 then
          local bfind=false;
          local traceList={};
          traceList=uiTaskGetTraceTaskList();
@@ -326,16 +343,8 @@ function layWorld_frmTaskListEx_tlTask_OnSelect(self)
          end       
          --没有早到
          ckbTrace:SetChecked(false);
-    elseif iid and iid ==-4 then
-         local bTraceConsign=uiConsignIsTrace();
-	 if bTraceConsign == true then
-	     ckbTrace:SetChecked(true);
-	 else
-	     ckbTrace:SetChecked(false);
-	 end        
     end
 end --end select func()
-
 
 
 
@@ -350,7 +359,7 @@ function layWorld_frmTaskListEx_btnCancelTask_OnLClick(self)
     local sel=tlTask:getSelectItem();
     local id=tlTask:Get("CurSelect");
     
-    if id and id ~= -1 and id ~=-2 and id ~=-3 and id~=-4 then
+    if id and id ~= -1 and id ~=-2 and id ~=-3 and id~=-4 and id~=-5 then
         local msgBox = uiMessageBox(uiLanString("msg_task_warn_abort"),"",true,true,false);
         SAPI.AddDefaultMessageBoxCallBack(msgBox, layWorld_frmTaskListEx_btCancelMapPoint_Yes,frmTaskListEx_btCancelMapPoint_No,id);    
     end
@@ -396,7 +405,7 @@ function layWorld_frmTaskListEx_ckbTrace_OnLClick(self)
     local sel=tlTask:getSelectItem();
     local id=tlTask:Get("CurSelect");
     --"成都城" id 为nil
-    if id and id ~= -1 and id ~=-2 and id ~=-3 and id~=-4 then
+    if id and id ~= -1 and id ~=-2 and id ~=-3 and id~=-4 and id~=-5 then
          local bfind=false;
          local traceList={};
          traceList=uiTaskGetTraceTaskList();
@@ -408,8 +417,8 @@ function layWorld_frmTaskListEx_ckbTrace_OnLClick(self)
 	         uiTaskRemoveTraceTask(tonumber(id)); 
                  bfind=true;
 
-		 if uiTaskHaveTraceTask()==false and lbTrackTaskEx:getVisible()==true then
-			lbTrackTaskEx:Hide();
+		 if lbTrackTaskEx:getVisible()==true then
+			--lbTrackTaskEx:Hide();
 		 end
 
                  layWorld_lbTrackTaskEx_Show();
@@ -423,35 +432,12 @@ function layWorld_frmTaskListEx_ckbTrace_OnLClick(self)
 	     bRes = uiTaskAddTraceTask(tonumber(id));
              self:SetChecked(bRes);
 
-	     if uiTaskHaveTraceTask()==true and lbTrackTaskEx:getVisible()==false then
+	     if lbTrackTaskEx:getVisible()==false then
                  lbTrackTaskEx:Show();
              end
 
              layWorld_lbTrackTaskEx_Show();
          end
-    elseif id and id== -4 then
-        local bTraceConsign=uiConsignIsTrace();
-	if bTraceConsign==true then
-	    uiInfo("uiConsignTrace 0");
-	    uiConsignTrace(false);
-	    self:SetChecked(false);
-
-	    if uiTaskHaveTraceTask()==false and lbTrackTaskEx:getVisible()==true then
-		lbTrackTaskEx:Hide();
-	    end
-
-	    layWorld_lbTrackTaskEx_Show();
-	else
-	    uiInfo("uiConsignTrace 1");
-	    uiConsignTrace(true);
-	    self:SetChecked(true);
-
-	    if uiTaskHaveTraceTask()==true and lbTrackTaskEx:getVisible()==false then
-                 lbTrackTaskEx:Show();
-            end
-
-	    layWorld_lbTrackTaskEx_Show();
-	end
     end
 
 end

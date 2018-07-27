@@ -3,17 +3,17 @@
   <Script file="frm_Blend_ex.lua"/>
   <Layer Name="layWorld" Show="true">
     <Form DragIn="true" Inherit="" Location="478,383,300,360" Name="frmBlendEx" Show="false">
-      <Label Inherit="" Location="15,40,270,314" Name="1956" Show="true">
-        <BackgroundImage File="tz_029_2" Source="0,0,306,168"/>
-      </Label>	
       <Label Inherit="bg1" Location="10,21,280,335" Name="554" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="3,2,294,50" Name="9942" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="4,2,292,50" Name="9942" Show="true"/>
       <Anchors/>
       <Label Inherit="" Location="-1,256,256,75" Name="588" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <Button DragIn="false" DragOut="false" Inherit="" Location="130,139,42,42" Name="btPracticePic" Show="true">
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
+      <Label Inherit="" Location="50,56,200,161" Name="719" Show="fals">
+        <BackgroundImage File="tz_026" Source="0,0,200,161" Transparency="1"/>
+      </Label>
+      <Button DragIn="false" DragOut="false" Inherit="" Location="136,145,32,32" Name="btPracticePic" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmBlendEx_btPracticePic_OnHint(self)</OnHint>
@@ -29,20 +29,11 @@
           <OnLClick>layWorld_frmBlendEx_btCancel_OnLClick()</OnLClick>
         </Scripts>
       </Button>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="89,-5,120,70" Name="1229" Show="true" Text="$L:477$" TextFont="$L:1$" TextSize="$L:3$"/>
-      <Label Inherit="" Location="66,72,50,50" Name="CGZBGII25" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Label Inherit="" Location="180,72,50,50" Name="CGZBGII26" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Label Inherit="" Location="126,135,50,50" Name="CGZBGII27" Show="fals">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Button DragIn="true" DragOut="true" Inherit="" Location="70,76,42,42" Name="btPracticeLeft" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="89,0,120,70" Name="1229" Show="true" Text="$L:477$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="76,82,32,32" Name="btPracticeLeft" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmBlendEx_btPracticeLeft_OnHint(self)</OnHint>
@@ -50,10 +41,10 @@
           <OnDragNull>layWorld_frmBlendEx_btPracticeLeft_OnDragNull(self)</OnDragNull>
         </Scripts>
       </Button>
-      <Button DragIn="true" DragOut="true" Inherit="" Location="184,76,42,42" Name="btPracticeRight" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="190,82,32,32" Name="btPracticeRight" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmBlendEx_btPracticeRight_OnHint(self)</OnHint>
@@ -66,9 +57,9 @@
       <Label Inherit="" Location="40,230,36,16" Name="lbPracticeName" Show="true" Text="$L:478$"/>
       <Label Inherit="" Location="106,180,52,16" Name="570" Show="false" Text="$L:479$"/>
       <TitleBarButton Location="8,6,280,28"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="265,32,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnLoad>self:RegisterScriptEventNotify("cev_item_fuse_show")

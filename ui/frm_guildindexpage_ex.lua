@@ -26,6 +26,7 @@ function layWorld_frmGuildIndexPageEx_Show(self)
 end
 
 function layWorld_frmGuildIndexPageEx_Refresh(self)
+        
 	if not self then self = uiGetglobal("layWorld.frmGuildIndexPageEx") end
 	if not self:getVisible() then	
 		return
@@ -73,7 +74,7 @@ function layWorld_frmGuildIndexPageEx_Refresh(self)
 	btGuildOver:Disable()
 	btAppendUniteGuild:Disable()
 	--btGuildPK:Disable()
-	--edbGuildInfo:SetText("")
+	edbGuildInfo:SetText("")  --wj add here:
 	lbGuildPoint:SetText("")
 	edbGuildPlayerNumber:SetText("")
 	edbGuildInfo:SetEnableInput(false)
@@ -270,8 +271,11 @@ function layWorld_frmGuildIndexPageEx_Refresh(self)
 	end
 	
 	if guildBulletin == nil then
+	        edbGuildInfo:SetText("")
 		return
 	end
+	
+	
 
 	edbGuildInfo:SetText(guildBulletin)
 

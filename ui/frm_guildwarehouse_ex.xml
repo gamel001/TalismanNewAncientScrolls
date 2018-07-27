@@ -8,24 +8,24 @@
         <BackgroundImage File="" Source="0,0,256,256"/>
       </Label>
       <TitleBarButton Location="0,0,299,28" Text="" TextFont="$L:1$" TextSize="$L:18$"/>
-      <CloseButton Location="254,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="262,30,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="93,253,60,20" Name="goldnum" Show="true" Text="$L:469$">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="180,253,31,20" Name="silvernum" Show="true" Text="$L:470$">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="237,253,31,20" Name="coppernum" Show="true" Text="$L:471$">
-        <BackgroundImage File="cgz_design4" Source="94,4,201,33"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </Label>
       <Label AlignCol="CENTER" Inherit="" LineSpacing="6" Location="42,61,147,24" Name="lbGuildWarehouse" Show="true" Text="">
-        <BackgroundImage File="cgz_design" Source="6,103,204,28"/>
+        <BackgroundImage File="tz_010" Source="181,351,147,24"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="30,252,34,20" Name="lbTotal" Show="true" Text="$L:472$">
-        <BackgroundImage File="cgz_design" Source="7,340,75,28"/>
+        <BackgroundImage File="tz_010" Source="448,269,31,14"/>
       </Label>
       <Button Inherit="PushButton" Location="23,287,70,20" Name="btnSaveMoney" Show="true" Text="$L:473$">
         <Scripts>
@@ -41,8 +41,8 @@
       <Label Inherit="" Location="40,92,213,141" Name="lbItems" Show="true">
         <BackgroundImage File="tz_011" Source="298,2,213,141"/>
         <Button DragIn="true" DragOut="true" Inherit="" Location="3,2,31,31" Name="btItem1" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -51,8 +51,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="38,2,31,31" Name="btItem2" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -61,8 +61,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="73,2,31,31" Name="btItem3" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -71,8 +71,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="108,2,31,31" Name="btItem4" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -81,8 +81,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="143,2,31,31" Name="btItem5" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -91,8 +91,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="178,2,31,31" Name="btItem6" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -101,8 +101,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="3,37,31,31" Name="btItem7" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -111,8 +111,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="38,37,31,31" Name="btItem8" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -121,8 +121,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="73,37,31,31" Name="btItem9" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -131,8 +131,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="108,37,31,31" Name="btItem10" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -141,8 +141,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="143,37,31,31" Name="btItem11" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -151,8 +151,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="178,37,31,31" Name="btItem12" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -161,8 +161,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="3,72,31,31" Name="btItem13" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -171,8 +171,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="38,72,31,31" Name="btItem14" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -181,8 +181,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="73,72,31,31" Name="btItem15" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -191,8 +191,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="108,72,31,31" Name="btItem16" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -201,8 +201,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="143,72,31,31" Name="btItem17" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -211,8 +211,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="178,72,31,31" Name="btItem18" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -221,8 +221,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="3,107,31,31" Name="btItem19" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -231,8 +231,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="38,107,31,31" Name="btItem20" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -241,8 +241,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="73,107,31,31" Name="btItem21" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -251,8 +251,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="108,107,31,31" Name="btItem22" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -261,8 +261,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="143,107,31,31" Name="btItem23" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -271,8 +271,8 @@
           </Scripts>
         </Button>
         <Button DragIn="true" DragOut="true" Inherit="" Location="178,107,31,31" Name="btItem24" Show="true">
-          <HighlightImage File="cgz_design" Source="103,417,36,36"/>
-          <PushedImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage File="tz_010" Source="186,376,48,48"/>
+          <PushedImage File="tz_010" Source="186,376,48,48"/>
           <Hint/>
           <Scripts>
             <OnHint>layWorld_frmGuildWarehouseEx_btItem_OnHint(self)</OnHint>
@@ -282,35 +282,32 @@
         </Button>
       </Label>
       <Label Inherit="" Location="67,251,25,23" Name="714" Show="true">
-        <BackgroundImage File="cgz_design1" Source="203,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="413,487,25,23"/>
       </Label>
       <Label Inherit="" Location="155,252,24,23" Name="857" Show="true">
-        <BackgroundImage File="cgz_design1" Source="240,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="445,488,24,22"/>
       </Label>
       <Label Inherit="" Location="212,251,23,23" Name="1018" Show="true">
-        <BackgroundImage File="cgz_design1" Source="275,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="477,485,23,26"/>
       </Label>
-      <Label Inherit="TemplateNormalTitle" Location="0,0,294,48" Name="lbTitle" Show="true"/>
-	  	<Label Inherit="" Location="67,14,163,18" Name="Name40" Show="true">
-          <BackgroundImage File="cgz_design25" Source="634,419,326,24"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="86,-5,120,68" Name="18779" Show="false" Text="$L:1096$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,0,293,48" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="86,0,120,68" Name="18779" Show="true" Text="$L:1096$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Button Inherit="" Location="205,67,12,14" Name="btGuildLeft" Show="true">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010" Source="51,382,12,14"/>
+        <PushedImage File="tz_010" Source="51,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGuildWarehouseEx_btGuildLeft_OnLClick()</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="239,67,13,14" Name="btGuildRight" Show="true">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010" Source="77,382,12,14"/>
+        <PushedImage File="tz_010" Source="77,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGuildWarehouseEx_btGuildRight_OnLClick()</OnLClick>
         </Scripts>
       </Button>
       <Label BackgroundColor="#ee000000" Inherit="" Location="217,65,22,18" Name="lbGuildHouse2" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="459,194,30,20"/>
       </Label>
       <Button Inherit="PushButton" Location="201,287,70,20" Name="btGuildWareHouseHistory" Show="true" Text="$L:1097$">
         <Scripts>
@@ -353,36 +350,36 @@
       <Label Inherit="" Location="256,256,256,174" Name="786" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <CloseButton Location="494,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="501,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="-1,1,534,50" Name="lbTitle" Show="true"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="206,-5,120,68" Name="1027" Show="true" Text="$L:1097$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,1,532,47" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="206,0,120,68" Name="1027" Show="true" Text="$L:1097$" TextFont="$L:1$" TextSize="$L:3$"/>
       <ListBox AutoScrollV="false" BackgroundColor="#ee000000" Inherit="" Location="19,93,492,316" Name="lstGuildHistoryItem" Show="true">
         <Scripts>
           <OnLoad>layWorld_frmHistoryGuildEx_lstGuildHistory_OnLoad(self)</OnLoad>
         </Scripts>
       </ListBox>
       <CheckButton Inherit="" Location="16,49,76,32" Name="ckItemPage" Show="true" Text="$L:276$">
-        <NormalImage Blend="true" File="cgz_design" Source="368,376,102,24"/>
-        <PushedImage Blend="true" File="cgz_design" Source="368,405,102,24"/>
-        <CheckImage Blend="true" File="cgz_design" Source="368,405,102,24"/>
+        <NormalImage Blend="true" File="tz_010" Source="82,231,80,40"/>
+        <PushedImage Blend="true" File="tz_010" Source="0,231,80,40"/>
+        <CheckImage Blend="true" File="tz_010" Source="0,231,80,40"/>
         <Scripts>
           <OnLoad>self:SetChecked(true)</OnLoad>
           <OnLClick>layWorld_frmHistoryGuildEx_ckItemPage_OnLClick(self)</OnLClick>
         </Scripts>
       </CheckButton>
       <CheckButton Inherit="" Location="92,49,76,32" Name="ckGoldPage" Show="true" Text="$L:955$">
-        <NormalImage Blend="true" File="cgz_design" Source="368,376,102,24"/>
-        <PushedImage Blend="true" File="cgz_design" Source="368,405,102,24"/>
-        <CheckImage Blend="true" File="cgz_design" Source="368,405,102,24"/>
+        <NormalImage Blend="true" File="tz_010" Source="82,231,80,40"/>
+        <PushedImage Blend="true" File="tz_010" Source="0,231,80,40"/>
+        <CheckImage Blend="true" File="tz_010" Source="0,231,80,40"/>
         <Scripts>
           <OnLClick>layWorld_frmHistoryGuildEx_ckGoldPage_OnLClick(self)</OnLClick>
         </Scripts>
       </CheckButton>
       <Label Inherit="" Location="12,77,508,6" Name="34952" Show="true">
-        <BackgroundImage File="cgz_design" Source="125,88,4,4"/>
+        <BackgroundImage File="tz_010" Source="365,397,6,6"/>
       </Label>
       <ListBox AutoScrollV="false" BackgroundColor="#ee000000" Inherit="" Location="19,93,492,316" Name="lstGuildHistoryMoney" Show="false">
         <Scripts>
@@ -390,18 +387,20 @@
         </Scripts>
       </ListBox>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="255,417,20,17" Name="lbPage" Show="true" Text="1">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,194,31,20"/>
       </Label>
       <Button Inherit="" Location="243,418,12,14" Name="btnPre" Show="true">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010" Source="51,382,12,14"/>
+        <PushedImage File="tz_010" Source="51,399,12,14"/>
+        <DisabledImage File="tz_010" Source="51,382,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmHistoryGuildEx_btnPre_OnLClick(self)</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="276,418,12,14" Name="btnNext" Show="true">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010" Source="77,382,12,14"/>
+        <PushedImage File="tz_010" Source="77,399,12,14"/>
+        <DisabledImage File="tz_010" Source="77,382,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmHistoryGuildEx_btnNext_OnLClick(self)</OnLClick>
         </Scripts>
@@ -441,34 +440,34 @@
         <BackgroundImage File="" Source=""/>
       </Label>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="37,41,60,20" MaxChar="4" Name="EdbGold" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
       </EditBox>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="122,41,30,20" MaxChar="2" Name="EdbAG" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </EditBox>
       <EditBox AlignCol="CENTER" AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="177,41,30,20" MaxChar="2" Name="EdbCu" NumberOnly="true" Show="true">
-        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
       </EditBox>
       <Anchors>
         <Anchor offset="0,-100" point="BOTTOM"/>
         <Anchor offset="-60,0" point="CENTERH"/>
       </Anchors>
-      <Label Inherit="TemplateNormalTitle" Location="-7,-19,234,50" Name="5906" Show="true">
+      <Label Inherit="TemplateNormalTitle" Location="-7,-19,233,35" Name="5906" Show="true">
         <Label Name="lbTitelText" Show="false"/>
       </Label>
-      <CloseButton Location="190,-5,21,21" Show="ture">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="198,7,13,13" Show="ture">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <TitleBarButton Location="-5,-19,230,35" Show="true"/>
       <Label Inherit="" Location="12,39,24,22" Name="2554" Show="true">
-        <BackgroundImage File="cgz_design1" Source="203,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="413,488,24,22"/>
       </Label>
       <Label Inherit="" Location="97,39,24,22" Name="2674" Show="true">
-        <BackgroundImage File="cgz_design1" Source="240,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="445,488,24,22"/>
       </Label>
       <Label Inherit="" Location="152,38,24,26" Name="2794" Show="true">
-        <BackgroundImage File="cgz_design1" Source="275,1,35,33"/>
+        <BackgroundImage File="tz_010" Source="476,485,24,26"/>
       </Label>
       <Scripts>
         <OnShow>uiRegisterEscWidget(self)</OnShow>

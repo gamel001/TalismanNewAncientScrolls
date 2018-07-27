@@ -110,7 +110,7 @@ function layWorld_frmTargetEx_Refresh(self)
 	pbMPSP:SetValue(mpsp/maxmpsp);
 	-- buff
 	local lbBuff = SAPI.GetChild(self, "lbBuff");
-	for i = 1, 24, 1 do
+	for i = 1, 48, 1 do
 		local btBuff = SAPI.GetChild(lbBuff, "btBuff"..i);
 		btBuff.ID = bufflist[i];
 		frmTargetEx_TemplateBtnBuf_Refresh(btBuff);

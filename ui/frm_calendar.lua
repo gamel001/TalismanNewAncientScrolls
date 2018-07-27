@@ -205,6 +205,14 @@ function EvUiLuaClass_CalendarEvent:GetFirstActiveTime()
 	end
 	return hour, minute, endhour, endminute;
 end
+function EvUiLuaClass_CalendarEvent:GetFirstActiveTimeText()
+	local hour, minute, endhour, endminute = self:GetFirstActiveTime();
+	if endhour then
+		return string.format("%02d:%02d-%02d:%02d", hour, minute, endhour, endminute);
+	else
+		return string.format("%02d:%02d", hour, minute);
+	end
+end
 --------------------  ..EvUiLuaClass_CalendarEvent  --------------
 
 --------------------   EvUiLuaClass_Calendar  --------------
@@ -264,6 +272,7 @@ function EvUiLuaClass_DayInMonth:LoadFromEventCalendar(name, Calendar, year, mon
 			table.insert(EventList, Event);
 		end
 	end
+	if table.getn(EventList) == 0 then EventList = nil end
 	self.EventList[name] = EventList;
 end
 function EvUiLuaClass_DayInMonth:FindEventById(id)
@@ -272,6 +281,12 @@ function EvUiLuaClass_DayInMonth:FindEventById(id)
 			if v:GetId() == id then return v end
 		end
 	end
+end
+function EvUiLuaClass_DayInMonth:DeleteEvent(name)
+	self.EventList[name] = nil;
+end
+function EvUiLuaClass_DayInMonth:ClearEvent()
+	self.EventList = {};
 end
 --------------------  ..EvUiLuaClass_DayInMonth  --------------
 
@@ -291,6 +306,18 @@ local CalendarList =
 		self.List[name] = nil;
 	end,
 };
+
+function API_FindEventByDetailsType(_detailsType)
+	local res = {};
+	for i, v in pairs(CalendarList.List) do
+		for j, e in pairs(v.EventList) do
+			if e:GetDetailsType() == _detailsType then
+				table.insert(res, e);
+			end
+		end
+	end
+	return res;
+end
 
 local DayListInMonth =
 {
@@ -356,8 +383,25 @@ local DayListInMonth =
 		end
 	end,
 	LoadAllEvent = function (self)
+		self:ClearEvent();
 		for name, calendar in pairs (CalendarList.List) do
 			self:LoadEvent(name, calendar);
+		end
+	end,
+	DeleteEvent = function (self, name)
+		for day = 1, 6*7 do
+			local Day = self.DayList[day];
+			if Day then
+				Day:DeleteEvent(name);
+			end
+		end
+	end,
+	ClearEvent = function (self)
+		for day = 1, 6*7 do
+			local Day = self.DayList[day];
+			if Day then
+				Day:ClearEvent();
+			end
 		end
 	end,
 	FindDay = function (self, weekid, dayid)
@@ -371,25 +415,40 @@ local DayListInMonth =
 		local dayid = math.mod((day + self.FirstDayWeek), 7);
 		return self:FindDay(weekid, dayid);
 	end,
+	IsBeforeToday = function (self, year, month, day)
+		if year < self.Today.Year then return true end
+		if year == self.Today.Year then
+			if month < self.Today.Month then return true end
+			if month == self.Today.Month then
+				if day < self.Today.Day then return true end
+			end
+		end
+		return false;
+	end,
 };
 
 local function RefreshCalendarEventShortcut(self, Event, CalendarName)
 	if Event == nil then self:Hide() return end
 	local lbTimeDesc = SAPI.GetChild(self, "lbTimeDesc");
 	local btIcon = SAPI.GetChild(self, "btIcon");
+	--[[
 	local starthour, startminute, endhour, endminute = Event:GetFirstActiveTime();
+	local TimeText = "";
 	if endhour then
-		lbTimeDesc:SetText(string.format("%02d:%02d-%02d:%02d", starthour, startminute, endhour, endminute));
+		TimeText = string.format("%02d:%02d-%02d:%02d", starthour, startminute, endhour, endminute);
 	else
-		lbTimeDesc:SetText(string.format("%02d:%02d", starthour, startminute));
+		TimeText = string.format("%02d:%02d", starthour, startminute);
 	end
+	]]
+	local TimeText = Event:GetFirstActiveTimeText();
+	lbTimeDesc:SetText(TimeText);
 	btIcon.EventId = Event:GetId(); -- TODO:点击事件的处理
 	btIcon.CalendarName = CalendarName;
 	
 	local image = EventDetailsTypeInfoList:GetImage(Event:GetDetailsType());
 	btIcon:SetNormalImage(image);
 	btIcon:SetPushedImage(image);
-	btIcon:SetHintText(Event:GetName());
+	btIcon:SetHintText(Event:GetName().." "..TimeText.."");
 	
 	self:Show();
 end
@@ -501,7 +560,7 @@ end
 local function RefreshCalendarData(name)
 	if not name then return end
 	local Name, EventCount = uiCalendarGetCalendarInfo(name);
-	if Name == nil or Name ~= name then CalendarList:DeleteCalendar(name) return end
+	if Name == nil or Name ~= name then CalendarList:DeleteCalendar(name) DayListInMonth:DeleteEvent(name) return end
 	local Calendar = CalendarList:GetCalendar(name);
 	Calendar:SetName(name);
 	local idlist = uiCalendarGetEventIdList(name);
@@ -530,14 +589,22 @@ function layWorld_frmCalendar_OnShow(self)
 	DayListInMonth:LoadAllEvent();
 	RefreshCalendarMonth(lbCalendarMonth);
 	uiGetglobal("layWorld.btShowCalendar"):Hide();
+	local cbxCalendarEventFilter = SAPI.GetChild(self, "cbxCalendarEventFilter");
+	cbxCalendarEventFilter:SelectItem(3);
 end
 
+function layWorld_frmCalendar_OnHide(self)
+	uiGetglobal("layWorld.frmCalenderUserEventCreate"):Hide();
+	uiGetglobal("layWorld.frmCalenderEventView"):Hide();
+	uiGetglobal("layWorld.frmCalenderUserEventView"):Hide();
+end
 
 function layWorld_frmCalendar_OnLoad(self)
 	self:RegisterScriptEventNotify("EVENT_CalendarUpdateOne");
 	self:RegisterScriptEventNotify("EVENT_CalendarEventSyncFromOther");
 	self:RegisterScriptEventNotify("EVENT_CalendarNewDay");
 	self:RegisterScriptEventNotify("EVENT_ToggleCalendar");
+	self:RegisterScriptEventNotify("EVENT_CalendarEventStart");
 end
 
 function layWorld_frmCalendar_OnEvent(self, event, args)
@@ -563,6 +630,13 @@ function layWorld_frmCalendar_OnEvent(self, event, args)
 		else
 			self:ShowAndFocus();
 		end
+	elseif event == "EVENT_CalendarEventStart" then
+		local CalendarName = args[1];
+		local EventId = args[2];
+		if CalendarName == USER_CALENDAR_NAME then return end
+		if self:getVisible() == false then
+			uiGetglobal("layWorld.btShowCalendar"):ShowAndFocus();
+		end
 	end
 end
 
@@ -587,25 +661,31 @@ end
 
 ------------------------------------------------
 
-local function UpdateCalendarEventList(self)
+local function UpdateCalendarEventList(self, form)
 	local edbDesc = SAPI.GetSibling(self, "edbDesc");
 	local Desc = "";
 	edbDesc:SetText(Desc);
 	self:RemoveAllLines(false);
 	FocusEventList = {};
+	local count = 0;
 	if FocusDayInMonth then
-		local count = 0;
 		for name, v in pairs(FocusDayInMonth.EventList) do
-			for i, v in ipairs(v) do
-				self:InsertLine(-1, -1, -1);
-				self:SetLineItem(count, 0, v:GetName(), -1);
-				table.insert(FocusEventList, v);
-				if ClickShortcutId == v:GetId() and ClickShortcutName == name then
-					self:SetSelect(count);
+			if name ~= USER_CALENDAR_NAME then
+				for i, v in ipairs(v) do
+					self:InsertLine(-1, -1, -1);
+					self:SetLineItem(count, 0, v:GetName(), -1);
+					self:SetLineItem(count, 1, v:GetFirstActiveTimeText(), -1);
+					table.insert(FocusEventList, v);
+					if ClickShortcutId == v:GetId() and ClickShortcutName == name then
+						self:SetSelect(count);
+					end
+					count = count + 1;
 				end
-				count = count + 1;
 			end
 		end
+	end
+	if count == 0 then
+		form:Hide();
 	end
 	ClickShortcutId = 0;
 end
@@ -613,16 +693,16 @@ local function UpdateCalendarEventView(self)
 	if not self then self = uiGetglobal("layWorld.frmCalenderEventView") end
 	if self:getVisible() == false then return end
 	local lsbEventName = SAPI.GetChild(self, "lsbEventName");
-	UpdateCalendarEventList(lsbEventName);
+	UpdateCalendarEventList(lsbEventName, self);
 end
-local function UpdateCalendarUserEventList(self)
+local function UpdateCalendarUserEventList(self, form)
 	local edbDesc = SAPI.GetSibling(self, "edbDesc");
 	local Desc = "";
 	edbDesc:SetText(Desc);
 	self:RemoveAllLines(false);
 	FocusUserEventList = {};
+	local count = 0;
 	if FocusDayInMonth then
-		local count = 0;
 		local v = FocusDayInMonth.EventList[USER_CALENDAR_NAME];
 		if v then
 			for i, v in ipairs(v) do
@@ -633,15 +713,17 @@ local function UpdateCalendarUserEventList(self)
 			end
 		end
 	end
-	ClickShortcutId = 0;
+	if count == 0 then
+		form:Hide();
+	end
 end
 local function UpdateCalendarUserEventView(self)
 	if not self then self = uiGetglobal("layWorld.frmCalenderUserEventView") end
 	if self:getVisible() == false then return end
 	local lsbEventName = SAPI.GetChild(self, "lsbEventName");
-	UpdateCalendarUserEventList(lsbEventName);
+	UpdateCalendarUserEventList(lsbEventName, self);
 end
-function frmCalendar_TemplateCalendarDay_OnLClick(self)
+local function DaySelected (self) -- self = "TemplateCalendarDay"
 	if FocusCalendarDay then FocusCalendarDay:SetChecked(false) end
 	self:SetChecked(true);
 	FocusCalendarDay = self;
@@ -654,17 +736,34 @@ function frmCalendar_TemplateCalendarDay_OnLClick(self)
 	UpdateCalendarUserEventView();
 	RefreshMonthText();
 end
+function frmCalendar_TemplateCalendarDay_OnLClick(self)
+	DaySelected (self);
+	if FocusDayInMonth.EventList[USER_CALENDAR_NAME] then
+		uiGetglobal("layWorld.frmCalenderUserEventView"):ShowAndFocus();
+	else
+		local count = 0;
+		for k, v in pairs(FocusDayInMonth.EventList) do
+			count = count + 1;
+		end
+		if count > 0 then
+			uiGetglobal("layWorld.frmCalenderEventView"):ShowAndFocus();
+		else
+			uiGetglobal("layWorld.frmCalenderUserEventView"):Hide();
+			uiGetglobal("layWorld.frmCalenderEventView"):Hide();
+		end
+	end
+end
 function frmCalendar_TemplateLabelEventShortcut_OnLClick(self)
 	ClickShortcutId = self.EventId;
 	ClickShortcutName = self.CalendarName;
-	frmCalendar_TemplateCalendarDay_OnLClick(SAPI.GetParent(SAPI.GetParent(self)));
+	DaySelected(SAPI.GetParent(SAPI.GetParent(self)));
 	local frmCalenderEventView = uiGetglobal("layWorld.frmCalenderEventView");
 	if frmCalenderEventView:getVisible() == false then
 		frmCalenderEventView:ShowAndFocus();
 	end
 end
 function frmCalendar_TemplateCalendarDay_btUserEvent_OnLClick(self)
-	frmCalendar_TemplateCalendarDay_OnLClick(SAPI.GetParent(self));
+	DaySelected(SAPI.GetParent(self));
 	uiGetglobal("layWorld.frmCalenderUserEventView"):ShowAndFocus();
 end
 function layWorld_frmCalendarEventView_lsbEventName_OnSelect(self)
@@ -679,6 +778,7 @@ end
 
 function layWorld_frmCalendarEventView_OnShow(self)
 	UpdateCalendarEventView(self);
+	uiGetglobal("layWorld.frmCalenderUserEventView"):Hide();
 end
 
 function layWorld_frmCalenderUserEventView_lsbEventName_OnSelect(self)
@@ -698,6 +798,7 @@ end
 
 function layWorld_frmCalenderUserEventView_OnShow(self)
 	UpdateCalendarUserEventView(self);
+	uiGetglobal("layWorld.frmCalenderEventView"):Hide();
 end
 
 function layWorld_frmCalendarUserEventView_btDelete_OnLClick(self)
@@ -711,11 +812,16 @@ function layWorld_frmCalendarUserEventView_btDelete_OnLClick(self)
 end
 
 function layWorld_frmCalenderUserEventCreate_btCreate_OnLClick(self)
+	if DayListInMonth:IsBeforeToday(FocusYear, FocusMonth, FocusDayInMonth.DayInMonth) then
+		uiMessageBox(LAN("msg_calendar_create_event_error_before_today"),"",true,false,true);
+		return;
+	end
 	if not FocusDayInMonth then uiClientMsg(LAN("msg_calendar_create_event_error5"), true) return end
 	local edbName = SAPI.GetSibling(self, "edbName");
 	local edbDesc = SAPI.GetSibling(self, "edbDesc");
 	local edbRecever = SAPI.GetSibling(self, "edbRecever");
-	if uiCalendarCreateUserEvent(edbName:getText(), edbDesc:getText(), edbRecever:getText(), DayListInMonth.Year, DayListInMonth.Month, FocusDayInMonth.DayInMonth) == true then
+	local DoSync = SAPI.GetSibling(self, "cbDoSync"):getChecked();
+	if uiCalendarCreateUserEvent(edbName:getText(), edbDesc:getText(), edbRecever:getText(), DoSync, DayListInMonth.Year, DayListInMonth.Month, FocusDayInMonth.DayInMonth) == true then
 		-- 成功发送到服务器,等待服务器返回
 		self:Disable();
 	end

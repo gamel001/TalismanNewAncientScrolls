@@ -4,41 +4,41 @@
   <Theme Name="layCreateChar2">
     <Templates>
       <CheckButton Inherit="" Name="CharacterSelectionTemplate" Show="false" Size="144,46">
-        <CheckButton CheckStyle="false" Inherit="" Location="70,0,58,12" MouseEvent="false" MouseMove="false" Name="ckbParty" Show="true" Size="95,12" Text="">
+        <CheckButton CheckStyle="false" Inherit="" Location="70,0,58,15" MouseEvent="false" MouseMove="false" Name="ckbParty" Show="true" Size="95,15" Text="">
           <Anchors>
             <Anchor offset="-1,0" point="CENTERH"/>
-            <Anchor offset="0,10" point="TOP"/>
+            <Anchor offset="0,7" point="TOP"/>
           </Anchors>
-          <NormalImage File="" Source=""/>
-          <PushedImage File="" Source=""/>
+          <NormalImage File="tz_013" Source="417,11,95,15"/>
+          <PushedImage File="tz_013" Source="417,80,95,15"/>
           <DisabledImage File="" Source=""/>
-          <CheckImage File="" Source=""/>
-          <HighlightCheckArea File="" Source=""/>
+          <CheckImage File="tz_013" Source="417,80,95,15"/>
+          <HighlightCheckArea File="tz_013" Source="417,80,95,15"/>
         </CheckButton>
-        <CheckButton CheckStyle="false" Inherit="" Location="0,0,25,15" Name="ckbMale" Show="true" Size="47,16" Text="$L:215$">
+        <CheckButton CheckStyle="false" Inherit="" Location="0,0,29,15" Name="ckbMale" Show="true" Size="47,16" Text="$L:215$">
           <Anchors>
             <Anchor point="LEFT" relativeTo="ckbParty"/>
-            <Anchor offset="0,2" point="TOP" relativePoint="BOTTOM" relativeTo="ckbParty"/>
+            <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="ckbParty"/>
           </Anchors>
-          <NormalImage File="" Source=""/>
-          <PushedImage File="" Source=""/>
+          <NormalImage File="tz_013" Source="416,33,47,16"/>
+          <PushedImage File="tz_013" Source="412,112,47,15"/>
           <DisabledImage File="" Source=""/>
-          <CheckImage File="" Source=""/>
-          <HighlightCheckArea File="" Source=""/>
+          <CheckImage File="tz_013" Source="412,112,47,15"/>
+          <HighlightCheckArea File="tz_013" Source="412,112,47,15"/>
           <Scripts>
             <OnLClick>CharacterSelection_ckbMale_OnLClick(self);</OnLClick>
           </Scripts>
         </CheckButton>
-        <CheckButton CheckStyle="false" Inherit="" Location="110,0,25,15" Name="ckbFemale" Show="true" Size="47,16" Text="$L:216$">
+        <CheckButton CheckStyle="false" Inherit="" Location="110,0,29,15" Name="ckbFemale" Show="true" Size="47,16" Text="$L:216$">
           <Anchors>
             <Anchor offset="1,0" point="RIGHT" relativeTo="ckbParty"/>
-            <Anchor offset="0,2" point="TOP" relativePoint="BOTTOM" relativeTo="ckbParty"/>
+            <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="ckbParty"/>
           </Anchors>
-          <NormalImage File="" Source=""/>
-          <PushedImage File="" Source=""/>
+          <NormalImage File="tz_013" Source="465,34,47,15"/>
+          <PushedImage File="tz_013" Source="465,112,47,15"/>
           <DisabledImage File="" Source=""/>
-          <CheckImage File="" Source=""/>
-          <HighlightCheckArea File="" Source=""/>
+          <CheckImage File="tz_013" Source="465,112,47,15"/>
+          <HighlightCheckArea File="tz_013" Source="465,112,47,15"/>
           <Scripts>
             <OnLClick>CharacterSelection_ckbFemale_OnLClick(self);</OnLClick>
           </Scripts>
@@ -47,11 +47,11 @@
           <OnLoad>CharacterSelection_OnLoad(self);</OnLoad>
           <OnLClick>CharacterSelection_OnLClick(self);</OnLClick>
         </Scripts>
-        <NormalImage File="cgz_design2" Source="254,2,200,75"/>
-        <DisabledImage File="cgz_design2" Source="254,78,200,75"/>
-        <PushedImage File="cgz_design2" Source="254,78,200,75"/>
-        <HighlightImage File="cgz_design2" Source="254,2,200,75"/>
-        <CheckImage File="cgz_design2" Source="254,78,200,75"/>
+        <NormalImage File="tz_013" Source="256,49,144,46"/>
+        <DisabledImage File="tz_013" Source="256,49,144,46"/>
+        <PushedImage File="tz_013" Source="256,0,144,46"/>
+        <HighlightImage File="tz_013" Source="256,0,144,46"/>
+        <CheckImage File="tz_013" Source="256,0,144,46"/>
       </CheckButton>
       <Label Inherit="" Name="CharacterAttributeSelectionTemplate1" Show="true" Size="215,18">
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="0,0,68,18" Name="lbTitle" Show="true">
@@ -62,7 +62,7 @@
             <Anchor offset="5,0" point="LEFT" relativePoint="RIGHT" relativeTo="lbTitle"/>
             <Anchor offset="0,2" point="TOP"/>
           </Anchors>
-          <NormalImage File="cgz_design" Source="8,159,22,21"/>
+          <NormalImage File="tz_010" Source="50,382,14,14"/>
           <PushedImage File="" Source=""/>
           <Scripts>
             <OnLClick>CharacterAttributeSelection_btLeft_OnLClick(self);</OnLClick>
@@ -73,7 +73,7 @@
             <Anchor offset="0,0" point="RIGHT"/>
             <Anchor offset="0,2" point="TOP"/>
           </Anchors>
-          <NormalImage File="cgz_design" Source="32,159,22,21"/>
+          <NormalImage File="tz_010" Source="75,382,14,14"/>
           <PushedImage File="" Source=""/>
           <Scripts>
             <OnLClick>CharacterAttributeSelection_btRight_OnLClick(self);</OnLClick>
@@ -340,10 +340,10 @@
             <Anchor offset="0,20" point="TOP"/>
           </Anchors>
           <Label Name="lbTitle" Text="$L:210$">
-            <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+            <BackgroundImage File="tz_010" Source="315,196,92,24"/>
           </Label>
           <Label Name="lbDesc" Text="default">
-            <BackgroundImage File="cgz_design4" Source="282,262,222,34"/>
+            <BackgroundImage File="tz_012" Source="364,368,149,25"/>
           </Label>
         </Label>
         <Label Inherit="CharacterAttributeSelectionTemplate1" Location="416,21,180,50" Name="TypeSelection1" Show="true">
@@ -352,21 +352,21 @@
             <Anchor offset="0,10" point="TOP" relativePoint="BOTTOM" relativeTo="TypeSelection0"/>
           </Anchors>
           <Label Name="lbTitle" Text="$L:211$">
-            <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+            <BackgroundImage File="tz_010" Source="315,196,92,24"/>
           </Label>
           <Label Name="lbDesc" Text="default">
-            <BackgroundImage File="cgz_design4" Source="282,262,222,34"/>
+            <BackgroundImage File="tz_012" Source="364,368,149,25"/>
           </Label>
         </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="20,75,65,18" Name="lbName" Show="true" Size="65,18" Text="$L:212$">
-          <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+          <BackgroundImage File="tz_010" Source="315,196,92,24"/>
           <Anchors>
             <Anchor offset="20,0" point="LEFT"/>
             <Anchor offset="0,-20" point="BOTTOM"/>
           </Anchors>
         </Label>
-        <EditBox Inherit="" Location="96,203,140,22" MaxChar="16" MouseMove="true" Name="edbCharName" Show="true" Size="140,18">
-          <BackgroundImage File="cgz_design4" Source="282,262,222,34"/>
+        <EditBox Inherit="" Location="96,203,140,18" MaxChar="16" MouseMove="true" Name="edbCharName" Show="true" Size="140,18">
+          <BackgroundImage File="tz_012" Source="364,368,149,25"/>
           <Anchors>
             <Anchor point="TOP" relativeTo="lbName"/>
             <Anchor offset="10,0" point="LEFT" relativePoint="RIGHT" relativeTo="lbName"/>
@@ -382,28 +382,28 @@
           <Anchor point="CENTERH"/>
           <Anchor offset="0,-110" point="BOTTOM" relativePoint="BOTTOM"/>
         </Anchors>
-        <Button Inherit="" Location="0,0,54,54" Name="btNewRight" Show="true" Size="32,32">
+        <Button Inherit="" Location="0,0,34,34" Name="btNewRight" Show="true" Size="32,32">
           <Anchors>
             <Anchor point="RIGHT"/>
             <Anchor point="TOP"/>
           </Anchors>
-          <NormalImage File="cgz_design2" Source="455,66,54,54"/>
+          <NormalImage File="tz_011" Source="0,256,32,32"/>
           <HighlightImage File="" Source=""/>
-          <PushedImage File="cgz_design2" Source="351,155,51,51"/>
+          <PushedImage File="tz_011" Source="34,256,32,32"/>
           <Scripts>
             <OnLDown>uiCharStartTurnRight();</OnLDown>
             <OnLUp>uiCharStopTurn();</OnLUp>
             <OnLeave>uiCharStopTurn();</OnLeave>
           </Scripts>
         </Button>
-        <Button Inherit="" Location="10,10,54,54" Name="btNewLeft" Show="true" Size="32,32">
+        <Button Inherit="" Location="10,10,34,34" Name="btNewLeft" Show="true" Size="32,32">
           <Anchors>
             <Anchor point="LEFT"/>
             <Anchor point="TOP"/>
           </Anchors>
-          <NormalImage File="cgz_design2" Source="455,6,54,54"/>
+          <NormalImage File="tz_011" Source="68,256,32,32"/>
           <HighlightImage File="" Source=""/>
-          <PushedImage File="cgz_design2" Source="298,155,51,51"/>
+          <PushedImage File="tz_011" Source="102,256,32,32"/>
           <Scripts>
             <OnLDown>uiCharStartTurnLeft();</OnLDown>
             <OnLUp>uiCharStopTurn();</OnLUp>

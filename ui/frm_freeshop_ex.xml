@@ -8,14 +8,14 @@
         <BackgroundImage File="" Source="0,0,255,75"/>
       </Label>
       <Label Inherit="bg3" Location="45,85,218,149" Name="22331" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="17,1,274,50" Name="26182" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="18,1,272,50" Name="26182" Show="true"/>
       <TitleBarButton Location="12,6,280,28"/>
-      <CloseButton Location="255,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="260,31,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Label AlignCol="CENTER" AlignLine="CENTER" ColSpacing="6" LineSpacing="3" Location="52,54,207,24" MouseEvent="true" MouseMove="true" Name="lbShopAD" Show="true" Text="1111">
-        <BackgroundImage File="cgz_design" Source="5,103,205,27"/>
+        <BackgroundImage File="tz_010" Source="252,323,207,24"/>
       </Label>
       <Label Inherit="" Location="48,89,213,141" Name="620" Show="true">
         <BackgroundImage File="tz_011" Source="298,2,213,141"/>
@@ -28,7 +28,7 @@
           <OnLClick>layWorld_frmFreeShopEx_btCancelStall_OnLClick(self);</OnLClick>
         </Scripts>
       </Button>
-      <Button Inherit="PushButton" Location="192,242,70,20" Name="btSetAD" Show="true" Text="$L:928$">
+      <Button Inherit="PushButton" Location="119,242,70,20" Name="btSetAD" Show="true" Text="$L:928$">
         <Scripts>
           <OnLClick>layWorld_frmFreeShopEx_btSetAD_OnLClick(self);</OnLClick>
         </Scripts>
@@ -333,7 +333,7 @@
           <OnHint>layWorld_frmFreeShopEx_btnCustom_D_OnHint(self,30);</OnHint>
         </Scripts>
       </Button>
-      <Button Inherit="PushButton" Location="192,242,70,20" Name="btHistory" Show="false" Text="$L:966$">
+      <Button Inherit="PushButton" Location="192,242,70,20" Name="btHistory" Show="true" Text="$L:966$">
         <Scripts>
           <OnLClick>layWorld_frmFreeShopEx_btHistory_OnLClick(self);</OnLClick>
         </Scripts>
@@ -343,7 +343,7 @@
           <OnLClick>layWorld_frmFreeShopEx_btStallTalk_OnLClick(self);</OnLClick>
         </Scripts>
       </Button>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="95,-5,120,68" Name="lbStallOwner" Show="true" Text="$L:926$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="95,0,120,68" Name="lbStallOwner" Show="true" Text="$L:926$"/>
       <Scripts>
         <OnLoad>layWorld_frmFreeShopEx_OnLoad(self);</OnLoad>
         <OnEvent>layWorld_frmFreeShopEx_OnEvent(self,event,arg);</OnEvent>

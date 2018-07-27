@@ -1,4 +1,7 @@
 
+local NoDeadMsgBox = nil;
+local SuperNoDeadMsgBox = nil;
+
 function layWorld_frmDeadEx_OnLoad(self)
 	self:RegisterScriptEventNotify("EVENT_SelfDie");
 	self:RegisterScriptEventNotify("EVENT_SelfRevive");
@@ -25,10 +28,26 @@ end
 
 function layWorld_frmDeadEx_OnEvent_SelfRevive(self, event, args)
 	self:Hide();
+	NoDeadMsgBox = nil;
+	SuperNoDeadMsgBox = nil;
 end
 
 
 function layWorld_frmDeadEx_btRewardOk_OnLCLick(self)
+	if SuperNoDeadMsgBox then
+		local frmNoDead = uiGetglobal(SuperNoDeadMsgBox);
+		if frmNoDead and frmNoDead:getVisible() then
+			uiClientMsg(LAN("msg_super_no_dead_cancel_first"), true)
+			return;
+		end
+	end
+	if NoDeadMsgBox and uiGetglobal(NoDeadMsgBox) then
+		local frmNoDead = uiGetglobal(NoDeadMsgBox);
+		if frmNoDead and frmNoDead:getVisible() then
+			uiClientMsg(LAN("msg_no_dead_cancel_first"), true)
+			return;
+		end
+	end
 	uiUserRevive();
 end
 
@@ -62,11 +81,13 @@ function layWorld_frmDeadEx_OnUpdate(self, delta)
 			if (uiUserCanReviveWithItem(EV_ITEM_TYPE_NODEAD)) == true then
 				if nExp and nExp > 0.5 then
 					local frame = uiMessageBox(LAN("msg_no_dead_request"), "", true, true, false);
+					NoDeadMsgBox = frame:getName();
 					SAPI.AddDefaultMessageBoxCallBack(frame, function() uiUserReviveWithItem(EV_ITEM_TYPE_NODEAD) end, function() uiUserExcludeItemTypeForAutoRevive(EV_ITEM_TYPE_NODEAD) end, nil, function(event, arg1, arg2, box, frame) if uiUserIsDead() ~= true then frame:Hide() end end);
 				end
 			end
 			if (uiUserCanReviveWithItem(EV_ITEM_TYPE_NODEAD_SUPER)) == true then
 				local frame = uiMessageBox(LAN("msg_super_no_dead_request"), "", true, true, false);
+				SuperNoDeadMsgBox = frame:getName();
 				SAPI.AddDefaultMessageBoxCallBack(frame, function() uiUserReviveWithItem(EV_ITEM_TYPE_NODEAD_SUPER) end, function() uiUserExcludeItemTypeForAutoRevive(EV_ITEM_TYPE_NODEAD_SUPER) end, nil, function(event, arg1, arg2, box, frame) if uiUserIsDead() ~= true then frame:Hide() end end);
 			end
 		end

@@ -8,25 +8,25 @@
       <Label Inherit="" Location="-2,254,266,80" Name="lbPlayer2" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <Label Inherit="TemplateNormalTitle" Location="4,2,294,50" Name="11796" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="5,2,292,50" Name="11796" Show="true"/>
       <Label Inherit="bg3" Location="26,85,250,215" Name="5063" Show="true"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="36,54,160,24" Name="lbPlayerName" Show="true" Text="111111" TextColor="#ffe0d020" TextFont="$L:1$" TextSize="$L:4$">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="36,54,147,24" Name="lbPlayerName" Show="true" Text="111111" TextColor="#ffe0d020" TextFont="$L:1$" TextSize="$L:4$">
+        <BackgroundImage File="tz_010" Source="181,351,147,24"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,127,120,20" Name="lbPlayerSchoolName" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Label AlignLine="CENTER" Inherit="" Location="42,154,60,20" Name="3113" Show="true" Text="$L:609$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,154,120,20" Name="lbLocation" Show="true" Text="">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Label AlignLine="CENTER" Inherit="" Location="42,183,60,20" Name="3210" Show="true" Text="$L:610$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,182,120,20" Name="lbGuildLev" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Label AlignLine="CENTER" Inherit="" Location="42,242,70,20" Name="3283" Show="true" Text="$L:611$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,242,120,20" Name="lbLastOnline" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Button Inherit="PushButton" Location="49,311,70,20" Name="btMove" Show="true" Text="$L:613$">
         <Scripts>
@@ -41,55 +41,52 @@
       <Label AlignLine="CENTER" Inherit="" Location="42,126,60,20" Name="4447" Show="true" Text="$L:615$"/>
       <Label AlignLine="CENTER" Inherit="" Location="42,99,60,20" Name="4495" Show="true" Text="$L:616$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,99,120,20" Name="lblev" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Button Inherit="" Location="235,185,14,14" Name="btleft" Show="true">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010" Source="50,382,14,14"/>
+        <PushedImage File="tz_010" Source="50,399,14,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGMemberInfoEx_btleft_OnLClick()</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="251,185,14,14" Name="btright" Show="true">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010" Source="75,382,14,14"/>
+        <PushedImage File="tz_010" Source="75,399,14,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGMemberInfoEx_btright_OnLClick()</OnLClick>
         </Scripts>
       </Button>
       <Label AlignLine="CENTER" Inherit="" Location="42,214,70,20" Name="2443" Show="true" Text="$L:1056$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,214,120,20" Name="lbChangeLocalGuild" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Button Inherit="" Location="235,217,14,14" Name="btLocalGuildLeft" Show="true">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010" Source="50,382,14,14"/>
+        <PushedImage File="tz_010" Source="50,399,14,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGMemberInfoEx_btLocalGuildLeft_OnLClick()</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="251,217,14,14" Name="btLocalGuildRight" Show="true">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010" Source="75,382,14,14"/>
+        <PushedImage File="tz_010" Source="75,399,14,14"/>
         <Scripts>
           <OnLClick>layWorld_frmGMemberInfoEx_btLocalGuildRight_OnLClick()</OnLClick>
         </Scripts>
       </Button>
-	  	 <Label Inherit="" Location="115,14,81,20" Name="Name37" Show="true">
-          <BackgroundImage File="cgz_design25" Source="774,257,163,29"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="89,-5,124,70" Name="3300" Show="false" Text="$L:1048$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="89,0,124,70" Name="3300" Show="true" Text="$L:1048$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Anchors>
         <Anchor point="TOP" relativeTo="layWorld.frmGuildIndexPageEx"/>
         <Anchor offset="8,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.frmGuildIndexPageEx"/>
       </Anchors>
-      <CloseButton Location="260,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="267,30,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Label AlignLine="CENTER" Inherit="" Location="42,270,70,20" Name="2474" Show="true" Text="$L:612$"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="100,270,150,20" Name="lbnickname" Show="true">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="111,270,120,20" Name="lbnickname" Show="true">
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </Label>
       <Scripts>
         <OnShow>uiRegisterEscWidget(self)</OnShow>
@@ -116,7 +113,7 @@
     </Form>
     <Form Inherit="" Location="611,313,300,230" Name="frmNewGuildEx" Show="false">
       <Label Inherit="bg1" Location="10,19,280,210" Name="lbPlayer1" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="3,2,294,50" Name="12533" Show="true">
+      <Label Inherit="TemplateNormalTitle" Location="4,2,292,30" Name="12533" Show="true">
         <Label Name="lbTitelText" Show="false"/>
       </Label>
       <Label AlignLine="CENTER" Inherit="" Location="32,41,80,20" Name="lbNewGuildName" Show="true" Text="$L:620$"/>
@@ -133,13 +130,13 @@
       <Label AlignLine="CENTER" Inherit="" Location="32,64,180,20" Name="6854" Show="true" Text="$L:621$"/>
       <Label Inherit="bg3" Location="33,83,230,80" Name="5356" Show="true"/>
       <EditBox EnableInput="false" Inherit="" Location="36,87,225,75" MultiLine="true" Name="lbNewGuildInfo" Show="true" Text="$L:755$" WordWrap="true"/>
-      <EditBox Inherit="DefaultEdit" Location="107,41,160,20" Name="edtGuildName" Show="true">
-        <BackgroundImage File="cgz_design4" Source="283,263,220,32"/>
+      <EditBox Inherit="DefaultEdit" Location="115,41,150,20" Name="edtGuildName" Show="true">
+        <BackgroundImage File="tz_011" Source="84,0,161,21"/>
       </EditBox>
       <TitleBarButton Location="9,2,280,25" Text="" TextFont="$L:1$" TextSize="$L:4$"/>
-      <CloseButton Location="260,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="266,26,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13 "/>
       </CloseButton>
       <Scripts>
         <OnShow>uiRegisterEscWidget(self)</OnShow>
@@ -152,7 +149,7 @@
 				 end</OnEvent>
       </Scripts>
       <CheckButton Inherit="DefaultChkBtn" Location="59,167,180,22" Name="cbUseItem" Show="true" Text="$L:1263$">
-        <BackgroundImage File="cgz_design" Source="5,103,205,27"/>
+        <BackgroundImage File="tz_012" Source="364,368,148,25"/>
       </CheckButton>
     </Form>
   </Layer>

@@ -117,6 +117,22 @@ function layWorld_btnPVE_OnEvent(self, event, args)
 	end
 end
 
+function layWorld_frmLargescalePVE_lbLeftTime_OnUpdate(self, delta)
+	if not self.EndTime then self:Hide() return end
+	local now = uiGetServerLocalTime();
+	local left = self.EndTime - now;
+	if 0 > left then
+		self.EndTime = nil;
+		self:SetText("");
+	else
+		local h = math.floor(math.mod(left / 3600, 3600));
+		local m = math.floor(math.mod(left / 60, 60));
+		local s = math.floor(math.mod(left, 60));
+		local timestring = string.format("%02d:%02d:%02d", h, m, s);
+		self:SetText(timestring);
+	end
+end
+
 function layWorld_frmLargescalePVE_OnLoad(self)
 	self:RegisterScriptEventNotify("Event_UpdatePevInfo");
 end
@@ -130,6 +146,16 @@ function layWorld_frmLargescalePVE_OnEvent(self, event, args)
 end
 
 function layWorld_frmLargescalePVE_OnShow(self)
+	local EventList = API_FindEventByDetailsType(12);
+	for i, v in ipairs(EventList) do
+		local now = uiGetServerLocalTime();
+		local year, month, day, hour, minute, second, msecond, dayinweek = uiFormatTime(now);
+		local starthour, startminute, endhour, endminute = v:GetFirstActiveTime();
+		local lbLeftTime = SAPI.GetChild(self, "lbLeftTime");
+		lbLeftTime.EndTime = now + (os.time({year=year,month=month,day=day,hour=endhour,min=endminute,sec=0}) - os.time({year=year,month=month,day=day,hour=hour,min=minute,sec=0}));
+		lbLeftTime:Show();
+		break;
+	end
 	UpdateLargescalePVE(self);
 	if NeedUpdatePveInfo == true then
 		uiPveUpdateInfo();

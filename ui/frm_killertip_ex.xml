@@ -45,7 +45,7 @@
           <OnLClick>layWorld_frmKillerTipEx_btCancleKill_OnLClick()</OnLClick>
         </Scripts>
       </Button>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="6,-5,282,70" Name="lbLootTitle" Show="true" Text="$L:945$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="6,0,282,70" Name="lbLootTitle" Show="true" Text="$L:945$" TextFont="$L:1$" TextSize="$L:3$"/>
       <EditBox ColSpacing="4" Inherit="" LineSpacing="4" Location="130,116,110,20" Name="edbKillerName" Show="true" WordWrap="false">
         <BackgroundImage File="tz_011" Source="84,0,160,20"/>
       </EditBox>
@@ -60,7 +60,7 @@
       </Button>
       <Label Inherit="" Location="30,153,100,20" Name="945" Show="false" Text="$L:938$"/>
       <Label Inherit="" Location="198,61,80,20" Name="1046" Show="false" Text="$L:941$"/>
-      <CheckButton CheckStyle="true" Inherit="DefaultChkBtn" Location="42,87,182,20" Name="cbAddname" Show="true" Text="$L:942$">
+      <CheckButton CheckStyle="true" Inherit="DefaultChkBtn" Location="42,87,150,20" Name="cbAddname" Show="true" Text="$L:942$">
         <BackgroundImage File="tz_012" Source="364,368,148,25"/>
       </CheckButton>
       <CheckButton CheckStyle="true" Inherit="DefaultChkBtn" Location="42,180,150,20" Name="cbGamemoney" Show="false" Text="$L:939$">
@@ -71,9 +71,9 @@
       </CheckButton>
       <CheckButton CheckStyle="true" Inherit="DefaultChkBtn" Location="32,110,110,20" Name="cbDimond" Show="false" Text="$L:940$"/>
       <TitleBarButton Location="0,0,294,30"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnShow>layWorld_frmKillerTipEx_OnShow(self)</OnShow>

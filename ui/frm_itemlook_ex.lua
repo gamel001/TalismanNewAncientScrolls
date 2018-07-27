@@ -1,17 +1,17 @@
 
--- 刷新指定装备
+-- 脣垄脨脗脰赂露篓脳掳卤赂
 function TemplateBtnOtherEquip_Refresh(self)
 	local part = self:Get(EV_UI_EQUIP_PART_KEY);
-	local id, classid = uiSeeEquipGetCurEquipItemByPart(part); -- 获取此部位的当前装备
+	local id, classid = uiSeeEquipGetCurEquipItemByPart(part); -- 禄帽脠隆麓脣虏驴脦禄碌脛碌卤脟掳脳掳卤赂
 	if id == nil or id == 0 or classid == nil or classid == 0 then
 		self:Delete(EV_UI_SHORTCUT_OBJECTID_KEY);
 		self:Delete(EV_UI_SHORTCUT_CLASSID_KEY);
-		self:SetNormalImage(0); -- 清除图标
+		self:SetNormalImage(0); -- 脟氓鲁媒脥录卤锚
 	else
 		self:Set(EV_UI_SHORTCUT_OBJECTID_KEY, id);
 		self:Set(EV_UI_SHORTCUT_CLASSID_KEY, classid);
-		local tableInfo = uiItemGetItemClassInfoByTableIndex(classid); -- 道具的静态信息
-		self:SetNormalImage(SAPI.GetImage(tableInfo.Icon)); -- 设置图标
+		local tableInfo = uiItemGetItemClassInfoByTableIndex(classid); -- 碌脌戮脽碌脛戮虏脤卢脨脜脧垄
+		self:SetNormalImage(SAPI.GetImage(tableInfo.Icon)); -- 脡猫脰脙脥录卤锚
 	end
 end
 function layWorld_frmItemlookEx_modelOther_RefreshPart(self, part)
@@ -73,30 +73,30 @@ function layWorld_frmItemlookEx_modelOther_Refresh(self)
 	self:SetModel(model);
 	self:LoadSkin("head", head);
 	self:LoadSkin("hair", hair);
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_MAINTRUMP);			--主法宝
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SUBTRUMP1);            --辅助法宝1
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SUBTRUMP2);            --辅助法宝2
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CLOTHING);             --盔甲
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_GLOVE);                --手套
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SHOES);                --鞋子
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CUFF);                 --护腕
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_KNEEPAD);              --护膝
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SASH);                 --腰带
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_RING1);                --戒指1
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_RING2);                --戒指2
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_AMULET1);              --护身符1
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_AMULET2);              --护身符2
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_PANTS);                --裤子
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CLOAK);                --披风
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_HELM);                 --头盔
-	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SHOULDER);             --护肩
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_MAINTRUMP);			--脰梅路篓卤娄
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SUBTRUMP1);            --赂篓脰煤路篓卤娄1
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SUBTRUMP2);            --赂篓脰煤路篓卤娄2
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CLOTHING);             --驴酶录脳
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_GLOVE);                --脢脰脤脳
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SHOES);                --脨卢脳脫
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CUFF);                 --禄陇脥贸
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_KNEEPAD);              --禄陇脧楼
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SASH);                 --脩眉麓酶
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_RING1);                --陆盲脰赂1
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_RING2);                --陆盲脰赂2
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_AMULET1);              --禄陇脡铆路没1
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_AMULET2);              --禄陇脡铆路没2
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_PANTS);                --驴茫脳脫
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_CLOAK);                --脜没路莽
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_HELM);                 --脥路驴酶
+	layWorld_frmItemlookEx_modelOther_RefreshPart(self, EV_EQUIP_PART_SHOULDER);             --禄陇录莽
 end
--- 刷新所有装备
+-- 脣垄脨脗脣霉脫脨脳掳卤赂
 function TemplateBtnOtherEquip_RefreshAll()
 	local form = uiGetglobal("layWorld.frmItemlookEx");
 	for i = 0,13,1 do
 		local btPart = SAPI.GetChild(form, "btPart"..i);
-		TemplateBtnOtherEquip_Refresh(btPart); -- 逐个刷新
+		TemplateBtnOtherEquip_Refresh(btPart); -- 脰冒赂枚脣垄脨脗
 	end
 	local modelOther = SAPI.GetChild(form, "modelOther");
 	layWorld_frmItemlookEx_modelOther_Refresh(modelOther);
@@ -108,26 +108,27 @@ function TemplateBtnOtherEquip_OnEvent(self, event, Arg)
 	if event == "EVENT_SelfEnterWorld" then
 		local t_equip_part =
 		{
-			["btPart0"] = EV_EQUIP_PART_CLOTHING,	-- 盔甲
-			["btPart1"] = EV_EQUIP_PART_SASH,		--  腰带
-			["btPart2"] = EV_EQUIP_PART_CUFF,		--  护腕
-			["btPart3"] = EV_EQUIP_PART_GLOVE,		--  手套
-			["btPart4"] = EV_EQUIP_PART_KNEEPAD,	--  护膝
-			["btPart5"] = EV_EQUIP_PART_MAINTRUMP,	--  主法宝
-			["btPart6"] = EV_EQUIP_PART_SUBTRUMP1,	--  辅助法宝
-			["btPart7"] = EV_EQUIP_PART_SUBTRUMP2,	--  辅助法宝
-			["btPart8"] = EV_EQUIP_PART_SHOES,		--  鞋子
-			["btPart9"] = EV_EQUIP_PART_AMULET1,	--  护身符
-			["btPart10"] = EV_EQUIP_PART_AMULET2,	--  护身符
-			["btPart11"] = EV_EQUIP_PART_RING1,		--  戒指
-			["btPart12"] = EV_EQUIP_PART_RING2,		--  戒指
-			["btPart13"] = EV_EQUIP_PART_PANTS,		--  戒指
+			["btPart0"] = EV_EQUIP_PART_CLOTHING,	-- 驴酶录脳
+			["btPart1"] = EV_EQUIP_PART_SASH,		--  脩眉麓酶
+			["btPart2"] = EV_EQUIP_PART_CUFF,		--  禄陇脥贸
+			["btPart3"] = EV_EQUIP_PART_GLOVE,		--  脢脰脤脳
+			["btPart4"] = EV_EQUIP_PART_KNEEPAD,	--  禄陇脧楼
+			["btPart5"] = EV_EQUIP_PART_MAINTRUMP,	--  脰梅路篓卤娄
+			["btPart6"] = EV_EQUIP_PART_SUBTRUMP1,	--  赂篓脰煤路篓卤娄
+			["btPart7"] = EV_EQUIP_PART_SUBTRUMP2,	--  赂篓脰煤路篓卤娄
+			["btPart8"] = EV_EQUIP_PART_SHOES,		--  脨卢脳脫
+			["btPart9"] = EV_EQUIP_PART_AMULET1,	--  禄陇脡铆路没
+			["btPart10"] = EV_EQUIP_PART_AMULET2,	--  禄陇脡铆路没
+			["btPart11"] = EV_EQUIP_PART_RING1,		--  陆盲脰赂
+			["btPart12"] = EV_EQUIP_PART_RING2,		--  陆盲脰赂
+			["btPart13"] = EV_EQUIP_PART_PANTS,		--  陆盲脰赂
+			["btPart14"] = EV_EQUIP_PART_CLOAK,		--  陆盲脰赂
 		}
 		local name = self:getShortName();
 		self:Set(EV_UI_EQUIP_PART_KEY, t_equip_part[name]);
 	end
 end
--- 触发Hint
+-- 麓楼路垄Hint
 function TemplateBtnOtherEquip_OnHint(self)
 	local part = self:Get(EV_UI_EQUIP_PART_KEY);
 	if part == nil then self:SetHintRichText(0); return end

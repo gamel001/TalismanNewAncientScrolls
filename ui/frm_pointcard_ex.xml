@@ -27,16 +27,16 @@
 				<BackgroundImage File="tz_011" Source="0,0,80,20"/>
 			</EditBox>
 			<Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="44,60,96,18" Name="2423" Show="true" Text="$L:642$">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+				<BackgroundImage File="tz_012" Source="364,327,149,25"/>
 			</Label>
 			<Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="44,89,96,18" Name="2557" Show="true" Text="$L:643$">
-        <BackgroundImage File="cgz_design" Source="6,103,204,27"/>
+				<BackgroundImage File="tz_012" Source="364,327,149,25"/>
 			</Label>
 			<Label Inherit="" Location="57,114,180,60" Name="lbCardTips" Show="true"/>
 			<TitleBarButton Location="0,0,294,28"/>
-			<CloseButton Location="257,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+			<CloseButton Location="264,29,13,13">
+				<NormalImage File="tz_010" Source="120,383,13,13"/>
+				<PushedImage File="tz_010" Source="98,383,13,13"/>
 			</CloseButton>
 			<Scripts>
 				<OnUpdate>layWorld_frmPointCardEx_OnUpdate(self,delta);</OnUpdate>

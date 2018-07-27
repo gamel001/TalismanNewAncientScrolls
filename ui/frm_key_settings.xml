@@ -2,9 +2,9 @@
 <Ui>
   <Theme Name="frmKeySettings">
     <Templates>
-      <Button Inherit="PushButtonLong" Location="160,0,149,20" Name="TemplateKeySettingButton" Show="true" Text="">
-        <BackgroundImage File="" Source=""/>
-        <PushedImage File="" Source=""/>
+      <Button Inherit="" Location="160,0,149,20" Name="TemplateKeySettingButton" Show="true" Text="">
+        <BackgroundImage File="tz_012" Source="364,327,149,24"/>
+        <PushedImage File="tz_010" Source="333,353,179,20"/>
         <Scripts>
           <OnLClick>frmKeySettings_TemplateKeySettingButton_OnLClick(self)</OnLClick>
         </Scripts>
@@ -35,7 +35,7 @@
       </Label>
       <Label Inherit="bg3" Location="13,52,506,356" Name="1038" Show="true"/>
       <CheckButton Inherit="DefaultChkBtn" Location="304,412,200,22" Name="ckbRoleSpecify" Show="true" Text="$L:290$">
-          <BackgroundImage File="cgz_design4" Source="283,263,220,32"/>
+        <BackgroundImage File="tz_012" Source="364,369,149,24"/>
         <Scripts>
           <OnLClick>layWorld_frmKeySettingEx_ckbRoleSpecify_OnLClick(self)</OnLClick>
         </Scripts>
@@ -58,7 +58,7 @@
       <Label Inherit="TemplateLabelKeySettingsLine" Location="17,344,470,20" Name="lbLine13"/>
       <Label Inherit="TemplateLabelKeySettingsLine" Location="17,365,470,20" Name="lbLine14"/>
       <Label Inherit="TemplateLabelKeySettingsLine" Location="17,386,470,20" Name="lbLine15"/>
-      <ScrollBarV Inherit="DefaultSbv" Location="501,56,15,348" Name="sbScrollBar">
+      <ScrollBarV Inherit="DefaultSbv" Location="488,82,15,318" Name="sbScrollBar">
         <Scripts>
           <OnScroll>layWorld_frmKeySettingEx_sbScrollBar_OnScroll(self);</OnScroll>
         </Scripts>
@@ -98,18 +98,15 @@
           <OnHide>layWorld_frmKeySettingEx_edtNewKey_OnHide(self);</OnHide>
         </Scripts>
       </EditBox>
-      <CloseButton Location="495,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="501,29,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="-1,0,534,47" Name="lbTitle" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,0,530,47" Name="lbTitle" Show="true"/>
       <Label Inherit="" Location="386,8,147,47" Name="lbTitle1" Show="false">
         <BackgroundImage File="tz_010" Source="314,0,145,47"/>
       </Label>
-	  	<Label Inherit="" Location="206,14,123,18" Name="Name12" Show="true">
-          <BackgroundImage File="cgz_design25" Source="412,90,246,29"/>
-        </Label>
-      <Label AlignCol="CENTER" Inherit="" Location="196,16,140,22" Name="2270" Show="false" Text="$L:298$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" Inherit="" Location="196,22,140,22" Name="2270" Show="true" Text="$L:298$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Scripts>
         <OnShow>layWorld_frmKeySettingEx_OnShow(self);</OnShow>
 		<OnHide>layWorld_frmKeySettingEx_OnHide(self)</OnHide>

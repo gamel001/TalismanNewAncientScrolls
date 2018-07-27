@@ -4,16 +4,16 @@
   <Layer Name="layWorld" Show="true">
     <Form Inherit="" Location="253,137,290,360" Name="frmAllPetEx" Show="false">
       <Label Inherit="bg1" Location="7,12,280,345" Name="lbUP" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="0,0,294,47" Name="650" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,0,292,47" Name="650" Show="true"/>
       <Label Inherit="" Location="0,256,256,75" Name="lbDown" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
       <TitleBarButton Location="5,-1,280,26"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="260,28,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="88,-5,120,66" Name="3340" Show="true" Text="$L:1039$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="88,0,120,66" Name="3340" Show="true" Text="$L:1039$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Form Inherit="NoTitleBarForm" Location="7,31,270,320" Name="frmXianqingPet" Show="true">
         <TitleBarButton Location="5,-1,250,20" Text="$L:102$"/>
         <CloseButton Location="222,2,14,15">
@@ -27,7 +27,7 @@
         <Label Inherit="bg3" Location="16,204,250,105" Name="2563" Show="true"/>
         <Label Inherit="bg3" Location="16,54,250,115" Name="3150" Show="true"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="16,25,147,24" Name="labPetName" Show="true" Text="$L:625$">
-          <BackgroundImage File="cgz_design" Source="5,103,205,26"/>
+          <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
         </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="143,19,100,24" Name="labCharFactionPet" Show="false" Text="$L:104$">
           <BackgroundImage File="" Source=""/>
@@ -47,7 +47,7 @@
         <Label Inherit="" Location="71,183,40,18" Name="labWitPet" Show="false" Text="$L:116$" TextColor=""/>
         <Label Inherit="" Location="180,183,40,18" Name="labConPet" Show="false" Text="$L:117$" TextColor=""/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="PushButton" Location="16,174,92,24" Name="btnExAttrib" Show="true" Text="$L:118$">
-          <BackgroundImage File="cgz_design" Source="5,103,205,26"/>
+          <BackgroundImage File="tz_010.tga" Source="315,196,92,24"/>
         </Label>
         <Label Inherit="" Location="23,212,100,18" Name="labpd" Show="true" Text="$L:119$" TextColor=""/>
         <Label Inherit="" Location="23,235,100,18" Name="labpa" Show="true" Text="$L:121$" TextColor=""/>
@@ -127,9 +127,9 @@
       </Label>
       <Label Inherit="TemplateNormalTitle" Location="5,9,292,50" Name="20719" Show="true"/>
       <TitleBarButton Location="10,13,280,28" Text="" TextFont="$L:1$" TextSize="$L:3$"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="266,39,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13 "/>
       </CloseButton>
       <Form Inherit="NoTitleBarForm" Location="24,60,238,165" Name="frmTrumps" Show="fals">
         <Label Inherit="bg3" Location="8,30,220,50" Name="10206" Show="true"/>
@@ -175,10 +175,10 @@
         </Button>
         <Label Inherit="bg3" Location="7,109,220,50" Name="10846" Show="true"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="4,3,147,24" Name="758" Show="true" Text="$L:628$">
-          <BackgroundImage File="cgz_design" Source="5,103,205,26"/>
+          <BackgroundImage File="tz_010" Source="181,351,147,24"/>
         </Label>
         <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="5,83,147,24" Name="780" Show="true" Text="$L:629$">
-          <BackgroundImage File="cgz_design" Source="5,103,205,26"/>
+          <BackgroundImage File="tz_010" Source="181,351,147,24"/>
         </Label>
         <Label Inherit="" Location="7,115,220,40" MouseEvent="true" MouseMove="true" Name="labSkills" Show="true">
           <Button Inherit="" Location="8,1,36,36" Name="btnSkillPet1" Show="true">

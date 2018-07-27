@@ -10,7 +10,7 @@
           <OnLClick>layWorld_frmOtherStallTalkEx_btBusinessClose_OnLClick(self);</OnLClick>
         </Scripts>
       </Button>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="82,-5,130,68" Name="lbRewardTitel" Show="true" Text="$L:969$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="82,0,130,68" Name="lbRewardTitel" Show="true" Text="$L:969$" TextFont="$L:1$" TextSize="$L:3$"/>
       <EditBox AutoScrollV="true" BackgroundColor="#ee000000" EnableInput="false" Inherit="" Location="30,56,235,135" MultiLine="true" Name="edbBusinessHistory" Show="true" WordWrap="true">
 	    <Scripts>
 		  <OnHyperLink>layWorld_frmOtherStallTalkEx_edbBusinessHistory(self, hypertype, hyperlink)</OnHyperLink>
@@ -22,9 +22,9 @@
         </Scripts>
       </Button>
       <TitleBarButton Location="0,0,294,28"/>
-      <CloseButton Location="255,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
     </Form>
   </Layer>

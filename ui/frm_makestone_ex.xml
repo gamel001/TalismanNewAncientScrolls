@@ -3,30 +3,18 @@
   <Script file="frm_makestone_ex.lua"/>
   <Layer Name="layWorld" Show="true">
     <Form DragIn="true" Inherit="" Location="479,383,300,370" Name="frmMakeStoneEx" Show="false">
-      <Label Inherit="" Location="15,40,270,314" Name="1956" Show="true">
-        <BackgroundImage File="tz_029_2" Source="0,0,306,168"/>
-      </Label>	
       <Label Inherit="bg1" Location="10,20,280,335" Name="554" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="3,2,294,50" Name="15787" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="4,2,292,50" Name="15787" Show="true"/>
       <Label Inherit="" Location="-2,256,256,75" Name="588" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-	  <Label Inherit="" Location="130,73,50,50" Name="CGZBGI9" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+      <Label Inherit="" Location="53,56,200,161" Name="719" Show="true">
+        <BackgroundImage File="tz_026" Source="0,0,200,161" Transparency="1"/>
       </Label>
-	  <Label Inherit="" Location="130,139,50,50" Name="CGZBGI10" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Label Inherit="" Location="70,73,50,50" Name="CGZBGI11" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Label Inherit="" Location="182,73,50,50" Name="CGZBGI12" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-      <Button DragIn="true" DragOut="true" Inherit="" Location="134,77,42,42" Name="btStoneCenter1" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="140,83,32,32" Name="btStoneCenter1" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmMakeStoneEx_btStoneCenter1_OnHint(self)</OnHint>
@@ -34,10 +22,10 @@
           <OnDragNull>layWorld_frmMakeStoneEx_btStoneCenter1_OnDragNull(self)</OnDragNull>
         </Scripts>
       </Button>
-      <Button Inherit="" Location="134,143,42,42" Name="btStoneCenter2" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Button Inherit="" Location="140,149,32,32" Name="btStoneCenter2" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmMakeStoneEx_btStoneCenter2_OnHint(self)</OnHint>
@@ -55,14 +43,11 @@
         </Scripts>
       </Button>
       <Anchors/>
-	  	<Label Inherit="" Location="90,14,122,18" Name="Name28" Show="true">
-          <BackgroundImage File="cgz_design25" Source="716,90,244,24"/>
-        </Label>
-      <Label AlignCol="CENTER" Inherit="" Location="91,-5,120,70" Name="1229" Show="false" Text="$L:922$" TextFont="$L:1$" TextSize="$L:3$" AlignLine="CENTER"/>
-      <Button DragIn="true" DragOut="true" Inherit="" Location="74,77,42,42" Name="btStoneLeft" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Label AlignCol="CENTER" Inherit="" Location="91,0,120,70" Name="1229" Show="true" Text="$L:922$" TextFont="$L:1$" TextSize="$L:3$" AlignLine="CENTER"/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="80,83,32,32" Name="btStoneLeft" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmMakeStoneEx_btStoneLeft_OnHint(self)</OnHint>
@@ -70,10 +55,10 @@
           <OnDragNull>layWorld_frmMakeStoneEx_btStoneLeft_OnDragNull(self)</OnDragNull>
         </Scripts>
       </Button>
-      <Button DragIn="true" DragOut="true" Inherit="" Location="186,77,42,42" Name="btStoneRight" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="192,83,32,32" Name="btStoneRight" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmMakeStoneEx_btStoneRight_OnHint(self)</OnHint>
@@ -85,9 +70,9 @@
       <Label Inherit="" Location="38,238,36,16" Name="lbPracticeName" Show="true" Text="$L:478$"/>
       <Label Inherit="" Location="106,180,52,16" Name="570" Show="false" Text="$L:479$"/>
       <TitleBarButton Location="10,5,280,28"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="265,33,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnLoad>self:RegisterScriptEventNotify("CEV_ITEM_ENCHANT_SHOW")

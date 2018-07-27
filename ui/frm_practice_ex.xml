@@ -3,29 +3,26 @@
   <Script file="frm_practice_ex.lua"/>
   <Layer Name="layWorld" Show="true">
     <Form DragIn="true" Inherit="" Location="479,383,300,370" MouseEvent="true" Name="frmPracticeEx" Show="false">
-      <Label Inherit="" Location="15,40,270,314" Name="1956" Show="true">
-        <BackgroundImage File="tz_029_2" Source="0,0,306,168"/>
-      </Label>
       <Anchors/>
       <Label Inherit="bg1" Location="10,20,280,335" Name="1637" Show="true"/>
       <TitleBarButton Location="9,6,280,26"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="265,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="3,1,294,50" Name="21483" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,300,50" Name="21483" Show="true"/>
       <Label Inherit="" Location="-2,256,256,75" Name="1671" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
+      <Label Inherit="" Location="66,51,168,167" Name="1956" Show="true">
+        <BackgroundImage File="tz_027" Source="0,0,167,165" Transparency="0.9"/>
+      </Label>
       <Label Inherit="bg3" Location="56,222,186,26" Name="11911" Show="true"/>
       <Label Inherit="bg3" Location="34,250,230,60" Name="12681" Show="true"/>
-      <Label Inherit="" Location="124,107,50,50" Name="CGZBGII21" Show="true">
-      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
-      </Label>
-	  <Button DragIn="true" DragOut="true" Inherit="" Location="128,111,42,42" Name="btItemPic" Show="true">
-        <BackgroundImage File="" Source=""/>
-        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
-		<PushedImage File="" Source=""/>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="134,117,32,32" Name="btItemPic" Show="true">
+        <BackgroundImage File="tz_010" Source="142,381,40,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnHint>layWorld_frmPracticeEx_btItemPic_OnHint(self)</OnHint>
@@ -45,7 +42,7 @@
         </Scripts>
       </Button>
       <Label Inherit="" Location="44,259,62,20" Name="lbMan" Show="true" Text="$L:395$"/>
-      <ProgressBar Inherit="" Location="120,262,138,10" Name="prgMan" Show="true">
+      <ProgressBar Inherit="" Location="125,262,120,10" Name="prgMan" Show="true">
         <ProgressBarImage File="tz_010" Source="429,443,66,5"/>
         <Label AlignCol="CENTER" AlignLine="CENTER" DragIn="true" Inherit="" Location="5,-3,110,14" MouseEvent="true" Name="lbManNumber" Show="true" Text="$L:396$">
           <Scripts>
@@ -55,7 +52,7 @@
         <BackgroundImage File="tz_010" Source="241,383,113,8"/>
       </ProgressBar>
       <Label Inherit="" Location="44,285,62,20" Name="lbItem" Show="true" Text="$L:397$"/>
-      <ProgressBar Inherit="" Location="120,288,138,10" Name="prgItem" Show="true">
+      <ProgressBar Inherit="" Location="125,288,120,10" Name="prgItem" Show="true">
         <Label AlignCol="CENTER" AlignLine="CENTER" DragIn="true" Inherit="" Location="5,-2,110,14" MouseEvent="true" Name="lbItemNumber" Show="true" Text="$L:398$">
           <Scripts>
             <OnDragIn>layWorld_frmPracticeEx_OnDragIn(drag)</OnDragIn>
@@ -64,13 +61,7 @@
         <ProgressBarImage File="tz_010" Source="429,443,66,5"/>
         <BackgroundImage File="tz_010" Source="241,383,113,8"/>
       </ProgressBar>
-	  <Label Inherit="" Location="118,258,140,17" Name="CGZBGE" Show="true">
-      <BackgroundImage File="cgz_design" Source="229,458,140,18"/>
-      </Label>
-	  <Label Inherit="" Location="118,285,140,17" Name="CGZBGE1" Show="true">
-      <BackgroundImage File="cgz_design" Source="229,458,140,18"/>
-      </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="90,-5,122,68" Name="1229" Show="true" Text="$L:399$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="90,0,122,68" Name="1229" Show="true" Text="$L:399$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Scripts>
         <OnLoad>self:RegisterScriptEventNotify("Practice")
 			self:RegisterScriptEventNotify("CEV_ITEM_UPTATE_WEAPON_BEGIN")

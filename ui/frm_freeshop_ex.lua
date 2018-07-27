@@ -326,6 +326,12 @@ function layWorld_frmFreeShopEx_Show()
 				index = index + 1;
 			end
 		end
+		for i, v in ipairs(objlist) do
+			if SAPI.ExistInTable(FreezeItemList, v) == false then
+				LClass_ItemFreezeManager:Push(v);
+				table.insert(FreezeItemList, v);
+			end
+		end
 		self.FreezeItemList = FreezeItemList;
 	end
     
@@ -350,6 +356,8 @@ function layWorld_frmFreeShopEx_Show()
             dbutton:Set("dragObjectid",objlist[idx]);            
         end
     end
+	
+	if number == 0 then uiStallClose() end
 end
 
 function layWorld_frmFreeShopEx_btnCustom_D_OnDragIn(self,drag,index)

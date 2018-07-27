@@ -5,24 +5,24 @@
     <Form Inherit="" Location="104,192,294,542" Name="frmNpcShopEx" Show="false">
       <Label Inherit="bg1" Location="7,20,280,522" Name="858" Show="fals" Size=""/>
       <Label Inherit="bg3" Location="22,47,250,460" Name="2314" Show="true"/>
-      <Label Inherit="TemplateNormalTitle" Location="0,1,295,50" Name="475" Show="fals"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,292,50" Name="475" Show="fals"/>
       <TitleBarButton AlignLine="CENTER" Location="0,0,294,28"/>
-      <CloseButton Location="256,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Label Inherit="" Location="22,230,240,26" Name="2339" Show="true">
         <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
         <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
         <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
         <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
       </Label>
       <Label Inherit="" Location="22,443,240,26" Name="1481" Show="true">
@@ -30,80 +30,80 @@
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
         <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
         <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
         <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
       </Label>
       <Button Inherit="" Location="189,59,13,14" Name="btnPageUp" Show="true" Text="">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010.tga" Source="51,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="51,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmNpcShopEx_btnPage_OnLClick(self,0);</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="242,59,13,14" Name="btnPageDown" Show="true" Text="">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010.tga" Source="76,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="76,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmNpcShopEx_btnPage_OnLClick(self,1);</OnLClick>
         </Scripts>
       </Button>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="202,57,40,21" Name="labPage" Show="true" Text="$L:416$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,448,44,20" Name="goldnum" Show="true" Text="$L:417$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,448,24,20" Name="silvernum" Show="true" Text="$L:418$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,448,24,20" Name="coppernum" Show="true" Text="$L:419$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,448,24,18" Name="coppernum" Show="true" Text="$L:419$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,235,34,20" Name="lbNpcgoldnum" Show="true" Text="$L:420$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,235,44,20" Name="lbNpcgoldnum" Show="true" Text="$L:420$">
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,234,34,20" Name="lbNpcsilvernum" Show="true" Text="$L:421$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,234,24,20" Name="lbNpcsilvernum" Show="true" Text="$L:421$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,235,34,20" Name="lbNpccoppernum" Show="true" Text="$L:422$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,235,24,20" Name="lbNpccoppernum" Show="true" Text="$L:422$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,54,147,24" Name="lbNpcname" Show="true">
-          <BackgroundImage File="cgz_design" Source="6,103,205,27"/>
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,269,147,24" Name="lbUsername" Show="true" Text="">
-          <BackgroundImage File="cgz_design" Source="6,103,205,27"/>
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
       </Label>
       <Label Inherit="bg3" Location="25,471,245,32" Name="4966" Show="true"/>
       <Label Inherit="" Location="22,473,240,26" Name="809" Show="true">
         <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
-        <Label Inherit="" Location="58,3,34,29" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+        <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
-        <Label Inherit="" Location="134,3,34,29" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+        <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
-        <Label Inherit="" Location="188,0,34,29" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+        <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
         <Label Inherit="" Location="6,4,50,20" Name="4365" Show="true" Text="$L:1531$" TextFont="$L:1$" TextSize="$L:3$"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,478,44,20" Name="bindgoldnum" Show="true" Text="$L:429$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,478,24,20" Name="bindsilvernum" Show="true" Text="$L:430$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,478,24,20" Name="bindcoppernum" Show="true" Text="$L:431$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Button Inherit="PushButton" Location="53,510,80,22" Name="btBuy" Show="true" Text="$L:423$">
         <Scripts>
@@ -116,28 +116,25 @@
         </Scripts>
       </Button>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,233,40,20" Name="lbSpend" Show="true" Text="$L:425$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,447,40,20" Name="lbTotal" Show="true" Text="$L:426$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
       </Label>
-	  	<Label Inherit="" Location="130,14,36,20" Name="Name23" Show="true">
-          <BackgroundImage File="cgz_design25" Source="513,379,72,29"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="83,-5,128,68" Name="9785" Show="false" Text="$L:415$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="83,0,128,68" Name="9785" Show="true" Text="$L:415$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="184,276,60,20" Name="2103" Show="true" Text="1234567">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="174,259,80,18" Name="2335" Show="true" Text="$L:1126$"/>
-      <Label Inherit="" Location="39,82,211,141" Name="607" Show="true">
-        <BackgroundImage File="tz_011" Source="297,0,215,144"/>
+      <Label Inherit="" Location="41,82,211,141" Name="607" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
       </Label>
-      <Label Inherit="" Location="39,297,211,141" Name="1284" Show="true">
-        <BackgroundImage File="tz_011" Source="297,0,215,144"/>
+      <Label Inherit="" Location="41,297,211,141" Name="1284" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
       </Label>
       <Label Inherit="" Location="10,10,70,18" Name="1534" Show="true"/>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D1" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,1);</OnDragOut>
@@ -148,7 +145,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D2" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,2);</OnDragOut>
@@ -159,7 +156,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D3" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,3);</OnDragOut>
@@ -170,7 +167,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D4" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,4);</OnDragOut>
@@ -181,7 +178,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D5" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,5);</OnDragOut>
@@ -192,7 +189,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D6" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,6);</OnDragOut>
@@ -203,7 +200,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D7" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,7);</OnDragOut>
@@ -214,7 +211,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D8" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,8);</OnDragOut>
@@ -225,7 +222,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D9" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,9);</OnDragOut>
@@ -236,7 +233,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D10" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,10);</OnDragOut>
@@ -247,7 +244,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D11" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,11);</OnDragOut>
@@ -258,7 +255,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D12" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,12);</OnDragOut>
@@ -269,7 +266,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D13" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,13);</OnDragOut>
@@ -280,7 +277,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D14" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,14);</OnDragOut>
@@ -291,7 +288,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D15" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,15);</OnDragOut>
@@ -302,7 +299,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D16" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,16);</OnDragOut>
@@ -313,7 +310,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D17" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,17);</OnDragOut>
@@ -324,7 +321,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D18" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,18);</OnDragOut>
@@ -335,7 +332,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D19" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,19);</OnDragOut>
@@ -346,7 +343,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D20" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,20);</OnDragOut>
@@ -357,7 +354,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D21" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,21);</OnDragOut>
@@ -368,7 +365,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D22" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,22);</OnDragOut>
@@ -379,7 +376,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D23" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,23);</OnDragOut>
@@ -390,7 +387,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D24" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,24);</OnDragOut>
@@ -401,7 +398,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D25" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,25);</OnDragOut>
@@ -412,7 +409,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D26" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,26);</OnDragOut>
@@ -423,7 +420,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D27" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,27);</OnDragOut>
@@ -434,7 +431,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D28" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,28);</OnDragOut>
@@ -445,7 +442,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D29" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,29);</OnDragOut>
@@ -456,7 +453,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D30" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_D_OnDragOut(self,30);</OnDragOut>
@@ -467,7 +464,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom1" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,1);</OnDragOut>
@@ -478,7 +475,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom2" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,2);</OnDragOut>
@@ -489,7 +486,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom3" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,3);</OnDragOut>
@@ -500,7 +497,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom4" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,4);</OnDragOut>
@@ -511,7 +508,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom5" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,5);</OnDragOut>
@@ -522,7 +519,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom6" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,6);</OnDragOut>
@@ -533,7 +530,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom7" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,7);</OnDragOut>
@@ -544,7 +541,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom8" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,8);</OnDragOut>
@@ -555,7 +552,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom9" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,9);</OnDragOut>
@@ -566,7 +563,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom10" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,10);</OnDragOut>
@@ -577,7 +574,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom11" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,11);</OnDragOut>
@@ -588,7 +585,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom12" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,12);</OnDragOut>
@@ -599,7 +596,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom13" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,13);</OnDragOut>
@@ -610,7 +607,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom14" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,14);</OnDragOut>
@@ -621,7 +618,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom15" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,15);</OnDragOut>
@@ -632,7 +629,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom16" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,16);</OnDragOut>
@@ -643,7 +640,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom17" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,17);</OnDragOut>
@@ -654,7 +651,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom18" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,18);</OnDragOut>
@@ -665,7 +662,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom19" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,19);</OnDragOut>
@@ -676,7 +673,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom20" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,20);</OnDragOut>
@@ -687,7 +684,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom21" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,21);</OnDragOut>
@@ -698,7 +695,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom22" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,22);</OnDragOut>
@@ -709,7 +706,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom23" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,23);</OnDragOut>
@@ -720,7 +717,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom24" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,24);</OnDragOut>
@@ -731,7 +728,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom25" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,25);</OnDragOut>
@@ -742,7 +739,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom26" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,26);</OnDragOut>
@@ -753,7 +750,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom27" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,27);</OnDragOut>
@@ -764,7 +761,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom28" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,28);</OnDragOut>
@@ -775,7 +772,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom29" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,29);</OnDragOut>
@@ -786,7 +783,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom30" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragOut>layWorld_frmNpcShopEx_btnCustom_OnDragOut(self,30);</OnDragOut>
@@ -805,19 +802,19 @@
     </Form>
     <Form Inherit="" Location="394,192,294,542" Name="frmSaleShopEx" Show="false">
       <Label Inherit="bg1" Location="7,20,280,522" Name="858" Show="true" Size=""/>
-      <Label Inherit="TemplateNormalTitle" Location="0,1,295,50" Name="475" Show="fals"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,292,50" Name="475" Show="fals"/>
       <Label Inherit="bg3" Location="22,47,250,460" Name="2314" Show="fals"/>
       <TitleBarButton Location="0,0,294,28"/>
       <Button Inherit="" Location="189,59,13,14" Name="btnPageUp" Show="true" Text="">
-        <NormalImage File="cgz_design" Source="8,159,22,21"/>
-        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <NormalImage File="tz_010.tga" Source="51,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="51,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmSaleShopEx_btnPage_OnLClick(self,0);</OnLClick>
         </Scripts>
       </Button>
       <Button Inherit="" Location="242,59,13,14" Name="btnPageDown" Show="true" Text="">
-        <NormalImage File="cgz_design" Source="32,159,22,21"/>
-        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <NormalImage File="tz_010.tga" Source="76,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="76,399,12,14"/>
         <Scripts>
           <OnLClick>layWorld_frmSaleShopEx_btnPage_OnLClick(self,1);</OnLClick>
         </Scripts>
@@ -827,13 +824,13 @@
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
         <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
         <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
         <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
       </Label>
       <Label Inherit="" Location="22,443,240,26" Name="1481" Show="true">
@@ -841,41 +838,41 @@
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
         <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
         <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
         <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="202,57,40,21" Name="labPage" Show="true" Text="$L:428$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,30,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,448,44,20" Name="goldnum" Show="true" Text="$L:429$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,448,24,20" Name="silvernum" Show="true" Text="$L:430$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,448,24,20" Name="coppernum" Show="true" Text="$L:431$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,235,44,20" Name="lbNpcgoldnum" Show="true" Text="$L:432$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,234,24,20" Name="lbNpcsilvernum" Show="true" Text="$L:433$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,235,24,20" Name="lbNpccoppernum" Show="true" Text="$L:433$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,54,147,24" Name="lbNpcname" Show="true">
-          <BackgroundImage File="cgz_design" Source="6,103,205,27"/>
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,269,147,24" Name="lbUsername" Show="true">
-          <BackgroundImage File="cgz_design" Source="6,103,205,27"/>
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
       </Label>
       <Label Inherit="bg3" Location="25,471,245,32" Name="5840" Show="true"/>
       <Label Inherit="" Location="22,473,240,26" Name="3675" Show="true">
@@ -883,24 +880,24 @@
           <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
         </Label>
         <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="204,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
         </Label>
         <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="239,3,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
         </Label>
         <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
-          <BackgroundImage File="cgz_design1" Source="273,2,34,29"/>
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
         </Label>
         <Label Inherit="" Location="6,4,50,20" Name="4687" Show="true" Text="$L:1531$" TextFont="$L:1$" TextSize="$L:3$"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,478,44,20" Name="bindgoldnum" Show="true" Text="$L:417$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,478,24,20" Name="bindsilvernum" Show="true" Text="$L:418$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,478,24,18" Name="bindcoppernum" Show="true" Text="$L:419$">
-          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
       </Label>
       <Button Inherit="PushButton" Location="57,511,80,22" Name="btSell" Show="true" Text="$L:435$">
         <Scripts>
@@ -918,18 +915,15 @@
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,447,40,20" Name="lbTotal" Show="true" Text="$L:438$">
         <BackgroundImage File="tz_010" Source="443,267,61,20"/>
       </Label>
-	  	<Label Inherit="" Location="130,14,33,20" Name="Name22" Show="true">
-          <BackgroundImage File="cgz_design25" Source="514,419,66,24"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="82,-5,130,68" Name="17506" Show="false" Text="$L:427$" TextFont="$L:1$" TextSize="$L:3$"/>
-      <Label Inherit="" Location="39,82,211,141" Name="607" Show="true">
-        <BackgroundImage File="tz_011" Source="297,0,215,144"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="82,0,130,68" Name="17506" Show="true" Text="$L:427$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="" Location="41,82,211,141" Name="607" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
       </Label>
-      <Label Inherit="" Location="39,297,211,141" Name="1284" Show="true">
-        <BackgroundImage File="tz_011" Source="297,0,215,144"/>
+      <Label Inherit="" Location="40,297,211,141" Name="1425" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
       </Label>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom1" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,1);</OnDragIn>
@@ -939,7 +933,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom2" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,2);</OnDragIn>
@@ -949,7 +943,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom3" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,3);</OnDragIn>
@@ -959,7 +953,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom4" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,4);</OnDragIn>
@@ -969,7 +963,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom5" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,5);</OnDragIn>
@@ -979,7 +973,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom6" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,6);</OnDragIn>
@@ -989,7 +983,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom7" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,7);</OnDragIn>
@@ -999,7 +993,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom8" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,8);</OnDragIn>
@@ -1009,7 +1003,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom9" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,9);</OnDragIn>
@@ -1019,7 +1013,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom10" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,10);</OnDragIn>
@@ -1029,7 +1023,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom11" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,11);</OnDragIn>
@@ -1039,7 +1033,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom12" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,12);</OnDragIn>
@@ -1049,7 +1043,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom13" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,13);</OnDragIn>
@@ -1059,7 +1053,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom14" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,14);</OnDragIn>
@@ -1069,7 +1063,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom15" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,15);</OnDragIn>
@@ -1079,7 +1073,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom16" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,16);</OnDragIn>
@@ -1089,7 +1083,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom17" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,17);</OnDragIn>
@@ -1099,7 +1093,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom18" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,18);</OnDragIn>
@@ -1109,7 +1103,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom19" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,19);</OnDragIn>
@@ -1119,7 +1113,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom20" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,20);</OnDragIn>
@@ -1129,7 +1123,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom21" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,21);</OnDragIn>
@@ -1139,7 +1133,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom22" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,22);</OnDragIn>
@@ -1149,7 +1143,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom23" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,23);</OnDragIn>
@@ -1159,7 +1153,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom24" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,24);</OnDragIn>
@@ -1169,7 +1163,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom25" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,25);</OnDragIn>
@@ -1179,7 +1173,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom26" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,26);</OnDragIn>
@@ -1189,7 +1183,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom27" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,27);</OnDragIn>
@@ -1199,7 +1193,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom28" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,28);</OnDragIn>
@@ -1209,7 +1203,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom29" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,29);</OnDragIn>
@@ -1219,7 +1213,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom30" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_OnDragIn(self, drag,30);</OnDragIn>
@@ -1229,7 +1223,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D1" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,1);</OnDragIn>
@@ -1239,7 +1233,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D2" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,2);</OnDragIn>
@@ -1249,7 +1243,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D3" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,3);</OnDragIn>
@@ -1259,7 +1253,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D4" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,4);</OnDragIn>
@@ -1269,7 +1263,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D5" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,5);</OnDragIn>
@@ -1279,7 +1273,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D6" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,6);</OnDragIn>
@@ -1289,7 +1283,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D7" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,7);</OnDragIn>
@@ -1299,7 +1293,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D8" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,8);</OnDragIn>
@@ -1309,7 +1303,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D9" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,9);</OnDragIn>
@@ -1319,7 +1313,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D10" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,10);</OnDragIn>
@@ -1329,7 +1323,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D11" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,11);</OnDragIn>
@@ -1339,7 +1333,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D12" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,12);</OnDragIn>
@@ -1349,7 +1343,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D13" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,13);</OnDragIn>
@@ -1359,7 +1353,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D14" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,14);</OnDragIn>
@@ -1369,7 +1363,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D15" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,15);</OnDragIn>
@@ -1379,7 +1373,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D16" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,16);</OnDragIn>
@@ -1389,7 +1383,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D17" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,17);</OnDragIn>
@@ -1399,7 +1393,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D18" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,18);</OnDragIn>
@@ -1409,7 +1403,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D19" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,19);</OnDragIn>
@@ -1419,7 +1413,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D20" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,20);</OnDragIn>
@@ -1429,7 +1423,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D21" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,21);</OnDragIn>
@@ -1439,7 +1433,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D22" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,22);</OnDragIn>
@@ -1449,7 +1443,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D23" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,23);</OnDragIn>
@@ -1459,7 +1453,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D24" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,24);</OnDragIn>
@@ -1469,7 +1463,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D25" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,25);</OnDragIn>
@@ -1479,7 +1473,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D26" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,26);</OnDragIn>
@@ -1489,7 +1483,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D27" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,27);</OnDragIn>
@@ -1499,7 +1493,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D28" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,28);</OnDragIn>
@@ -1509,7 +1503,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D29" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,29);</OnDragIn>
@@ -1519,7 +1513,7 @@
         </Scripts>
       </Button>
       <Button DragIn="true" DragOut="true" Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="btnCustom_D30" Show="false" Text="">
-        <HighlightImage File="cgz_design" Source="103,417,36,36"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
         <Hint/>
         <Scripts>
           <OnDragIn>layWorld_frmSaleShopEx_btnCustom_D_OnDragIn(self, drag,30);</OnDragIn>
@@ -1528,9 +1522,9 @@
           <OnHint>layWorld_frmSaleShopEx_btnCustom_D_OnHint(self,30);</OnHint>
         </Scripts>
       </Button>
-      <CloseButton Location="256,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnShow>layWorld_frmSaleShopEx_OnShow(self);</OnShow>

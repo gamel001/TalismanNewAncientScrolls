@@ -35,11 +35,8 @@
 				</Scripts>
 			</Button>
 			<Anchors/>
-			<Label Inherit="TemplateNormalTitle" Location="-1,0,534,47" Name="lbTitle" Show="true"/>
-	    <Label Inherit="" Location="215,14,115,20" Name="Name34" Show="true">
-          <BackgroundImage File="cgz_design25" Source="707,464,230,24"/>
-        </Label>
-			<Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="199,-5,136,68" Name="1229" Show="false" Text="$L:876$" TextFont="$L:1$" TextSize="$L:3$"/>
+			<Label Inherit="TemplateNormalTitle" Location="0,0,532,47" Name="lbTitle" Show="true"/>
+			<Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="199,0,136,68" Name="1229" Show="true" Text="$L:876$" TextFont="$L:1$" TextSize="$L:3$"/>
 			<ListBox BackgroundColor="#ee000000" Inherit="" Location="23,69,487,322" Name="lstNeedTeach" Show="fals">
 				<ColumnButton Text="$L:1354$" AlignCol="CENTER" Width="120" TextColor="#FFFFFF00"/>
 				<ColumnButton Text="$L:1355$" AlignCol="CENTER" Width="40" TextColor="#FFFFFF00"/>
@@ -52,9 +49,9 @@
 				</Scripts>
 			</ListBox>
 			<TitleBarButton Location="0,0,520,28"/>
-			<CloseButton Location="495,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+			<CloseButton Location="500,31,13,13">
+				<NormalImage File="tz_010" Source="120,383,13,13"/>
+				<PushedImage File="tz_010" Source="98,383,13,13"/>
 			</CloseButton>
 			<Scripts>
 				<OnLoad>layWorld_frmNeedTeachEx_OnLoad(self);</OnLoad>

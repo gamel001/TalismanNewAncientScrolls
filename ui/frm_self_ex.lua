@@ -160,7 +160,7 @@ end
 function frmSelfEx_TemplateBtnSelfBuff_lbTime_OnUpdate(self)
 	local ID = self.ID;
 	if not ID or ID == 0 then self:Hide() return end
-	local id, lefttime, triggercount = uiSkill_GetMyEffectInfo(ID);
+	local id, lefttime = uiSkill_GetMyEffectInfo(ID);
 	lefttime = lefttime / 1000; -- 得到的lefttime是毫秒
 	if id and id > 0 then
 		local h = math.floor(lefttime / 3600);
@@ -216,7 +216,7 @@ function layWorld_frmSelfBuffEx_Refresh(self)
 	if not self then return end
 	local bufflist = uiGetMyInfo("EffectList");
 	if not bufflist or table.getn(bufflist) <= 0 then self:Hide() return end
-	for i = 1, 21, 1 do
+	for i = 1, 48, 1 do
 		local btBuff = SAPI.GetChild(self, "btBuff"..i);
 		btBuff.ID = bufflist[i];
 		frmSelfEx_TemplateBtnSelfBuff_Refresh(btBuff);

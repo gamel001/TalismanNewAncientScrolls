@@ -4,7 +4,7 @@ local UI_Create_Luck1_Object_Id = 0
 local UI_Create_Luck2_Object_Id = 0
 local UI_Create_Luck3_Object_Id = 0
 local UI_Create_Luck4_Object_Id = 0
-local UI_CREATE_AUTO_ADD_GEM_MAX_LEVEL = 16
+local UI_CREATE_AUTO_ADD_GEM_MAX_LEVEL = 12
 
 
 local function AutoAddSmithingGem ()
@@ -29,7 +29,7 @@ local function AutoAddSmithingGem ()
 			if objInfo and objInfo.Type == NeedGemType then
 				return;
 			end
-			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- ½â¶³
 			UI_Create_Smithing_Object_Id = 0;
 		end
 		
@@ -45,7 +45,7 @@ local function AutoAddSmithingGem ()
 			end
 		end
 		if GemId and GemId > 0 then
-			LClass_ItemFreezeManager:Push(GemId); -- ����
+			LClass_ItemFreezeManager:Push(GemId); -- ¶³½á
 			--uiItemFreezeItem(UI_Create_Smithing_Object_Id, false)
 			UI_Create_Smithing_Object_Id = GemId;
 		else
@@ -393,13 +393,13 @@ function layWorld_frmCreateEx_btCreateItem_OnDragIn(drag)
 
 	if uiItemSmithing_CheckItemToSmithing(itemOid) then
 		if UI_Create_Item_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Item_Object_Id, false)
 		end
 		UI_Create_Item_Object_Id = itemOid
 		
 		if UI_Create_Smithing_Object_Id ~= 0 then
-			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Smithing_Object_Id, false)
 			UI_Create_Smithing_Object_Id = 0
 		end
@@ -407,30 +407,30 @@ function layWorld_frmCreateEx_btCreateItem_OnDragIn(drag)
 		AutoAddSmithingGem ();
 
 		if UI_Create_Luck1_Object_Id ~= 0 then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck1_Object_Id, false)
 			UI_Create_Luck1_Object_Id = 0
 		end
 
 		if UI_Create_Luck2_Object_Id ~= 0 then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck2_Object_Id, false)
 			UI_Create_Luck2_Object_Id = 0
 		end
 
 		if UI_Create_Luck3_Object_Id ~= 0 then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck3_Object_Id, false)
 			UI_Create_Luck3_Object_Id = 0
 		end
 
 		if UI_Create_Luck4_Object_Id ~= 0 then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck4_Object_Id, false)
 			UI_Create_Luck4_Object_Id = 0
 		end 
 	
-		LClass_ItemFreezeManager:Push(UI_Create_Item_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Item_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Item_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -458,19 +458,14 @@ function layWorld_frmCreateEx_btCreateSmithing_OnDragIn(drag)
 		return
 	end
 
-	local _, isSmithingItem = uiItemSmithing_GetItemInfo(itemOid)
-
-	if isSmithingItem == nil then
-		return
-	end
-
-	if isSmithingItem then
+	local objInfo = uiItemGetBagItemInfoByObjectId(itemOid)
+	if objInfo.Type == 40 or objInfo.Type == 41 or objInfo.Type == 42 or objInfo.Type == 43 or objInfo.Type == 44 or objInfo.Type == 45 or objInfo.Type == 46 or objInfo.Type == 47 then
 		if UI_Create_Smithing_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Smithing_Object_Id, false)
 		end
 		UI_Create_Smithing_Object_Id = itemOid
-		LClass_ItemFreezeManager:Push(UI_Create_Smithing_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Smithing_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Smithing_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -508,11 +503,11 @@ function layWorld_frmCreateEx_btLuckyItem1_OnDragIn(drag)
 
 	if uiItemSmithing_CheckLuckItem(UI_Create_Item_Object_Id, itemOid, UI_Create_Luck1_Object_Id, UI_Create_Luck2_Object_Id, UI_Create_Luck3_Object_Id, UI_Create_Luck4_Object_Id) then
 		if UI_Create_Luck1_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck1_Object_Id, false)
 		end
 		UI_Create_Luck1_Object_Id = itemOid
-		LClass_ItemFreezeManager:Push(UI_Create_Luck1_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Luck1_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Luck1_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -550,11 +545,11 @@ function layWorld_frmCreateEx_btLuckyItem2_OnDragIn(drag)
 
 	if uiItemSmithing_CheckLuckItem(UI_Create_Item_Object_Id, itemOid, UI_Create_Luck1_Object_Id, UI_Create_Luck2_Object_Id, UI_Create_Luck3_Object_Id, UI_Create_Luck4_Object_Id) then
 		if UI_Create_Luck2_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck2_Object_Id, false)
 		end
 		UI_Create_Luck2_Object_Id = itemOid
-		LClass_ItemFreezeManager:Push(UI_Create_Luck2_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Luck2_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Luck2_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -592,11 +587,11 @@ function layWorld_frmCreateEx_btLuckyItem3_OnDragIn(drag)
 
 	if uiItemSmithing_CheckLuckItem(UI_Create_Item_Object_Id, itemOid, UI_Create_Luck1_Object_Id, UI_Create_Luck2_Object_Id, UI_Create_Luck3_Object_Id, UI_Create_Luck4_Object_Id) then
 		if UI_Create_Luck3_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck3_Object_Id, false)
 		end
 		UI_Create_Luck3_Object_Id = itemOid
-		LClass_ItemFreezeManager:Push(UI_Create_Luck3_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Luck3_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Luck3_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -634,11 +629,11 @@ function layWorld_frmCreateEx_btLuckyItem4_OnDragIn(drag)
 
 	if uiItemSmithing_CheckLuckItem(UI_Create_Item_Object_Id, itemOid, UI_Create_Luck1_Object_Id, UI_Create_Luck2_Object_Id, UI_Create_Luck3_Object_Id, UI_Create_Luck4_Object_Id) then
 		if UI_Create_Luck4_Object_Id ~= nil then
-			LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- �ⶳ
+			LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- ½â¶³
 			--uiItemFreezeItem(UI_Create_Luck4_Object_Id, false)
 		end
 		UI_Create_Luck4_Object_Id = itemOid
-		LClass_ItemFreezeManager:Push(UI_Create_Luck4_Object_Id); -- ����
+		LClass_ItemFreezeManager:Push(UI_Create_Luck4_Object_Id); -- ¶³½á
 		--uiItemFreezeItem(UI_Create_Luck4_Object_Id, true)
 		layWorld_frmCreateEx_Refresh()
 	end
@@ -646,7 +641,7 @@ end
 
 function layWorld_frmCreateEx_btCreateItem_OnDragNull(self)
 	if UI_Create_Item_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Item_Object_Id, false)
 	end
 	UI_Create_Item_Object_Id = 0
@@ -655,7 +650,7 @@ end
 
 function layWorld_frmCreateEx_btCreateSmithing_OnDragNull(self)
 	if UI_Create_Smithing_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Smithing_Object_Id, false)
 	end
 	UI_Create_Smithing_Object_Id = 0
@@ -664,7 +659,7 @@ end
 
 function layWorld_frmCreateEx_btLuckyItem1_OnDragNull(self)
 	if UI_Create_Luck1_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Luck1_Object_Id, false)
 	end
 	UI_Create_Luck1_Object_Id = 0
@@ -673,7 +668,7 @@ end
 
 function layWorld_frmCreateEx_btLuckyItem2_OnDragNull(self)
 	if UI_Create_Luck2_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Luck2_Object_Id, false)
 	end
 	UI_Create_Luck2_Object_Id = 0
@@ -682,7 +677,7 @@ end
 
 function layWorld_frmCreateEx_btLuckyItem3_OnDragNull(self)
 	if UI_Create_Luck3_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Luck3_Object_Id, false)
 	end
 	UI_Create_Luck3_Object_Id = 0
@@ -691,7 +686,7 @@ end
 
 function layWorld_frmCreateEx_btLuckyItem4_OnDragNull(self)
 	if UI_Create_Luck4_Object_Id ~= 0 then
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- ½â¶³
 		--uiItemFreezeItem(UI_Create_Luck4_Object_Id, false)
 	end
 	UI_Create_Luck4_Object_Id = 0
@@ -725,27 +720,27 @@ end
 function layWorld_frmCreateEx_OnHide()
 	if UI_Create_Item_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Item_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Item_Object_Id); -- ½â¶³
 	end
 	if UI_Create_Smithing_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Smithing_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Smithing_Object_Id); -- ½â¶³
 	end
 	if UI_Create_Luck1_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Luck1_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck1_Object_Id); -- ½â¶³
 	end
 	if UI_Create_Luck2_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Luck2_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck2_Object_Id); -- ½â¶³
 	end
 	if UI_Create_Luck3_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Luck3_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck3_Object_Id); -- ½â¶³
 	end
 	if UI_Create_Luck4_Object_Id ~= 0 then
 		--uiItemFreezeItem(UI_Create_Luck4_Object_Id, false)
-		LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- �ⶳ
+		LClass_ItemFreezeManager:Erase(UI_Create_Luck4_Object_Id); -- ½â¶³
 	end
 end
 

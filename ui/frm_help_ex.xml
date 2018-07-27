@@ -22,15 +22,12 @@
       </ListBox>
       <Label Inherit="bg3" Location="229,51,290,379" Name="9517" Show="true"/>
       <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="234,57,279,370" Name="edtContext" Show="true" WordWrap="true"/>
-      <CloseButton Location="495,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="501,30,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="-1,0,534,47" Name="lbTitle" Show="true"/>
-	  	<Label Inherit="" Location="206,14,106,18" Name="Name13" Show="true">
-          <BackgroundImage File="cgz_design25" Source="428,132,212,29"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="206,-5,122,66" Name="16601" Show="false" Text="$L:597$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,0,532,47" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="206,0,122,66" Name="16601" Show="true" Text="$L:597$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Scripts>
         <OnShow>layWorld_frmHelpEx_OnShow(self);</OnShow>
       </Scripts>

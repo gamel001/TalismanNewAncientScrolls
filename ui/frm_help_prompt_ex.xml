@@ -2,12 +2,12 @@
 <Ui>
   <Theme Name="frmHelpPromptEx">
     <Templates>
-      <Button Inherit="" Location="8,382,49,49" Name="TemplateBtnFlickerPrompt" Show="false" Size="49,49">
-        <NormalImage File="cgz_design5" Source="317,335,57,57"/>
-        <HighlightImage File="cgz_design5" Source="377,339,49,49"/>
-        <PushedImage File="cgz_design5" Source="317,335,57,57"/>
+      <Button Inherit="" Location="8,382,32,32" Name="TemplateBtnFlickerPrompt" Show="false" Size="32,32">
+        <NormalImage File="tz_010" Source="382,430,40,40"/>
+        <HighlightImage File="tz_010" Source="338,472,40,40"/>
+        <PushedImage File="tz_010" Source="382,430,40,40"/>
         <Flicker Cycle="2" Show="true">
-          <Image File="cgz_design5" Source="377,339,49,49"/>
+          <Image File="tz_010" Source="338,472,40,40"/>
         </Flicker>
       </Button>
       <Button Inherit="TemplateBtnFlickerPrompt" Name="TemplateBtnHelpPrompt">
@@ -60,12 +60,12 @@
         <Anchor offset="0,-50" point="CENTERV"/>
         <Anchor offset="-40,0" point="CENTERH"/>
       </Anchors>
-      <Label Inherit="TemplateNormalTitle" Location="2,0,294,50" Name="12880" Show="true">
+      <Label Inherit="TemplateNormalTitle" Location="2,0,294,31" Name="12880" Show="true">
         <Label Name="lbTitelText" Show="false"/>
       </Label>
-      <CloseButton Location="258,14,21,21" Show="fals">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,25,14,14" Show="fals">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
     </Form>
   </Layer>

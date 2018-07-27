@@ -22,10 +22,6 @@ function layWorld_frCreateRoomEx_cbChooseStyle_OnUpdateText(self)
     local cbChooseMap=SAPI.GetChild(frCreateRoomEx,"cbChooseMap");
     if self:getSelectItemIndex()==0 then
         cbChooseMap:SelectItem(0);
-        layWorld_frCreateRoomEx_cbChooseMap_content(1);
-
-    elseif self:getSelectItemIndex()==1 then
-        cbChooseMap:SelectItem(1);
         layWorld_frCreateRoomEx_cbChooseMap_content(3);
     end
 end
@@ -42,14 +38,10 @@ function layWorld_frCreateRoomEx_cbChooseMap_content(idx)
     local edbSetLevel=SAPI.GetChild(frCreateRoomEx,"edbSetLevel");
     local setting=uiGetDungeonSetting();
     local pvemin=setting["PVE_LEV"];
-    local pvpmin=setting["PVP_LEV"];
+    local pvpmin=("61");
 
      
-    if idx == 1 then
-        edbStyleIntroduction:SetText(uiLanString("msg_dungeon_txt1"));
-        edbMapIntroduction:SetText(uiLanString("msg_dungeon_map1"));
-	edbSetLevel:SetText(tostring(pvemin));
-    elseif idx == 3 then
+    if idx == 3 then
         edbStyleIntroduction:SetText(uiLanString("msg_dungeon_txt2"));
         edbMapIntroduction:SetText(uiLanString("msg_dungeon_map2"));
 	edbSetLevel:SetText(tostring(pvpmin));
@@ -67,44 +59,28 @@ function layWorld_frCreateRoomEx_Show(idx)
     local edbSetLevel=SAPI.GetChild(frCreateRoomEx,"edbSetLevel");
 
     local setting=uiGetDungeonSetting();
-    local pvemin=setting["PVE_LEV"];
-    local pvpmin=setting["PVP_LEV"];
+    local pvpmin=("61");
 
-
+	local name, party, sex = uiGetMyInfo("Role")
     --·¿¼äÃû×Ö
-    edbEnterRoomName:SetText("");
+    edbEnterRoomName:SetText(name.."'s Room");
 
     cbChooseStyle:RemoveAllItems();
     cbChooseMap:RemoveAllItems();
     edbEnterPassword:SetText("");
 
-   local bpvpopen=uiGetDungeonIsOpen(3);
-   
-
     cbChooseStyle:SetEnableInput(false);
-    cbChooseStyle:AddItem(uiLanString("msg_dungeon_type1"),0);
-    if bpvpopen==true then
-        cbChooseStyle:AddItem(uiLanString("msg_dungeon_type2"),0);
-    end
+    cbChooseStyle:AddItem(uiLanString("msg_dungeon_type2"),0);
+
     
     cbChooseMap:SetEnableInput(false);
     cbChooseMap:Disable();
-    cbChooseMap:AddItem(uiLanString("msg_dungeon_type1"),0);
-    if bpvpopen==true then
-        cbChooseMap:AddItem(uiLanString("msg_dungeon_type2"),0);   
-    end
+    cbChooseMap:AddItem(uiLanString("msg_dungeon_type2"),0);
 
-    if idx == 1 then 
-        edbSetLevel:SetText(tostring(pvemin));
+        edbSetLevel:SetText(tostring(pvpmin));
         cbChooseStyle:SelectItem(0);
         cbChooseMap:SelectItem(0);
-
-
-    elseif idx == 3 then
-        edbSetLevel:SetText(tostring(pvpmin));
-        cbChooseStyle:SelectItem(1);
-        cbChooseMap:SelectItem(1);
-    end
+ 
     layWorld_frCreateRoomEx_cbChooseMap_content(idx);
     
 end
@@ -118,36 +94,22 @@ function layWorld_frCreateRoomEx_btConfirm_OnLClick(self)
     local edbEnterPassword=SAPI.GetChild(frCreateRoomEx,"edbEnterPassword");
     local edbSetLevel=SAPI.GetChild(frCreateRoomEx,"edbSetLevel");
     local setting=uiGetDungeonSetting();
-    local pvemin=setting["PVE_LEV"];
-    local pvpmin=setting["PVP_LEV"];
-
-
+    local pvpmin=("61");
 
     local itype;
-    local slev=tonumber(edbSetLevel:getText());
-
     if cbChooseStyle:getSelectItemIndex() == 0 then
-        itype=1;
-    elseif cbChooseStyle:getSelectItemIndex() == 1 then
         itype=3;
     else
         return;
     end
-    local strerror1=string.format(uiLanString("msg_dungeon_min_level"),tostring(pvemin));
+	
     local strerror2=string.format(uiLanString("msg_dungeon_min_level"),tostring(pvpmin));
-    
-    if itype == 1 then
-        if slev<tonumber(pvemin) then
-	    uiClientMsg(strerror1,false);
+	local level, curexp, maxexp = uiGetMyInfo("Exp");
+    if tonumber(level)<tonumber(pvpmin) then
+	    uiClientMsg(strerror2,true);
 	    return;
-	end
-    else
-      --ityle == 3
-       if slev<tonumber(pvpmin) then
-	    uiClientMsg(strerror2,false);
-	    return;
-	end
     end
+	
     local roomtitle=edbEnterRoomName:getText();
     if  tostring(roomtitle)~="" then
         uiDungeonCreateRoom(roomtitle,itype,tonumber(edbSetLevel:getText()),edbEnterPassword:getText());

@@ -5,15 +5,12 @@
     <Form Inherit="" Location="50,150,580,532" Movable="true" Name="frmGuildPKEx" Show="false" Size="580,532">
       <Label Inherit="bg1" Location="6,18,553,512" Name="lbBackLT" Show="true"/>
       <TitleBarButton Location="-2,0,570,44"/>
-      <CloseButton Location="528,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="534,27,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="-2,0,569,50" Name="lbTitle" Show="true"/>
-	  	<Label Inherit="" Location="210,14,170,17" Name="Name33" Show="true">
-          <BackgroundImage File="cgz_design25" Source="105,340,340,24"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="223,-5,140,66" Name="2015" Show="false" Text="$L:1275$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="-2,0,570,44" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="223,0,120,66" Name="2015" Show="true" Text="$L:1275$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Label Inherit="bg3" Location="34,124,500,350" MouseEvent="true" MouseMove="true" Name="lbList" Pick="false" Show="true">
         <EditBox ColSpacing="5" EnableInput="false" Inherit="" LineSpacing="20" Location="7,7,485,335" MultiLine="true" Name="etPKTime" Show="true" Text="$L:1281$" WordWrap="true"/>
         <ListBox Inherit="" Location="7,7,485,335" MouseEvent="true" MouseMove="true" Name="lstPKList" Pick="false" Show="false">
@@ -132,9 +129,9 @@
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="47,59,147,24" Name="lbGuildName" Show="true">
         <BackgroundImage File="tz_010" Source="181,351,147,24"/>
       </Label>
-      <CloseButton Location="360,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="366,27,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Scripts>
         <OnShow>layWorld_frmPKDetailedEx_OnShow(self);</OnShow>

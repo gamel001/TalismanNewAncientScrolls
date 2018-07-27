@@ -27,14 +27,11 @@
         </Scripts>
       </Button>
       <TitleBarButton Location="0,0,294,20"/>
-      <CloseButton Location="258,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,28,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-	  	<Label Inherit="" Location="87,12,110,18" Name="Name16" Show="true">
-          <BackgroundImage File="cgz_design25" Source="715,339,220,24"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="87,-5,120,68" Name="8439" Show="false" Text="$L:969$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="87,0,120,68" Name="8439" Show="true" Text="$L:969$" TextFont="$L:1$" TextSize="$L:3$"/>
     </Form>
   </Layer>
 </Ui>

@@ -2,9 +2,6 @@
 <Ui>
   <Layer Name="layWorld" Show="true">
     <Form Inherit="" Location="470,117,294,460" Name="frmAllConnection" Show="fals">
-	  <Label Inherit="" Location="20,97,255,295" Name="1956" Show="true">
-        <BackgroundImage File="cgz_lines_3" Source=""/>
-      </Label>	
       <Label Inherit="bg1" Location="7,18,280,430" Name="lbBackground" Show="fals"/>
       <Label Inherit="" Location="0,256,256,164" Name="lbBackground2" Show="false">
         <BackgroundImage File="" Source=""/>
@@ -15,12 +12,12 @@
       <Label Inherit="" Location="254,255,90,165" Name="1052" Show="false">
         <BackgroundImage File="" Source=""/>
       </Label>
-      <CloseButton Location="256,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
       <Form Inherit="NoTitleBarForm" Location="18,97,260,345" Name="frmFriends" Show="fals">
-        <Label Inherit="bg3" Location="1,0,256,295" Name="10505" Show="true"/>
+        <Label Inherit="bg3" Location="2,2,256,295" Name="10505" Show="true"/>
         <ListBox BackgroundColor="#8f000000" Inherit="" Location="5,5,249,289" Name="ltFriends" Show="true"/>
         <Button Inherit="PushButton" Location="147,299,80,20" Name="btAddFriends" Show="true" Text="$L:404$"/>
         <Button Inherit="PushButton" Location="35,299,80,20" Name="btSendMessenger" Show="true" Text="$L:405$"/>
@@ -44,31 +41,28 @@
         <Button Inherit="PushButton" Location="150,308,80,20" Name="btSystem" Show="true" Text="$L:973$"/>
       </Form>
       <TitleBarButton Location="0,0,294,30" TextFont="$L:1$" TextSize="$L:3$"/>
-      <CheckButton CheckStyle="false" Inherit="" Location="27,54,77,24" Name="btnFriends" Show="true" Text="$L:413$">
-        <NormalImage File="cgz_design" Source="238,344,77,24"/>
-        <CheckImage File="cgz_design" Source="238,255,77,24"/>
-        <PushedImage File="cgz_design" Source="238,255,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="27,54,80,40" Name="btnFriends" Show="true" Text="$L:413$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="187,54,77,24" Name="btnBadMan" Show="true" Text="$L:414$">
-        <NormalImage File="cgz_design" Source="238,344,77,24"/>
-        <CheckImage File="cgz_design" Source="238,255,77,24"/>
-        <PushedImage File="cgz_design" Source="238,255,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="187,54,80,40" Name="btnBadMan" Show="true" Text="$L:414$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
       </CheckButton>
-      <CheckButton CheckStyle="false" Inherit="" Location="107,54,77,24" Name="btnBad" Show="true" Text="$L:971$">
-        <NormalImage File="cgz_design" Source="238,344,77,24"/>
-        <CheckImage File="cgz_design" Source="238,255,77,24"/>
-        <PushedImage File="cgz_design" Source="238,255,77,24"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="107,54,80,40" Name="btnBad" Show="true" Text="$L:971$">
+        <NormalImage File="tz_010" Source="82,231,80,40"/>
+        <CheckImage File="tz_010" Source="0,231,80,40"/>
+        <PushedImage File="tz_010" Source="0,231,80,40"/>
       </CheckButton>
-      <Label Inherit="TemplateNormalTitle" Location="0,0,294,50" Name="lbTitle" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,0,292,50" Name="lbTitle" Show="true"/>
       <Label Inherit="" Location="384,8,145,24" Name="lbTitle1" Show="false">
         <BackgroundImage File="tz_010" Source="314,0,145,24"/>
       </Label>
-	   <Label Inherit="" Location="80,13,135,18" Name="Name6" Show="true">
-          <BackgroundImage File="cgz_design25" Source="6,175,219,29"/>
-       </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="86,-5,126,66" Name="lbTitleName" Show="false" Text="$L:403$" TextFont="$L:1$" TextSize="$L:3$"/>
-      <Label Inherit="" Location="13,72,268,10" Name="3404" Show="true">
-        <BackgroundImage File="cgz_design" Source="125,88,4,10"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="86,0,126,66" Name="lbTitleName" Show="true" Text="$L:403$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="" Location="13,88,268,6" Name="3404" Show="true">
+        <BackgroundImage File="tz_010" Source="365,397,6,6"/>
       </Label>
     </Form>
   </Layer>

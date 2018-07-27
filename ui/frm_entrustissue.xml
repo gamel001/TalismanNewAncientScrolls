@@ -2,65 +2,124 @@
 <Ui>
   <Script file="frm_entrustissue.lua">LUA</Script>
   <Layer Name="layWorld" Show="true">
-    <Form Inherit="" Location="200,150,320,410" Name="frmEntrust" Show="true">
-      <Label Inherit="bg1" InheritTag="true" Location="10,10,300,400" Name="1003" Show="true"/>
+    <Form Inherit="" Location="200,150,320,510" Name="frmEntrust" Show="false" Size="320,510">
+      <Label Inherit="bg1" InheritTag="true" Location="10,10,300,500" Name="1003" Show="true"/>
       <Label Inherit="TemplateNormalTitle" InheritTag="true" Location="0,0,320,45" Name="1719" Show="true"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="100,-8,120,80" Name="5411" Show="true" Text="发布委托" TextFont="$L:1$" TextSize="$L:4$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="100,-8,120,80" Name="5411" Show="true" Text="$L:1520$" TextFont="$L:1$" TextSize="$L:4$"/>
       <TitleBarButton Location="0,0,320,24"/>
-      <CloseButton Location="286,27,16,16">
+      <CloseButton Location="286,27,13,13">
         <NormalImage File="tz_010" FillMode="STRETCH" Source="120,383,13,13"/>
         <PushedImage File="tz_010" FillMode="STRETCH" Source="120,383,13,13"/>
       </CloseButton>
-      <Label Inherit="bg3" Location="30,170,260,190" Name="9555" Show="true"/>
-      <Label Inherit="bg3" Location="30,67,260,100" Name="35075" Show="true"/>
-      <ComboBox Active="false" AlignCol="CENTER" AlignLine="CENTER" EnableInput="false" Inherit="StudioCb" InheritTag="true" Location="48,77,80,20" Name="cbxEntrustTask" Show="true">
+      <Label Inherit="bg3" Location="30,221,260,140" Name="9555" Show="true"/>
+      <Label Inherit="bg3" Location="30,63,260,150" Name="35075" Show="true"/>
+      <ComboBox Active="false" AlignCol="CENTER" AlignLine="CENTER" EnableInput="false" Inherit="StudioCb" InheritTag="true" Location="48,79,80,20" Name="cbxEntrustTask" Show="true">
         <Scripts>
           <OnUpdateText>layWorld_frmEntrustissue_CBX_EntrustTask_OnUpdateText(self)</OnUpdateText>
         </Scripts>
       </ComboBox>
-      <ComboBox Active="false" AlignCol="CENTER" AlignLine="CENTER" EnableInput="false" Inherit="StudioCb" InheritTag="true" Location="141,77,130,20" Name="cbxEntrustTaskName" Show="true">
+      <ComboBox Active="false" AlignCol="CENTER" AlignLine="CENTER" EnableInput="false" Inherit="StudioCb" InheritTag="true" Location="141,79,130,20" Name="cbxEntrustTaskName" Show="true">
         <Scripts>
           <OnUpdateText>layWorld_frmEntrustissue_CBX_EntrustTaskName_OnUpdateText(self)</OnUpdateText>
         </Scripts>
       </ComboBox>
-      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,109,80,20" Name="8038" Show="true" Text="信誉度要求"/>
-      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,138,80,20" Name="8449" Show="true" Text="委托期限"/>
-      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,181,80,20" Name="8972" Show="true" Text="委托描述："/>
-      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,289,80,20" Name="11563" Show="true" Text="设置奖励"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="195,109,40,20" Name="9204" Show="true" Text="信誉度"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="196,138,40,20" Name="15492" Show="true" Text="小  时"/>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="194,289,20,20" Name="16335" Show="true" Text="金">
+      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,99,80,20" Name="8038" Show="false" Text="$L:1521$"/>
+      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,111,80,20" Name="8449" Show="true" Text="$L:1523$"/>
+      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,146,80,20" Name="8972" Show="true" Text="$L:1525$"/>
+      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="48,233,80,20" Name="11563" Show="true" Text="$L:1526$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="188,99,40,20" Name="9204" Show="false" Text="$L:1522$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="201,111,40,20" Name="15492" Show="true" Text="$L:1524$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="189,234,20,20" Name="16335" Show="true" Text="">
         <BackgroundImage File="tz_010" FillMode="STRETCH" Source="412,487,29,26"/>
       </Label>
-      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="59,320,70,20" Name="16550" Show="true" Text="手续费："/>
-      <Label Inherit="" Location="135,321,70,18" Name="lbprocedurefee" Show="true"/>
-      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="147,109,48,20" MultiLine="false" Name="ebxCreditworthiness" NumberOnly="true" Show="true">
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="99,326,20,20" Name="1659" Show="true" Text="">
+        <BackgroundImage File="tz_010" FillMode="STRETCH" Source="412,487,29,26"/>
+      </Label>
+      <Label Inherit="" Location="157,326,20,20" Name="825" Show="true">
+        <BackgroundImage File="tz_010" FillMode="STRETCH" Source="445,488,24,22"/>
+      </Label>
+      <Label Inherit="" Location="215,326,20,20" Name="910" Show="true">
+        <BackgroundImage File="tz_010" FillMode="STRETCH" Source="476,485,24,26"/>
+      </Label>
+      <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="58,299,70,20" Name="16550" Show="true" Text="$L:1527$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="60,326,40,20" Name="lbprocedurefeegold" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="118,326,40,20" Name="lbprocedurefeesilver" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="176,326,40,20" Name="lbprocedurefeecopper" Show="true"/>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="141,99,48,20" MaxChar="6" MultiLine="false" Name="ebxCreditworthiness" NumberOnly="true" Show="false">
         <BackgroundImage File="tz_011" FillMode="STRETCH" Source="102,316,24,15"/>
       </EditBox>
-      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="148,138,48,20" MultiLine="false" Name="ebxHours" NumberOnly="true" Show="true">
-        <BackgroundImage File="tz_011" FillMode="STRETCH" Source="102,316,24,15"/>
+      <Label Inherit="bg3" Location="141,146,120,50" Name="1189" Show="true"/>
+      <Label Inherit="" Location="141,111,60,20" Name="1294" Show="true">
+        <BackgroundImage File="tz_011" FillMode="STRETCH" Source="85,0,159,20"/>
+      </Label>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="161,114,20,20" MaxNumber="24" MultiLine="false" Name="ebxHours" NumberOnly="true" Show="true"/>
+      <EditBox AlignCol="LEFT" AlignLine="CENTER" Inherit="" Location="145,150,112,42" MaxChar="40" MultiLine="true" Name="ebxDescribe" Show="true" Size="114,95" WordWrap="true"/>
+      <Label Inherit="" Location="141,234,48,20" Name="1300" Show="true">
+        <BackgroundImage File="tz_011" FillMode="STRETCH" Source="85,0,159,20"/>
+      </Label>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="148,237,35,20" MaxChar="5" MultiLine="false" Name="ebxGold" NumberOnly="true" Show="true" MaxNumber="99999">
+        <Scripts>
+          <OnTextChanged>layWorld_frmEntrustissue_EbxGold_OnTextChanged( self )</OnTextChanged>
+        </Scripts>
       </EditBox>
-      <EditBox Inherit="" Location="142,185,115,95" MaxChar="40" MultiLine="true" Name="ebxDescribe" Show="true" Size="114,95" WordWrap="true">
-        <BackgroundImage File="tz_011" FillMode="STRETCH" Source="102,316,24,15"/>
-      </EditBox>
-      <EditBox AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="147,289,48,20" MultiLine="false" Name="ebxGold" NumberOnly="true" Show="true">
-        <BackgroundImage File="tz_011" FillMode="STRETCH" Source="102,316,24,15"/>
-      </EditBox>
-      <Button Inherit="PushButton" Location="48,364,100,24" Name="btConfirm" Show="true" Text="确   认">
-		<Scripts>
-            <OnLClick>layWorld_frmEntrustissue_BtnConfirm_OnClicked( self )</OnLClick>
+      <Button AlignCol="CENTER" AlignLine="CENTER" Inherit="PushButton" Location="48,458,100,24" Name="btConfirm" Show="true" Text="$L:1528$">
+        <Scripts>
+          <OnLClick>layWorld_frmEntrustissue_BtnConfirm_OnClicked( self )</OnLClick>
         </Scripts>
       </Button>
-      <Button Inherit="PushButton" Location="170,365,100,24" Name="btClose" Show="true" Text="取   消">
-		<Scripts>
-            <OnLClick>layWorld_frmEntrustissue_BtnClose_OnClicked( self )</OnLClick>
+      <Button AlignCol="CENTER" AlignLine="CENTER" Inherit="PushButton" Location="177,458,100,24" Name="btClose" Show="true" Text="$L:1529$">
+        <Scripts>
+          <OnLClick>layWorld_frmEntrustissue_BtnClose_OnClicked( self )</OnLClick>
         </Scripts>
-	  </Button>
+      </Button>
       <Scripts>
         <OnLoad>layWorld_frmEntrustissue_OnLoad(self)</OnLoad>
         <OnShow>layWorld_frmEntrustissue_OnShow(self)</OnShow>
-		<OnEvent>layWorld_frmEntrustissue_OnEvent(self,event,arg)</OnEvent>
+        <OnHide>layWorld_frmEntrustissue_OnHide(self)</OnHide>
+        <OnEvent>layWorld_frmEntrustissue_OnEvent(self,event,arg)</OnEvent>
       </Scripts>
+      <CheckButton DragIn="true" Inherit="" Location="74,260,32,32" Name="cbtEncouragement1" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
+        <Hint Text="$L:1545$"/>
+        <Scripts>
+          <OnLoad>layWorld_frmEntrustissue_CbxEncouragement_OnLoad(self)</OnLoad>
+          <OnDragIn>layWorld_frmEntrustissue_CbxEncouragement_OnDragIn( self, drag )</OnDragIn>
+          <OnDragNull>layWorld_frmEntrustissue_CbxEncouragement_OnDragNull( self )</OnDragNull>
+          <OnHint>layWorld_frmEntrustissue_CbxEncouragement_OnHint( self )</OnHint>
+        </Scripts>
+      </CheckButton>
+      <CheckButton DragIn="true" Inherit="" Location="140,260,32,32" Name="cbtEncouragement2" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
+        <Hint Text="$L:1545$"/>
+        <Scripts>
+          <OnLoad>layWorld_frmEntrustissue_CbxEncouragement_OnLoad(self)</OnLoad>
+          <OnDragIn>layWorld_frmEntrustissue_CbxEncouragement_OnDragIn( self, drag )</OnDragIn>
+          <OnDragNull>layWorld_frmEntrustissue_CbxEncouragement_OnDragNull( self )</OnDragNull>
+          <OnHint>layWorld_frmEntrustissue_CbxEncouragement_OnHint( self )</OnHint>
+        </Scripts>
+      </CheckButton>
+      <CheckButton DragIn="true" Inherit="" Location="206,260,32,32" Name="cbtEncouragement3" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+        <HighlightImage File="tz_010" Source="186,376,48,48"/>
+        <PushedImage File="tz_010" Source="186,376,48,48"/>
+        <Hint Text="$L:1545$"/>
+        <Scripts>
+          <OnLoad>layWorld_frmEntrustissue_CbxEncouragement_OnLoad(self)</OnLoad>
+          <OnDragIn>layWorld_frmEntrustissue_CbxEncouragement_OnDragIn( self, drag )</OnDragIn>
+          <OnDragNull>layWorld_frmEntrustissue_CbxEncouragement_OnDragNull( self )</OnDragNull>
+          <OnHint>layWorld_frmEntrustissue_CbxEncouragement_OnHint( self )</OnHint>
+        </Scripts>
+      </CheckButton>
+      <Label Inherit="bg3" Location="30,368,260,80" Name="3086" Show="true"/>
+      <EditBox EnableInput="false" Inherit="" Location="37,375,246,66" Name="3595" Pick="false" Show="true" Text="$L:1546$" WordWrap="true"/>
+      <Anchors>
+        <Anchor offset="0,194" point="TOP"/>
+        <Anchor offset="-60,0" point="CENTERH"/>
+      </Anchors>
     </Form>
   </Layer>
 </Ui>

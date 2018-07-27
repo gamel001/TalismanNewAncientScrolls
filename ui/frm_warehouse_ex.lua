@@ -1,7 +1,7 @@
 UI_Bank_Npc_Object_Id = 0
 
 local UI_BANK_ALLOWED_MAX_GRID_COUNT = 30
-local UI_ULTRABANK_ALLOWED_MAX_COUNT = 6
+local UI_ULTRABANK_ALLOWED_MAX_COUNT = 12
 
 function layWorld_frmWarehouseEx_OnUpdate(self)
 	if uiGuild_NpcDialogCheckDistance(UI_Bank_Npc_Object_Id) ~= true then self:Hide() return end
@@ -227,7 +227,7 @@ function layWorld_frmWarehouseEx_BtBag_OnLClick(self)
 				layWorld_frmWarebagEx_Hide()
 			end
 		else
-			BtBag:SetChecked(false)
+			--BtBag:SetChecked(false)
 		end
 	end
 end
@@ -247,3 +247,290 @@ function layWorld_frmWarehouseEx_btnLoadMoney_OnLClick()
 	frmBankSetmoneyEx:Set("save", false)
 	frmBankSetmoneyEx:ShowAndFocus()
 end
+
+local function SortBagItem (queue_mode, baglist)
+	-- 整理背包
+	if baglist == nil then  -- 总排序
+		baglist = {0}; -- 0 是 默认的仓库
+		for bagindex = 1, UI_ULTRABANK_ALLOWED_MAX_COUNT, 1 do
+			if bagindex > uiBank_GetUltraBagCount() then
+				break;
+			else
+				local bagEndTime = uiBank_GetUltraBagEndTime(bagindex);
+				if bagEndTime == 0 or uiGetServerTime() < bagEndTime then
+					table.insert(baglist, bagindex);
+				elseif uiGetServerTime() >= bagEndTime then
+					--过期
+				end
+			end
+		end
+	end
+	
+	-- 1.数据列表变量 < 叠加 >
+	local ItemList_M = {};	-- 叠加道具列表
+	local ItemList_P = {};	-- 位置列表
+	local ItemList_L = {};	-- 用于排序的道具列表
+	
+	local ExchangeItem = function (first, second)
+		local Temp = {
+			ObjectId = first.ObjectId,
+			TableId = first.TableId,
+			MaxCount = first.MaxCount,
+			Count = first.Count,
+			Type = first.Type,
+			};
+		first.ObjectId = second.ObjectId;
+		first.TableId = second.TableId;
+		first.MaxCount = second.MaxCount;
+		first.Count = second.Count;
+		first.Type = second.Type;
+		
+		second.ObjectId = Temp.ObjectId;
+		second.TableId = Temp.TableId;
+		second.MaxCount = Temp.MaxCount;
+		second.Count = Temp.Count;
+		second.Type = Temp.Type;
+	end
+	local ClearItem = function (item)
+		item.ObjectId = nil;
+		item.TableId = nil;
+		item.MaxCount = nil;
+		item.Count = nil;
+		item.Type = nil;
+	end
+	
+	-- 2.收集数据列表
+	for bagindex = 0, UI_ULTRABANK_ALLOWED_MAX_COUNT, 1 do
+		if SAPI.ExistInTable(baglist, bagindex) == true then
+			local _, line, col, count;
+			if bagindex == 0 then
+				line, col = uiBank_GetBankDefaultLineCol();
+			else
+				_, line, col = uiBank_GetUltraBagMaxCountLineCol(bagindex);
+			end
+			count = uiBank_GetBagItemCount(0);
+			local itembag = {maxline = line, maxcol = col};
+			for l = 1, line do
+				local itemline = {};
+				for c = 1, col do
+					local iteminfo = {};
+					iteminfo.bag = bagindex;
+					iteminfo.line = l;
+					iteminfo.col = c;
+					local ObjectId, TableId;
+					if bagindex == 0 then
+						_, _, ObjectId, TableId = uiBank_GetBankItemInfoByLineCol(l, c);
+					else
+						_, _, ObjectId, _, TableId = uiBank_GetBankUltraItemInfoByLineCol(bagindex, l, c);
+					end
+					if ObjectId then
+						iteminfo.ObjectId = ObjectId;
+						iteminfo.TableId = TableId;
+						local classInfo = uiItemGetItemClassInfoByTableIndex(TableId);
+						iteminfo.Type = classInfo.Type;
+					end
+					table.insert(itemline, iteminfo);
+					table.insert(ItemList_L, iteminfo);
+					if iteminfo.MaxCount then
+						if ItemList_M[TableId] == nil then
+							ItemList_M[TableId] = {};
+						end
+						table.insert(ItemList_M[TableId], iteminfo);
+					end
+				end
+				table.insert(itembag, itemline);
+			end
+			ItemList_P[bagindex] = itembag;
+		end
+	end
+	--[[
+	-- 3.叠加整理 < 叠加 >
+	for TableId, ItemList in pairs(ItemList_M) do
+		local OpItem = nil;
+		for i, v in ipairs(ItemList) do
+			local MaxCount = v.MaxCount;
+			if v.Count < MaxCount then
+				for j = 1, i - 1 do
+					OpItem = ItemList[j];
+					if OpItem and uiBank_CheckSameBagItemByCoord(v.bag, v.line, v.col, OpItem.bag, OpItem.line, OpItem.col) then
+						local totle = OpItem.Count + v.Count;
+						if totle > MaxCount then
+							--[[
+							totle = MaxCount - OpItem.Count;
+							uiItemDivideItem(v.bag, v.line, v.col, OpItem.bag, OpItem.line, OpItem.col, totle);
+							v.Count = v.Count - totle;
+							OpItem.Count = MaxCount;
+							OpItem = v;
+							]]
+						else
+							if OpItem.bag == 0 then
+								uiBank_ItemPutInDefaultBank(v.ObjectId, OpItem.line, OpItem.col, UI_Bank_Npc_Object_Id)
+							else
+								uiBank_ItemPutInUltraBank(v.ObjectId, OpItem.bag, OpItem.line, OpItem.col, UI_Bank_Npc_Object_Id)
+							end
+							ClearItem(v);
+							OpItem.Count = OpItem.Count + totle;
+							break;
+						end
+					end
+				end
+			end
+		end
+	end
+	]]
+	
+	-- 4.排序 < 移动 >
+	local sortfunc = nil;
+	if queue_mode == true then
+		sortfunc = function (first, second)
+						if first.Type == nil then return false end
+						if second.Type == nil then return true end
+						
+						if first.Type == second.Type then
+							if first.TableId == second.TableId then
+								return first.ObjectId < second.ObjectId;
+							end
+							return first.TableId < second.TableId;
+						end
+						
+						return first.Type < second.Type;
+					end;
+	else
+		sortfunc = function (first, second)
+						if first.Type == nil then return false end
+						if second.Type == nil then return true end
+						
+						if first.Type == second.Type then
+							if first.TableId == second.TableId then
+								return first.ObjectId > second.ObjectId;
+							end
+							return first.TableId > second.TableId;
+						end
+						
+						return first.Type > second.Type;
+					end;
+	end
+	table.sort(ItemList_L, sortfunc);
+
+	local SortList = {};
+	local index = 1;
+	for bagindex = 0, UI_ULTRABANK_ALLOWED_MAX_COUNT, 1 do
+		local bag = ItemList_P[bagindex];
+		if bag then
+			for line, lineitem in ipairs(bag) do
+				for col, item in ipairs(lineitem) do
+					local itemL = ItemList_L[index];
+					if itemL.ObjectId then
+						SortList[itemL.ObjectId] = {bag=bagindex, line=line, col=col};
+					end
+					index = index + 1;
+				end
+			end
+		end
+	end
+	
+	for bagindex = 0, UI_ULTRABANK_ALLOWED_MAX_COUNT, 1 do
+		local bag = ItemList_P[bagindex];
+		if bag then
+			for line, lineitem in ipairs(bag) do
+				for col, item in ipairs(lineitem) do
+					local move = true;
+					while move do
+						if item.ObjectId then
+							-- 检查是不是需要移动
+							local SortItem = SortList[item.ObjectId];
+							if SortItem then
+								if item.bag == SortItem.bag and item.line == SortItem.line and item.col == SortItem.col then
+									move = false;
+								else
+									local itemto = ItemList_P[SortItem.bag][SortItem.line][SortItem.col];
+									if not itemto then
+										uiError(string.format("itemto nil error!!![%s][%s][%s]", tostring(SortItem.bag), tostring(SortItem.line), tostring(SortItem.col)));
+										return;
+									end
+									uiBank_ItemPutInDefaultBankFromBank(item.bag, item.line, item.col, itemto.bag, itemto.line, itemto.col, UI_Bank_Npc_Object_Id)
+									ExchangeItem(item, itemto);
+								end
+							else
+								uiError(string.format("SortItem nil error!!![Objectid = %s]", tostring(item.ObjectId)));
+								return;
+							end
+						else
+							move = false;
+						end
+					end
+				end
+			end
+		end
+	end
+	
+	
+	--[[
+	-- 4.数据列表变量 < 移动 >
+	local SpaceList = {};
+	local ItemList = {};
+	
+	-- 5.收集数据列表 < 移动 >
+	for bagindex = 0, Local_Item_MaxBag - 1 do
+		local bag = ItemList_P[bagindex];
+		if bag then
+			for line, lineitem in ipairs(bag) do
+				for col, item in ipairs(lineitem) do
+					if item.ObjectId then
+						table.insert(ItemList, item);
+					else
+						table.insert(SpaceList, item);
+					end
+				end
+			end
+		end
+	end
+	
+	-- 6.位置整理 < 移动 >
+	if table.getn(SpaceList) < table.getn(ItemList) then
+		local curindex = table.getn(ItemList);
+		-- 如果空格在道具之前，则移动之
+		for i, v in ipairs(SpaceList) do
+			vItem = ItemList[curindex];
+			if vItem.bag < v.bag then
+				break;
+			elseif vItem.bag == v.bag then
+				if vItem.line < v.line then
+					break;
+				elseif vItem.line == v.line then
+					if vItem.col <= v.col then
+						break;
+					end
+				end
+			end
+			uiItemMoveItem(vItem.bag, vItem.line, vItem.col, v.bag, v.line, v.col);
+			curindex = curindex - 1;
+		end
+	else
+		local curindex = 1;
+		local v = nil;
+		for i = table.getn(ItemList), 1, -1 do
+			vSpace = SpaceList[curindex];
+			v = ItemList[i];
+			if vSpace.bag > v.bag then
+				break;
+			elseif vSpace.bag == v.bag then
+				if vSpace.line > v.line then
+					break;
+				elseif vSpace.line == v.line then
+					if vSpace.col >= v.col then
+						break;
+					end
+				end
+			end
+			uiItemMoveItem(v.bag, v.line, v.col, vSpace.bag, vSpace.line, vSpace.col);
+			curindex = curindex + 1;
+		end
+	end
+	]]
+end
+
+function layWorld_frmWarehouseEx_btSort_OnLClick(self)
+	SortBagItem (true);
+end
+

@@ -1,6 +1,6 @@
 --PVP System Entry
 --Code by jin.Wang
-local frColiseumExIdx=1;
+local frColiseumExIdx=3;
 local frColiseumEx_data={};
 frRoomInfo_Show=0;
 

@@ -34,9 +34,9 @@ local LOCAL_SHORTCUT_EVENT_MAP =
 	{event="Shortcut", {16,13}, {16,14}, {16,15}, {16,16}, {16,17}, {16,18}, {16,19}, {16,20}, {16,21}, {16,22}, {16,23}, {16,24},},
 	{event="Shortcut", { 4,23}, { 5,23}, { 6,23}, { 7,23}, { 8,23}, { 9,23}, {10,23}, {11,23}, {12,23}, {13,23}, {14,23}, {15,23},},
 	{event="Shortcut", { 4,24}, { 5,24}, { 6,24}, { 7,24}, { 8,24}, { 9,24}, {10,24}, {11,24}, {12,24}, {13,24}, {14,24}, {15,24},},
-	{event="MainShortcut", event1="MainShortcutS", 1, 2, 3, 4, 5},
-	{event="MainShortcut", event1="MainShortcutS", 1, 2, 3, 4, 5},
-	{event="MainShortcut", event1="MainShortcutS", 6, 7, 8, 9, 0},
+	{event="MainShortcut", event1="MainShortcutS", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+	{event="MainShortcut", event1="MainShortcutS", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
+	{event="MainShortcut", event1="MainShortcutS", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0},
 	GetName = function(self, line, col)
 		if self[line] == nil or self[line][col] == nil then return "" end
 		local event = self[line].event;
@@ -63,6 +63,7 @@ local LOCAL_SHORTCUT_EVENT_MAP =
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------                                           快捷栏的模板实现 (start)                                            --------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -817,7 +818,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function layWorld_frmSystemButtonEx_lbNetStatus_btUp(self)
 	local CurPage = 1;
-	for i = 2,2,2 do
+	for i = 2,3,1 do
 		local group = SAPI.GetSibling(self, "MainBarShortcutGroup"..i);
 		if group:getVisible() == true then
 			group:Hide()
@@ -832,8 +833,8 @@ function layWorld_frmSystemButtonEx_lbNetStatus_btUp(self)
 end
 
 function layWorld_frmSystemButtonEx_lbNetStatus_btDown(self)
-	local CurPage = 2;
-	for i = 1,1,1 do
+	local CurPage = 3;
+	for i = 1,2,1 do
 		local group = SAPI.GetSibling(self, "MainBarShortcutGroup"..i);
 		if group:getVisible() == true then
 			group:Hide()
@@ -856,8 +857,8 @@ function layWorld_frmSystemButtonEx_lbPageNumber_OnEvent(self, event, args)
 		local opReason = args[1];
 		if opReason ~= EV_EXCUTE_EVENT_KEY_UP then return end
 		local page = args[2];
-		if page < 1 or page > 2 then return end
-		for i = 2, 2, 2 do
+		if page < 1 or page > 3 then return end
+		for i = 1, 3, 1 do
 			local group = SAPI.GetSibling(self, "MainBarShortcutGroup"..i);
 			if i == page then
 				group:Show();
@@ -868,26 +869,60 @@ function layWorld_frmSystemButtonEx_lbPageNumber_OnEvent(self, event, args)
 		self:SetText(tostring(page));
 	end
 end
-				
+local seen={}
+function dump(t,i)
+        seen[t]=true
+        local s={}
+        local n=0
+        for k in pairs(t) do
+            n=n+1 s[n]=k
+        end
+        table.sort(s)
+        for k,v in ipairs(s) do
+            print(i,v)
+            v=t[v]
+            if type(v)=="table" and not seen[v] then
+                dump(v,i.."\t")
+            end
+        end
+end
+
 function layWorld_frmSystemButtonEx_lbNetStatus_OnHint(self)
+	local level, exp, nextexp = uiGetMyInfo("Exp");
+	local role = uiGetMyInfo("Role");
+	local hp, maxhp = uiGetMyInfo("Hp");
+	local pt = uiGetMyInfo("PvePoint");
+	local pt_ = uiGetMyInfo("PvpPoint");
+	local pk, pkmode = uiGetMyInfo("Pk");
 	local ping, sendPacketNum, recvPacketNum, totalByteSend, totalByteRecv, secByteSend, secByteRecv, lastSecByteSend, lastSecByteRecv, sendCompressRate, recvCompressRate = uiNetGetData();
-	local hint_text = string.format(LAN("net_status_hint1"), ping)
-	if sendPacketNum ~= nil then
-		hint_text = hint_text..string.format(
-		[[
-		Talisman Of Diablo
-		sendPacketNum = %d
-		recvPacketNum = %d
-		totalByteSend = %d
-		totalByteRecv = %d
-		secByteSend = %d
-		secByteRecv = %d
-		lastSecByteSend = %d
-		lastSecByteRecv = %d
-		sendCompressRate = %d
-		recvCompressRate = %d]],
-		sendPacketNum, recvPacketNum, totalByteSend, totalByteRecv, secByteSend, secByteRecv, lastSecByteSend, lastSecByteRecv, sendCompressRate, recvCompressRate);
+	
+	if pkmode == 0 then
+		pkmode = "Peace"
+	elseif pkmode == 1 then
+		pkmode = "Capture"
+	elseif pkmode == 2 then
+		pkmode = "Team"
+	elseif pkmode == 3 then
+		pkmode = "Guild"
+	elseif pkmode == 4 then
+		pkmode = "Free"
 	end
+	
+	local hint_text = string.format(
+	[[
+	ping: %d ms
+	Name: %s
+	HP: %d / %d
+	Level: %d
+	PVE Points: %d
+	PVP Points: %d
+	PK Mode: %s
+	PK Value: %d
+	--
+	ToB @ 2018
+	All Rights Reserved.
+	]], ping,role,hp,maxhp, level,pt,pt_,pkmode,pk);
+	
 	self:SetHintText(hint_text);
 end
 

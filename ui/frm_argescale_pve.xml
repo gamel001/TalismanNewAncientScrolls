@@ -32,6 +32,11 @@
     <Form BackgroundColor="#77000000" Inherit="" Location="10,10,258,303" Name="frmLargescalePVE" Show="false" Size="258,303">
       <Label Inherit="bg3" Location="1,0,256,303" Name="5871" Show="true"/>
       <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="7,41,140,22" Name="lbAreaContent" Show="true" Text="$L:1409$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Name="lbLeftTime" Location="147,41,110,22" Inherit="" Show="false" AlignCol="CENTER" AlignLine="CENTER" Text="$L:1409$" TextFont="$L:1$" TextSize="$L:3$">
+	    <Scripts>
+		  <OnUpdate Timer="1000">layWorld_frmLargescalePVE_lbLeftTime_OnUpdate(self, delta)</OnUpdate>
+		</Scripts>
+	  </Label>
       <Label Inherit="bg3" Location="9,64,240,108" Name="735" Show="fals"/>
       <ListBox AutoScrollV="false" Inherit="" Location="12,68,234,100" Name="lstAreaContent" Show="true" Text="">
         <ColumnButton AlignCol="CENTER" AlignLine="CENTER" Text="$L:1412$" TextColor="#ffe0e020" Width="140"/>
@@ -60,7 +65,6 @@
 			else
 				frmLargescalePVERank:ShowAndFocus()
 			end</OnLClick>
-          <OnUpdate Timer="60000">uiPveUpdateInfo()</OnUpdate>
         </Scripts>
       </Button>
       <Scripts>
@@ -71,7 +75,7 @@
 			if frmLargescalePVERank:getVisible() == true then
 				frmLargescalePVERank:Hide()
 			end</OnHide>
-		<OnUpdate Timer="60000">uiPveUpdateRank()</OnUpdate>
+        <OnUpdate Timer="60000">uiPveUpdateRank(); uiPveUpdateInfo();</OnUpdate>
       </Scripts>
       <Label AlignCol="RIGHT" AlignLine="CENTER" Inherit="" Location="7,14,78,22" Name="1900" Show="true" Text="$L:1465$"/>
       <Label AlignCol="LEFT" AlignLine="CENTER" Inherit="" Location="84,14,70,22" Name="lbuserpoint" Show="true"/>

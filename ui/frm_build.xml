@@ -21,7 +21,7 @@
         <BackgroundImage File="tz_011" Source="178,115,41,40"/>
       </Button>
       <Label Inherit="bg3" Location="83,215,182,67" Name="4077" Show="true"/>
-      <EditBox BackgroundColor="#ee000000" EnableInput="false" Inherit="" Location="87,219,175,60" MultiLine="true" Name="lbBuildTip" Show="true" Text="1111111111" WordWrap="true"/>
+      <EditBox BackgroundColor="#ee000000" EnableInput="false" Inherit="" Location="87,219,175,60" MultiLine="true" Name="lbBuildTip" Show="true" Text="" WordWrap="true"/>
       <Label Inherit="" Location="42,227,36,16" Name="lbBuildName" Show="true" Text="$L:507$"/>
       <TitleBarButton Location="11,2,280,28"/>
       <CloseButton Location="266,30,14,14">

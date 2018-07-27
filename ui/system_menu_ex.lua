@@ -7,8 +7,8 @@ local frmVedioEx_Display_box=nil;
 local InterfaceSettingEx_SetOld={};
 local InterfaceSettingEx_SetNew={};
 
-local ScreenUserCountMax = 999;
-local ScreenUserCountMin = 999;
+local ScreenUserCountMax = 60;
+local ScreenUserCountMin = 50;
 --[[
 RemoveAllItems
 SetEnableInput
@@ -310,7 +310,7 @@ function frmVedioEx_btOk_No(_,_)
     frmVedioEx_Display_box=nil;
     frmVedioEx:Hide();
 end
---[[
+
 function frmVedioEx_frmSelect_OnUpdate(self, delta)
     local d = self:Get(EV_UI_DELTA);
 	if d == nil then d = 0 end -- init  the value of EV_UI_DELTA
@@ -331,7 +331,7 @@ function frmVedioEx_frmSelect_OnUpdate(self, delta)
        self:Set("TIMERM",15);
     end
 end
---]]
+
 ---------------------------------------------------------------------------------
 
 function frmVedioEx_btCancel_OnLClick(self)
@@ -1008,8 +1008,8 @@ end
 
 function layWorld_frmVedioEx_OnShow(self)
 	uiRegisterEscWidget(self);
-	local Max = tonumber(uiGetConfigureEntry("video", "ScreenUserCountMax"));
-	local Min = tonumber(uiGetConfigureEntry("video", "ScreenUserCountMin"));
+	local Max = 100;
+	local Min = 1;
 	if Max then ScreenUserCountMax = Max end
 	if Min then ScreenUserCountMin = Min end
 	local frmSelect = SAPI.GetChild(self, "frmSelect");

@@ -54,15 +54,12 @@
         </Scripts>
       </Button>
       <TitleBarButton Location="0,0,350,30"/>
-      <CloseButton Location="309,14,21,21">
-        <NormalImage File="cgz_design" Source="402,159,21,21"/>
-        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      <CloseButton Location="314,29,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
       </CloseButton>
-      <Label Inherit="TemplateNormalTitle" Location="3,2,345,50" Name="lbTitle" Show="true"/>
-	  	<Label Inherit="" Location="125,14,118,18" Name="Name41" Show="true">
-          <BackgroundImage File="cgz_design25" Source="227,461,237,29"/>
-        </Label>
-      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="114,-5,120,72" Name="2015" Show="false" Text="$L:1264$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,2,350,48" Name="lbTitle" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="114,0,120,72" Name="2015" Show="true" Text="$L:1264$" TextFont="$L:1$" TextSize="$L:3$"/>
       <Label Inherit="bg3" Location="20,52,310,40" Name="lbSelectAll" Show="true">
         <CheckButton Inherit="DefaultChkBtn" Location="16,9,275,22" Name="cbSelectAll" Show="true" Text="$L:1265$">
           <BackgroundImage File="tz_012" Source="364,368,148,25"/>
