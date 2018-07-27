@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_Coliseum_ex.lua"/>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="200,100,410,200" Name="frColiseumEx" Show="false">
+      <Label Inherit="bg1" Location="10,10,390,190" Name="lbColiseum" Show="true">
+        <Label AlignCol="LEFT" AlignLine="CENTER" ColSpacing="6" Inherit="bg3" LineSpacing="" Location="15,37,360,30" Name="lbColiseumPoint" Show="true" Text="" TextColor="">
+          <Label AlignCol="LEFT" AlignLine="CENTER" Inherit="" Location="5,5,140,20" Name="lbPointTittle" Show="true" Text="$L:1359$"/>
+          <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="145,5,210,20" Name="lbPoint" Show="true" Text="" TextColor="#ffe10d2e"/>
+        </Label>
+        <Label AlignCol="LEFT" AlignLine="CENTER" ColSpacing="6" Inherit="bg3" LineSpacing="" Location="15,37,360,30" Name="lbColiseumPointBack" Show="false" Text="" TextColor="">
+          <Label AlignCol="LEFT" AlignLine="CENTER" Inherit="" Location="5,5,140,20" Name="lbPointTittle" Show="true" Text=""/>
+          <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="145,5,210,20" Name="lbPoint" Show="true" Text="" TextColor="#ffe10d2e"/>
+        </Label>
+      </Label>
+      <TitleBarButton Location="5,0,400,20"/>
+      <CloseButton Inherit="" Location="369,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <Label Inherit="TemplateNormalTitle" Location="3,0,404,47" Name="lbTittleBar" Show="true">
+	  	<Label Inherit="" Location="145,14,116,18" Name="Name15" Show="true">
+          <BackgroundImage File="cgz_design25" Source="4,380,233,29"/>
+        </Label>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="135,17,130,23" Name="lbTittleName" Show="false" Text="$L:1467$" TextFont="$L:1$" TextSize="$L:3$"/>
+      </Label>
+      <Form Inherit="NoTitleBarForm" Location="15,70,380,115" Name="frColiseumStyle" Show="true">
+        <Label Inherit="bg3" Location="10,30,360,80" Name="lbStyleInfo" Show="true"/>
+        <EditBox AlignCol="LEFT" AlignLine="CENTER" AutoScrollV="true" AutoSizeH="false" ColSpacing="10" EnableInput="false" Inherit="" LeftScrollBar="false" LineSpacing="5" Location="21,35,350,70" MultiLine="false" Name="ebStyleInfomation" Show="true" Text="$L:1363$" WordWrap="true"/>
+      </Form>
+      <Scripts>
+        <OnEvent>layWorld_frColiseumEx_OnEvent(self,event,arg);</OnEvent>
+        <OnShow>layWorld_frColiseumEx_OnShow(self);</OnShow>
+        <OnLoad>layWorld_frColiseumEx_OnLoad(self);</OnLoad>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

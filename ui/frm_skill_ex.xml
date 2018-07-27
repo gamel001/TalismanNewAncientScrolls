@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_skill_ex.lua"/>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="252,0,405,550" Name="frmSkillEx" Show="false">
+	  <Label Inherit="" Location="6,92,373,440" Name="CGZBG11" Show="true">
+      <BackgroundImage File="cgz_design28" Source="0,0,324,327"/>
+      </Label>	
+      <Label Inherit="bg1" Location="0,20,381,518" Name="lbUP" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="-7,1,395,50" Name="lbDown" Show="fals"/>
+	  <CheckButton CheckStyle="false" Inherit="" Location="27,65,77,24" Name="btnSkills" Show="true" Text="$L:172$">
+      <CheckImage File="cgz_design" Source="238,255,77,24"/>
+      <NormalImage File="cgz_design" Source="238,344,77,24"/>
+      <PushedImage File="cgz_design" Source="238,344,77,24"/>
+      <Scripts>
+      <OnLClick>layWorld_frmSkillEx_btnSkills_OnLClick()</OnLClick>
+      </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="107,65,77,24" Name="btnOtherSkills" Show="true" Text="$L:173$">
+      <CheckImage File="cgz_design" Source="238,255,77,24"/>
+      <NormalImage File="cgz_design" Source="238,344,77,24"/>
+      <PushedImage File="cgz_design" Source="238,344,77,24"/>
+      <Scripts>
+      <OnLClick>layWorld_frmSkillEx_btnOtherSkills_OnLClick()</OnLClick>
+      </Scripts>
+      </CheckButton>
+      <Label Inherit="" Location="6,86,367,10" Name="CGZBARC" Show="true">
+      <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      </Label>
+      <TitleBarButton AlignCol="CENTER" Location="0,-1,294,30" TextFont="$L:1$" TextSize="$L:3$"/>
+      <CloseButton Location="349,13,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <Form Inherit="NoTitleBarForm" Location="28,111,238,316" Name="frmOtherSkills" Show="false">
+        <Label Inherit="" Location="7,0,226,54" Name="5007" Show="true"/>
+        <Label Inherit="" Location="7,61,226,54" Name="781" Show="true"/>
+        <Label Inherit="" Location="6,6,50,50" Name="CGZ01" Show="true">
+		<BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+		</Label>
+		<Button Inherit="" Location="11,11,40,40" Name="lbOtherSkillIcon1" Show="true">
+          <BackgroundImage File="" Source=""/>
+          <HighlightImage Blend="true" File="cgz_design" Source="57,414,42,42"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmOtherSkills_lbOtherSkillIcon_OnLClick(self)</OnLClick>
+          </Scripts>
+        </Button>
+        <Label Inherit="" Location="65,9,100,18" Name="lbOtherSkillName1" Show="true" Text=""/>
+        <ProgressBar BackgroundColor="#ee000000" Inherit="" Location="57,33,162,10" Name="prgOtherSkill1" Show="true">
+          <ProgressBarImage File="tz_010" Source="380,405,116,8"/>
+        </ProgressBar>
+		<Label Inherit="" Location="55,30,165,17" Name="CGZB1" Show="true">
+		<BackgroundImage File="cgz_design" Source="229,458,140,17"/>
+		</Label>
+		<Label Inherit="" Location="6,67,50,50" Name="CGZB2" Show="true">
+		<BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+		</Label>
+        <Button Inherit="" Location="11,72,40,40" Name="lbOtherSkillIcon2" Show="true">
+          <BackgroundImage File="" Source=""/>
+        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmOtherSkills_lbOtherSkillIcon_OnLClick(self)</OnLClick>
+          </Scripts>
+        </Button>
+        <Label Inherit="" Location="58,70,100,18" Name="lbOtherSkillName2" Show="true" Text=""/>
+        <ProgressBar BackgroundColor="#ee000000" Inherit="" Location="57,94,162,10" Name="prgOtherSkill2" Show="true">
+          <ProgressBarImage File="tz_010" Source="380,405,116,8"/>
+        </ProgressBar>
+	    <Label Inherit="" Location="55,91,165,17" Name="CGZB3" Show="true">
+		<BackgroundImage File="cgz_design" Source="229,458,140,17"/>
+		</Label>
+        <Widget Inherit="" Location="3,122,230,54" Name="wgOtherSkill3" Show="false">
+          <Widgets>
+            <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="lt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="rt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+                <Anchor point="RIGHT" relativeTo="rt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lt"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lb"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+                <Anchor point="BOTTOM" relativeTo="lb"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="100,100,200,200" Name="center" Show="true">
+              <Anchors>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+              </Anchors>
+            </Widget>
+          </Widgets>
+        </Widget>
+        <Button Inherit="" Location="12,128,40,40" Name="lbOtherSkillIcon3" Show="false">
+          <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+          <HighlightImage Blend="true" File="tz_010" Source="185,375,50,50"/>
+        </Button>
+        <Label Inherit="" Location="58,131,70,18" Name="lbOtherSkillName3" Show="false" Text=""/>
+        <ProgressBar Inherit="" Location="57,155,162,10" Name="prgOtherSkill3" Show="false">
+          <ProgressBarImage File="tz_010" Source="380,405,116,8"/>
+        </ProgressBar>
+        <Widget Inherit="" Location="3,184,230,54" Name="wgOtherSkill4" Show="false">
+          <Widgets>
+            <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="lt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="rt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+                <Anchor point="RIGHT" relativeTo="rt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lt"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lb"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+                <Anchor point="BOTTOM" relativeTo="lb"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="100,100,200,200" Name="center" Show="true">
+              <Anchors>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+              </Anchors>
+            </Widget>
+          </Widgets>
+        </Widget>
+        <Button Inherit="" Location="12,190,40,40" Name="lbOtherSkillIcon4" Show="false">
+          <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+          <HighlightImage Blend="true" File="tz_010" Source="185,375,50,50"/>
+        </Button>
+        <Label Inherit="" Location="58,195,70,18" Name="lbOtherSkillName4" Show="false" Text=""/>
+        <ProgressBar Inherit="" Location="57,218,162,10" Name="prgOtherSkill4" Show="false">
+          <ProgressBarImage File="tz_010" Source="380,405,116,8"/>
+        </ProgressBar>
+        <Widget Inherit="" Location="3,246,230,54" Name="wgOtherSkill5" Show="false">
+          <Widgets>
+            <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="TOP"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="RIGHT"/>
+                <Anchor point="BOTTOM"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="lt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="LEFT" relativeTo="rt"/>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+                <Anchor point="RIGHT" relativeTo="rt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lt"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+                <Anchor point="BOTTOM" relativeTo="lt"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+              <BackgroundImage/>
+              <Anchors>
+                <Anchor point="TOP" relativeTo="lb"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+                <Anchor point="BOTTOM" relativeTo="lb"/>
+              </Anchors>
+            </Widget>
+            <Widget Inherit="" Location="100,100,200,200" Name="center" Show="true">
+              <Anchors>
+                <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+                <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+                <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+                <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+              </Anchors>
+            </Widget>
+          </Widgets>
+        </Widget>
+        <Button Inherit="" Location="12,252,40,40" Name="lbOtherSkillIcon5" Show="false">
+          <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+          <HighlightImage Blend="true" File="tz_010" Source="185,375,50,50"/>
+        </Button>
+        <Label Inherit="" Location="58,257,70,18" Name="lbOtherSkillName5" Show="false" Text=""/>
+        <ProgressBar Inherit="" Location="57,280,162,10" Name="prgOtherSkill5" Show="false">
+          <ProgressBarImage File="tz_010" Source="380,405,116,8"/>
+        </ProgressBar>
+        <Button AlignCol="CENTER" AlignLine="CENTER" Inherit="PushButton" Location="164,69,60,20" Name="btLifeSkillForget2" Show="true" Text="$L:635$">
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmOtherSkills_btLifeSkillForget_OnLClick(self)</OnLClick>
+          </Scripts>
+        </Button>
+        <Button AlignCol="CENTER" AlignLine="CENTER" Inherit="PushButton" Location="164,8,60,20" Name="btLifeSkillForget1" Show="true" Text="$L:635$">
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmOtherSkills_btLifeSkillForget_OnLClick(self)</OnLClick>
+          </Scripts>
+        </Button>
+      </Form>
+      <Form Inherit="NoTitleBarForm" Location="31,92,400,400" Name="frmTrumps" Show="true">
+        <Label Inherit="" Location="3,27,135,52" Name="938" Show="true"/>
+        <Label Inherit="" Location="3,104,224,52" Name="1748" Show="true"/>
+        <Label Inherit="" Location="3,184,224,92" Name="2032" Show="true"/>
+        <Label Inherit="" Location="3,304,224,52" Name="2212" Show="true"/>
+      <Label Inherit="" Location="53,40,64,69" Name="CGZBGSKILL1" Show="true">
+      <BackgroundImage File="cgz_design1" Source="330,171,64,69"/>
+      </Label>
+	  <Label Inherit="" Location="137,40,60,69" Name="CGZBGSKILL2" Show="true">
+      <BackgroundImage File="cgz_design1" Source="330,171,64,69"/>
+      </Label>
+	  <Label Inherit="" Location="218,40,60,69" Name="CGZBGSKILL3" Show="true">
+      <BackgroundImage File="cgz_design1" Source="330,171,64,69"/>
+      </Label>
+	  <Label Inherit="" Location="0,120,53,54" Name="CGZSKILL4" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="57,120,53,54" Name="CGZSKILL5" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="114,120,53,54" Name="CGZSKILL6" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="171,120,53,54" Name="CGZSKILL7" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <Label Inherit="" Location="228,120,53,54" Name="CGZSKILL8" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="285,120,53,54" Name="CGZSKILL24" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 	  
+	  <Label Inherit="" Location="0,185,53,54" Name="CGZSKILL9" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 
+	  <Label Inherit="" Location="57,185,53,54" Name="CGZSKILL10" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 
+	  <Label Inherit="" Location="114,185,53,54" Name="CGZSKILL11" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 
+	  <Label Inherit="" Location="171,185,53,54" Name="CGZSKILL12" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 
+	  <Label Inherit="" Location="228,185,53,54" Name="CGZSKILL13" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="285,185,53,54" Name="CGZSKILL25" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	  
+	  <Label Inherit="" Location="0,250,53,54" Name="CGZSKILL14" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label> 	
+	  <Label Inherit="" Location="57,250,53,54" Name="CGZSKILL15" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="114,250,53,54" Name="CGZSKILL16" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="171,250,53,54" Name="CGZSKILL17" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="228,250,53,54" Name="CGZSKILL18" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>
+	  <Label Inherit="" Location="285,250,53,54" Name="CGZSKILL26" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	  
+	  <Label Inherit="" Location="0,250,53,54" Name="CGZSKILL19" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <Label Inherit="" Location="57,250,53,54" Name="CGZSKILL20" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <Label Inherit="" Location="114,250,53,54" Name="CGZSKILL21" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <Label Inherit="" Location="171,250,53,54" Name="CGZSKILL22" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <Label Inherit="" Location="228,250,53,54" Name="CGZSKILL23" Show="true">
+      <BackgroundImage File="cgz_design1" Source="104,104,53,54"/>
+      </Label>	 
+	  <CheckButton Inherit="" Location="68,57,34,34" Name="btnWeapon1" Show="true">
+          <BackgroundImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+          <CheckImage File="cgz_design" Source="103,417,36,36"/>
+          <Hint/>
+          <Scripts>
+            <OnHint>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnHint(self)</OnHint>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnLClick(self)</OnLClick>
+          </Scripts>
+        </CheckButton>
+        <CheckButton Inherit="" Location="149,57,34,34" Name="btnWeapon2" Show="true">
+          <BackgroundImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+          <CheckImage File="cgz_design" Source="103,417,36,36"/>
+          <Hint/>
+          <Scripts>
+            <OnHint>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnHint(self)</OnHint>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnLClick(self)</OnLClick>
+          </Scripts>
+        </CheckButton>
+        <CheckButton Inherit="" Location="230,57,34,34" Name="btnWeapon3" Show="true">
+          <BackgroundImage File="cgz_design" Source="103,417,36,36"/>
+          <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+          <CheckImage File="cgz_design" Source="103,417,36,36"/>
+          <Hint/>
+          <Scripts>
+            <OnHint>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnHint(self)</OnHint>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btnWeapon_OnLClick(self)</OnLClick>
+          </Scripts>
+        </CheckButton>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="58,5,204,26" Name="758" Show="true" Text="$L:175$">
+          <BackgroundImage File="cgz_design" Source="6,103,204,26"/>
+        </Label>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="58,108,204,26" Name="780" Show="true" Text="$L:176$">
+          <BackgroundImage File="cgz_design" Source="6,103,204,26"/>
+        </Label>
+        <Label Inherit="" Location="7,110,400,400" MouseEvent="true" MouseMove="true" Name="labSkills" Show="true">
+          <Button Inherit="" Location="3,27,34,34" Name="btnSkill1" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="60,27,34,34" Name="btnSkill2" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="117,27,34,34" Name="btnSkill3" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="174,27,34,34" Name="btnSkill4" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="231,27,34,34" Name="btnSkill5" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="288,27,34,34" Name="btnSkill6" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_labSkills_btnSkill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>		  
+        </Label>
+        <EditBox EnableInput="false" Inherit="" Location="133,36,90,34" MultiLine="true" Name="edtDesc" Show="false" WordWrap="true">
+          <Border color="#111" size="2"/>
+        </EditBox>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="2,175,77,24" Name="1126" Show="true" Text="$L:177$">
+          <BackgroundImage File="cgz_design" Source="6,103,204,26"/>
+        </Label>
+        <Label Inherit="" Location="7,190,340,450" MouseEvent="true" MouseMove="true" Name="lbItemTalent" Show="true">
+          <Button Inherit="" Location="3,13,34,34" Name="btnTalent1" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="60,13,34,34" Name="btnTalent2" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="117,13,34,34" Name="btnTalent3" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="174,13,34,34" Name="btnTalent4" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="231,13,34,34" Name="btnTalent5" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="3,77,34,34" Name="btnTalent6" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="60,77,34,34" Name="btnTalent7" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="117,77,34,34" Name="btnTalent8" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="174,77,34,34" Name="btnTalent9" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="231,77,34,34" Name="btnTalent10" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbItemTalent_btnTalent_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+        </Label>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="58,305,204,26" Name="2189" Show="true" Text="$L:178$">
+          <BackgroundImage File="cgz_design" Source="6,103,204,26"/>
+        </Label>
+        <Label Inherit="" Location="7,310,400,400" MouseEvent="true" MouseMove="true" Name="lbFinalSkill" Show="true">
+          <Button Inherit="" Location="5,35,36,36" Name="btnSkillTill1" Show="true">
+            <BackgroundImage File="cgz_design1" Source="296,477,34,34"/>
+            <HighlightImage Blend="true" File="" Source=""/>
+            <Hint/>
+            <Scripts><OnHint>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnHint(self)</OnHint>.</Scripts>
+          </Button>
+          <Button Inherit="" Location="46,35,36,36" Name="btnSkillTill2" Show="true">
+            <BackgroundImage File="cgz_design1" Source="296,477,34,34"/>
+            <HighlightImage Blend="true" File="" Source=""/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="87,35,36,36" Name="btnSkillTill3" Show="true">
+            <BackgroundImage File="cgz_design1" Source="296,477,34,34"/>
+            <HighlightImage Blend="true" File="" Source=""/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="128,35,36,36" Name="btnSkillTill4" Show="true">
+            <BackgroundImage File="cgz_design1" Source="296,477,34,34"/>
+            <HighlightImage Blend="true" File="" Source=""/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+          <Button Inherit="" Location="169,35,36,36" Name="btnSkillTill5" Show="true">
+            <BackgroundImage File="cgz_design1" Source="296,477,34,34"/>
+            <HighlightImage Blend="true" File="" Source=""/>
+            <Hint/>
+            <Scripts>
+              <OnHint>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnHint(self)</OnHint>
+              <OnLClick>layWorld_frmSkillEx_frmTrumps_lbFinalSkill_btnSkillTill_OnLClick(self)</OnLClick>
+            </Scripts>
+          </Button>
+		          <Button Inherit="" Location="210,37,32,32" Name="btNormal2" Show="true">
+          <NormalImage File="ic_action_pracitice"/>
+		  <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btNormal2_OnClick(self)</OnLClick>
+            <OnRClick>layWorld_frmSkillEx_frmTrumps_btNormal2_OnClick(self)</OnRClick>
+          </Scripts>
+          <Hint/>
+        </Button>
+        <Button Inherit="" Location="251,37,32,32" Name="btBlend" Show="true">
+          <NormalImage File="ic_action_fuse"/>
+		   <HighlightImage Blend="true" File="cgz_design" Source="103,417,36,36"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btBlend_OnClick(self)</OnLClick>
+            <OnRClick>layWorld_frmSkillEx_frmTrumps_btBlend_OnClick(self)</OnRClick>
+          </Scripts>
+          <Hint/>
+        </Button>
+        </Label>
+        <Label AlignCol="CENTER" AlignLine="CETNER" Inherit="" Location="99,175,52,18" Name="3163" Show="true" Text="$L:179$"/>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="145,175,42,17" Name="lbLastPoint" Show="true">
+          <BackgroundImage File="cgz_design1" Source="110,159,42,17"/>
+        </Label>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="134,5,92,20" Name="873" Show="false" Text="$L:1163$">
+          <BackgroundImage File="tz_010" Source="315,196,92,24"/>
+        </Label>
+        <Label Inherit="" Location="135,27,95,52" Name="1074" Show="false"/>
+        <Button Inherit="" Location="145,37,32,32" Name="btNormal2" Show="false">
+          <NormalImage File="ic_action_pracitice"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btNormal2_OnClick(self)</OnLClick>
+            <OnRClick>layWorld_frmSkillEx_frmTrumps_btNormal2_OnClick(self)</OnRClick>
+          </Scripts>
+          <Hint/>
+        </Button>
+        <Button Inherit="" Location="183,37,32,32" Name="btBlend" Show="false">
+          <NormalImage File="ic_action_fuse"/>
+          <Scripts>
+            <OnLClick>layWorld_frmSkillEx_frmTrumps_btBlend_OnClick(self)</OnLClick>
+            <OnRClick>layWorld_frmSkillEx_frmTrumps_btBlend_OnClick(self)</OnRClick>
+          </Scripts>
+          <Hint/>
+        </Button>
+      </Form>
+	  	<Label Inherit="" Location="162,13,55,18" Name="Name4" Show="true">
+          <BackgroundImage File="cgz_design25" Source="6,134,71,24"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="110,-5,120,68" Name="6102" Show="false" Text="$L:171$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Scripts>
+        <OnShow>uiRegisterEscWidget(self)</OnShow>
+        <OnLoad>self:RegisterScriptEventNotify("ToggleMagicWeapon")
+				self:RegisterScriptEventNotify("EVENT_SelfEnterWorld")
+				self:RegisterScriptEventNotify("UserSkillRefresh")
+
+				self:RegisterScriptEventNotify("equipment item changed")
+				self:RegisterScriptEventNotify("equipment item equiped")
+				self:RegisterScriptEventNotify("equipment item unequiped")</OnLoad>
+        <OnEvent>if event == "ToggleMagicWeapon" then
+				if (arg[1] ~= EV_EXCUTE_EVENT_KEY_DOWN) and (arg[1] ~= EV_EXCUTE_EVENT_ON_LCLICK) then
+					return
+				end
+				layWorld_frmSkillEx_Show(self)
+			elseif event == "EVENT_SelfEnterWorld" then
+				
+				layWorld_frmSkillEx_Player_EnterWorld()
+			elseif event == "UserSkillRefresh" then
+				if not self:getVisible() then return end
+				layWorld_frmSkillEx_Refresh()
+			elseif event == "equipment item changed" then
+				if not self:getVisible() then return end
+				layWorld_frmSkillEx_Refresh()
+			elseif event == "equipment item equiped" then
+				if not self:getVisible() then return end
+				layWorld_frmSkillEx_Refresh()
+			elseif event == "equipment item unequiped" then
+				if not self:getVisible() then return end
+				layWorld_frmSkillEx_Refresh()
+			end</OnEvent>
+        <OnUpdate Timer="40">layWorld_frmSkillEx_OnUpdate(self)</OnUpdate>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

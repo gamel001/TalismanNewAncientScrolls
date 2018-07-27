@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="252,138,300,350" Name="frmnewplay" Show="false">
+      <Label Inherit="bg1" Location="10,20,280,320" Name="lbup" Show="true"/>
+      <Label Inherit="" Location="-2,256,256,75" Name="lbdown" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <TitleBarButton Location="8,8,280,28" Text="" TextFont="$L:1$" TextSize="$L:4$"/>
+      <CloseButton Location="267,33,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13 "/>
+        <PushedImage File="tz_010" Source="98,383,13,13 "/>
+      </CloseButton>
+      <Widget Inherit="" Location="10,50,236,252" Name="wgtBorders" Show="false">
+        <Widgets>
+          <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="lt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="rt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+              <Anchor point="RIGHT" relativeTo="rt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lt"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lb"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+              <Anchor point="BOTTOM" relativeTo="lb"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="5,6,200,35" Name="center" Show="true">
+            <Anchors>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+            </Anchors>
+          </Widget>
+        </Widgets>
+      </Widget>
+      <ListBox Inherit="" Location="28,112,245,150" Name="lsAttacker" Show="false"/>
+      <Button Inherit="PushButton" Location="180,305,65,22" Name="btCancel" Show="true" Text="$L:831$"/>
+      <Button Inherit="PushButton" Location="58,305,65,22" Name="btBack" Show="true" Text="$L:830$"/>
+      <Form Inherit="NoTitleBarForm" Location="22,36,255,260" Name="frmHelpIndex" Show="fals">
+        <Label Inherit="bg3" Location="0,30,255,210" Name="8946" Show="true"/>
+        <Button Inherit="PushButtonLong" Location="19,60,220,22" Name="btTaskGuide" Show="true" Text="$L:827$"/>
+        <Button Inherit="PushButtonLong" Location="19,119,220,22" Name="btMonsterGuide" Show="true" Text="$L:828$"/>
+        <Button Inherit="PushButtonLong" Location="19,179,220,22" Name="btDungeonGuild" Show="true" Text="$L:829$"/>
+        <Label Inherit="" Location="-1,14,255,18" Name="9785" Show="true">
+          <BackgroundImage File="tz_012" Source="232,153,212,18"/>
+        </Label>
+        <Label Inherit="" Location="-1,238,255,18" Name="9859" Show="true">
+          <BackgroundImage File="tz_012" Source="232,178,212,18"/>
+        </Label>
+      </Form>
+      <Form Inherit="NoTitleBarForm" Location="19,50,260,250" Name="frmgettask" Show="false">
+        <Label Inherit="bg3" Location="0,0,260,250" Name="4837" Show="true"/>
+        <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="9,7,245,236" Name="edbtask" Show="fals" WordWrap="true"/>
+      </Form>
+      <Form Inherit="NoTitleBarForm" Location="19,50,260,250" Name="frmkillmonster" Show="false">
+        <Label Inherit="bg3" Location="0,0,260,250" Name="4837" Show="true"/>
+        <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="9,7,245,236" Name="edbmonster" Show="fals" WordWrap="true"/>
+      </Form>
+      <Form Inherit="NoTitleBarForm" Location="19,50,260,250" Name="frmhelpfubenIndex" Show="false">
+        <Label Inherit="bg3" Location="0,0,260,250" Name="4837" Show="true"/>
+        <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="9,7,245,236" Name="edbfubenname" Show="fals" WordWrap="true"/>
+      </Form>
+      <Label Inherit="TemplateNormalTitle" Location="4,5,292,40" Name="16653" Show="true">
+        <Label Name="lbTitelText" Show="false"/>
+      </Label>
+    </Form>
+  </Layer>
+</Ui>

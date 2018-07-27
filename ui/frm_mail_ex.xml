@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_Mail_ex.lua">Script</Script>
+  <Theme Name="MailButtonEx">
+    <Templates>
+      <CheckButton Inherit="" Name="Template_btMail" Show="true">
+        <HighlightImage File="tz_010" Source="185,375,50,50"/>
+        <PushedImage File="tz_010" Source="185,375,50,50"/>
+        <CheckImage File="tz_010" Source="185,375,50,50"/>
+        <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+        <Scripts>
+          <OnLClick>layWorld_frmMailEx_fmAcceptMail_btMailName_OnLClick(self);</OnLClick>
+          <OnHint>layWorld_frmMailEx_fmAcceptMail_btMailName_OnHint(self);</OnHint>
+        </Scripts>
+      </CheckButton>
+    </Templates>
+  </Theme>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="252,128,350,550" Name="frmMailEx" Show="false">
+      <Label Inherit="bg1" Location="7,20,330,500" Name="lbUP" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,3,344,50" Name="lbDown" Show="fals"/>
+      <TitleBarButton Location="0,0,294,30"/>
+      <CloseButton Location="306,15,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="29,60,80,30" Name="btnRecv" Show="true" Text="$L:580$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmMailEx_CheckButton_OnLClick(0)</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="108,60,80,30" Name="btnSend" Show="true" Text="$L:581$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmMailEx_CheckButton_OnLClick(1)</OnLClick>
+        </Scripts>
+      </CheckButton>
+	  <Label Inherit="" Location="13,84,317,10" Name="9795" Show="true">
+      <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      </Label>
+      <Form Inherit="NoTitleBarForm" Location="29,115,290,349" Name="fmAcceptMail" Show="false">
+        <Label Inherit="bg3" Location="0,22,290,52" Name="2154" Show="true"/>
+        <Label Inherit="bg3" Location="0,75,290,52" Name="2483" Show="true"/>
+        <Label Inherit="bg3" Location="0,128,290,52" Name="2526" Show="true"/>
+        <Label Inherit="bg3" Location="0,181,290,52" Name="2560" Show="true"/>
+        <Label Inherit="bg3" Location="0,234,290,52" Name="2594" Show="true"/>
+        <Label Inherit="bg3" Location="0,287,290,52" Name="3807" Show="true"/>
+        <Label Inherit="" Location="165,2,70,18" Name="lbMailDay" Show="true" Text="$L:582$"/>
+        <Label Inherit="" Location="5,25,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam1" Show="true">
+          <CheckButton Inherit="Template_btMail" Location="7,8,32,32" Name="btMailName1" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,5,170,18" Name="lbMailPlayer1" Show="true"/>
+          <Label Inherit="" Location="43,25,220,18" Name="lbMailInfo1" Show="true"/>
+          <Label Inherit="" Location="149,5,76,18" Name="lbMailTime1" Show="true"/>
+        </Label>
+        <Label Inherit="" Location="5,76,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam2" Pick="false" Show="true">
+          <CheckButton Inherit="Template_btMail" Location="7,8,32,32" Name="btMailName2" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,5,80,18" Name="lbMailPlayer2" Show="true"/>
+          <Label Inherit="" Location="44,25,180,18" Name="lbMailInfo2" Show="true"/>
+          <Label Inherit="" Location="149,5,76,18" Name="lbMailTime2" Show="true"/>
+        </Label>
+        <Label Inherit="" Location="5,128,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam3" Show="true">
+          <CheckButton Inherit="Template_btMail" Location="7,9,32,32" Name="btMailName3" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,7,80,18" Name="lbMailPlayer3" Show="true"/>
+          <Label Inherit="" Location="44,27,180,18" Name="lbMailInfo3" Show="true"/>
+          <Label Inherit="" Location="149,7,76,18" Name="lbMailTime3" Show="true"/>
+        </Label>
+        <Label Inherit="" Location="5,180,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam4" Show="true">
+          <CheckButton Inherit="Template_btMail" Location="7,10,32,32" Name="btMailName4" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,7,80,18" Name="lbMailPlayer4" Show="true"/>
+          <Label Inherit="" Location="44,27,180,18" Name="lbMailInfo4" Show="true"/>
+          <Label Inherit="" Location="149,7,76,18" Name="lbMailTime4" Show="true"/>
+        </Label>
+        <Label Inherit="" Location="5,232,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam5" Show="true">
+          <CheckButton Inherit="Template_btMail" Location="7,11,32,32" Name="btMailName5" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,7,80,18" Name="lbMailPlayer5" Show="true"/>
+          <Label Inherit="" Location="44,27,180,18" Name="lbMailInfo5" Show="true"/>
+          <Label Inherit="" Location="149,7,76,18" Name="lbMailTime5" Show="true"/>
+        </Label>
+        <Label Inherit="" Location="5,286,226,48" MouseEvent="true" MouseMove="true" Name="lbMailTeam6" Show="fals">
+          <CheckButton Inherit="Template_btMail" Location="7,12,32,32" Name="btMailName6" Show="true">
+            <HighlightImage File="tz_010" Source="185,375,50,50"/>
+            <PushedImage File="tz_010" Source="185,375,50,50"/>
+            <CheckImage File="tz_010" Source="185,375,50,50"/>
+            <BackgroundImage File="tz_010" Source="142,381,41,40"/>
+            <Hint/>
+          </CheckButton>
+          <Label Inherit="" Location="44,7,80,18" Name="lbMailPlayer6" Show="true"/>
+          <Label Inherit="" Location="44,27,180,18" Name="lbMailInfo6" Show="true"/>
+          <Label Inherit="" Location="149,7,76,18" Name="lbMailTime6" Show="true"/>
+        </Label>
+        <Button Inherit="" Location="7,1,22,21" Name="btMailLeft" Show="true">
+          <NormalImage File="cgz_design" Source="8,159,22,21"/>
+          <PushedImage File="cgz_design" Source="8,182,22,21"/>
+          <Scripts>
+            <OnLClick>layWorld_frmMailEx_fmAcceptMail_btMailLeft_OnLClick()</OnLClick>
+          </Scripts>
+        </Button>
+        <Label Inherit="" Location="30,1,50,16" Name="lbMailLeft" Show="true" Text="$L:583$"/>
+        <Label Inherit="" Location="83,1,50,16" Name="lbMailRight" Show="true" Text="$L:584$"/>
+        <Scripts>
+          <OnLoad>layWorld_frmMailEx_fmAcceptMail_OnLoad(self)</OnLoad>
+          <OnShow>layWorld_frmMailEx_fmAcceptMail_OnShow(self)</OnShow>
+          <OnEvent>layWorld_frmmailEx_fmAcceptMail_OnEvent(self,event,arg)</OnEvent>
+        </Scripts>
+        <Button Inherit="" Location="120,1,22,21" Name="btMailRight" Show="true">
+          <NormalImage File="cgz_design" Source="32,159,22,21"/>
+          <Scripts>
+            <OnLClick>layWorld_frmMailEx_fmAcceptMail_btMailRight_OnLClick()</OnLClick>
+          </Scripts>
+          <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        </Button>
+      </Form>
+      <Form Inherit="NoTitleBarForm" Location="15,92,350,450" Name="frmSendMail" Show="false">
+        <Label Inherit="" Location="0,-11,317,433" Name="21422" Show="true">
+          <BackgroundImage File="cgz_m" Source="0,0,327,422"/> 
+        </Label>
+        <Label AlignCol="left" Inherit="" Location="1,10,55,18" Name="lbSendMailName" Show="true" Text="$L:585$"/>
+        <EditBox ColSpacing="4" Inherit="" LineSpacing="4" Location="54,8,77,20" Name="edbSendMailName" Show="true">
+          <BackgroundImage File="tz_011" Source="0,0,80,20"/>
+        </EditBox>
+        <Label Inherit="" Location="133,8,70,18" Name="2961" Show="true" Text="$L:586$"/>
+        <Label Inherit="" Location="209,3,24,26" Name="lbsendtongitem" Show="true">
+          <BackgroundImage File="" Source="476,485,24,26"/>
+        </Label>
+        <Label AlignCol="left" Inherit="" Location="1,33,55,18" Name="LbMailTitle" Show="true" Text="$L:587$"/>
+        <EditBox ColSpacing="4" Inherit="" LineSpacing="4" Location="54,31,150,20" Name="edbMailTitle" Show="true">
+          <BackgroundImage File="tz_011" Source="85,0,159,20"/>
+        </EditBox>
+        <EditBox AutoScrollV="true" ColSpacing="14" Inherit="" LineSpacing="10" Location="35,58,255,270" Name="edbMailText" Show="true" WordWrap="true">
+          <Scripts>
+            <OnLoad>layWorld_frmSendMail_ebdMailText_OnLoad(self)</OnLoad>
+            <OnEvent>layWorld_frmSendMail_ebdMailText_OnEvent(self, event, arg)</OnEvent>
+          </Scripts>
+        </EditBox>
+        <Label Inherit="" Location="12,337,34,28" Name="lbGoldIcon" Show="false">
+          <BackgroundImage File="cgz_design1" Source="204,3,34,28"/>
+        </Label>
+        <Label Inherit="" Location="101,337,34,28" Name="lbAgIcon" Show="false">
+          <BackgroundImage File="cgz_design1" Source="239,3,34,28"/>
+        </Label>
+        <Label Inherit="" Location="162,337,34,28" Name="lbCuIcon" Show="false">
+          <BackgroundImage File="cgz_design1" Source="274,2,34,28"/>
+        </Label>
+        <EditBox AlignCol="CENTER" AlignLine="CENTER" ColSpacing="4" Inherit="" LineSpacing="4" Location="39,338,60,20" Name="edtMailGold" NumberOnly="true" Show="false">
+          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        </EditBox>
+        <EditBox AlignCol="CENTER" AlignLine="CENTER" ColSpacing="4" Inherit="" LineSpacing="4" Location="128,338,30,20" Name="edtMailAg" NumberOnly="true" Show="false">
+          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        </EditBox>
+        <EditBox AlignCol="CENTER" AlignLine="CENTER" ColSpacing="4" Inherit="" LineSpacing="4" Location="189,338,30,20" Name="edtMailCu" NumberOnly="true" Show="false">
+          <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+        </EditBox>
+        <Button Inherit="PushButton" Location="20,395,80,22" Name="btMailSend" Show="true" Text="$L:588$">
+          <Scripts>
+            <OnLClick>layWorld_frmMailEx_frmSendMail_btMailSend_OnLClick(self);</OnLClick>
+          </Scripts>
+        </Button>
+        <Button Inherit="PushButton" Location="215,395,80,22" Name="btMailCancel" Show="true" Text="$L:589$">
+          <Scripts>
+            <OnLClick>layWorld_frmMailEx_frmSendMail_btMailCancel_OnLClick(self);</OnLClick>
+          </Scripts>
+        </Button>
+        <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="64,358,147,29" Name="lbAccessory" Show="true" Text="$L:590$">
+          <BackgroundImage File="cgz_design" Source="5,102,205,29"/>
+        </Label>
+        <Button DragIn="true" Inherit="" Location="250,335,36,36" Name="btnItem" Show="true">
+            <BackgroundImage File="cgz_design1" Source="337,459,52,52"/>
+          <Scripts>
+            <OnLoad>layWorld_frmMailEx_frmSendMail_btnItem_OnLoad(self);</OnLoad>
+            <OnDragIn>layWorld_frmMailEx_frmSendMail_btnItem_OnDragIn(self, drag);</OnDragIn>
+            <OnDragNull>layWorld_frmMailEx_frmSendMail_btnItem_OnDragNull(self);</OnDragNull>
+            <OnHint>layWorld_frmMailEx_frmSendMail_btnItem_OnHint(self);</OnHint>
+          </Scripts>
+          <Hint/>
+        </Button>
+        <Label BackgroundColor="" Inherit="" Location="133,3,100,28" Name="lbsenditem" Show="false">
+          <Label Inherit="" Location="74,0,24,24" Name="1368" Show="true">
+            <BackgroundImage File="cgz_design1" Source="337,459,52,52"/>
+          </Label>
+          <Label AlignCol="" Inherit="" Location="0,5,70,18" Name="1462" Show="true" Text="$L:586$"/>
+        </Label>
+      </Form>
+	  	<Label Inherit="" Location="130,14,82,18" Name="Name31" Show="true">
+          <BackgroundImage File="cgz_design25" Source="467,339,164,24"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="105,-5,126,72" Name="36611" Show="false" Text="$L:579$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="" Location="12,118,70,18" Name="4192" Show="true"/>
+      <Scripts>
+        <OnHide>layWorld_frmMailEx_OnHide(self);</OnHide>
+        <OnUpdate>layWorld_frmMailEx_OnUpdate(self);</OnUpdate>
+        <OnShow>layWorld_frmMailEx_OnShow(self);</OnShow>
+        <OnLoad>layWorld_frmMailEx_OnLoad(self);</OnLoad>
+      </Scripts>
+      <CheckButton Inherit="DefaultChkBtn" Location="47,470,250,20" Name="btnAutoDelete" Show="true" Text="$L:1498$"/>
+    </Form>
+  </Layer>
+</Ui>

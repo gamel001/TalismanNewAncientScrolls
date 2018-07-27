@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form BackgroundColor="#66666666" ClipChildren="false" Inherit="NoTitleBarForm" Location="347,606,220,120" Name="frmSavemoney" Show="true" Size="220,120">
+      <Label Inherit="bg1" Location="0,0,220,120" Name="10121" Show="true"/>
+      <BackgroundImage/>
+      <Button Inherit="PushButton" Location="30,82,50,20" Name="btRoll" Show="true" Text="$L:466$"/>
+      <Button Inherit="PushButton" Location="136,82,50,20" Name="btCancel" Show="true" Text="$L:467$"/>
+      <Label Inherit="" Location="19,38,185,24" Name="lbSavemoney" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <EditBox AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="36,41,60,20" MaxChar="4" Name="EdbGold" Show="true" AlignCol="CENTER">
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
+      </EditBox>
+      <EditBox AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="122,41,30,20" MaxChar="2" Name="EdbAG" Show="true" AlignCol="CENTER">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </EditBox>
+      <EditBox AutoScrollV="false" ColSpacing="4" EnableInput="true" Inherit="" LineSpacing="4" Location="178,41,30,20" MaxChar="2" Name="EdbCu" Show="true" AlignCol="CENTER">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </EditBox>
+      <Anchors>
+        <Anchor offset="0,-100" point="BOTTOM"/>
+        <Anchor offset="-60,0" point="CENTERH"/>
+      </Anchors>
+      <Label Inherit="TemplateNormalTitle" Location="-7,-19,233,35" Name="5517" Show="true">
+        <Label Name="lbTitelText" Show="false"/>
+      </Label>
+      <CloseButton Location="197,8,13,13" Show="ture">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+      <TitleBarButton Location="-8,-19,235,35" Show="ture"/>
+      <Label Inherit="" Location="11,39,24,22" Name="3253" Show="true">
+        <BackgroundImage File="tz_010" Source="413,488,24,22"/>
+      </Label>
+      <Label Inherit="" Location="97,39,24,22" Name="3915" Show="true">
+        <BackgroundImage File="tz_010" Source="445,488,24,22"/>
+      </Label>
+      <Label Inherit="" Location="153,38,24,26" Name="4035" Show="true">
+        <BackgroundImage File="tz_010" Source="476,485,24,26"/>
+      </Label>
+    </Form>
+  </Layer>
+</Ui>

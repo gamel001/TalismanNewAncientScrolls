@@ -1,0 +1,12 @@
+,主角模型ID[int],,门派[int],出生场景[string],出生位置[int;int],装备衣服[int],装备手套[int],装备鞋子[int],装备武器[int],道具包携带道具[int;int;...],"特殊道具携带[int,int,int,int;int,int,int,int;...]",副法宝1[int],携带技能[int;int;...],增加快捷栏[skill:int;item:int;misc:int;...],说明,炉石NpcId,备注
+ID,ModelID,CareerName,PartyID,BornScene,BornPosition,Dress,Glove,Shoes,Weapon,ItemBag,ItemEx,SubTrump1,Skill,AddShortcut,Readme,HomeStoneNpcId,Remark
+1,101,$L:actor_emeinan$,0,,52;-1638,0,0,0,4,6420;1089;1089;1089;1089;1089;,,,1;52;53,201;202;misc:3;imisc:1;misc:2;misc:4;,$L:emIndex$,,
+2,106,$L:actor_emeinv$,0,,52;-1638,0,0,0,4,6420;1089;1089;1089;1089;1089;,,,1;52;53,201;202;misc:3;imisc:1;misc:2;misc:4;,$L:emIndex$,,
+3,102,$L:actor_fomennan1$,1,,52;-1638,0,0,0,24,6420;1089;1089;1089;1089;1089;,,,1;54;55,401;402;misc:3;misc:1;misc:2;misc:4;,$L:fmIndex$,,
+4,0,$L:actor_fomennan2$,1,,52;-1638,0,0,0,24,6420;1089;1089;1089;1089;1089;,,,1;54;55,401;402;misc:3;misc:1;misc:2;misc:4;,$L:fmIndex$,,
+5,104,$L:actor_qingcheng1$,2,,52;-1638,0,0,0,550,6420;1089;1089;1089;1089;1089;,,,1;58;59,501;502;misc:3;misc:1;misc:2;misc:4;,$L:qcIndex$,,
+6,0,$L:actor_qingcheng2$,2,,52;-1638,0,0,0,550,6420;1089;1089;1089;1089;1089;,,,1;58;59,501;502;misc:3;misc:1;misc:2;misc:4;,$L:qcIndex$,,
+7,0,$L:actor_baihuanan$,3,,52;-1638,0,0,0,54,6420;1089;1089;1089;1089;1089;,,,1;56;57,305;307;misc:3;misc:1;misc:2;misc:4;,$L:bhIndex$,,
+8,103,$L:actor_baihuanv$,3,,52;-1638,0,0,0,54,6420;1089;1089;1089;1089;1089;,,,1;56;57,305;307;misc:3;misc:1;misc:2;misc:4;,$L:bhIndex$,,
+9,0,$L:actor_xianqingnan$,4,,52;-1638,0,0,0,628,6420;1089;1089;1089;1089;1089;,,,1;60;61;21;22,601;602;misc:3;misc:1;misc:2;misc:4;,$L:xqIndex$,,
+10,105,$L:actor_xianqingnv$,4,,52;-1638,0,0,0,628,6420;1089;1089;1089;1089;1089;,,,1;60;61;21;22,601;602;misc:3;misc:1;misc:2;misc:4;,$L:xqIndex$,,

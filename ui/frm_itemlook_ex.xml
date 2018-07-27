@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Theme Name="frmItemlookEx">
+    <Templates>
+      <Button Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="TemplateBtnOtherEquip" Show="true">
+        <HighlightImage Blend="true" File="tz_010" Source="189,378,45,44"/>
+        <Hint/>
+        <Scripts>
+          <OnLoad>TemplateBtnOtherEquip_OnLoad(self);</OnLoad>
+          <OnHint>TemplateBtnOtherEquip_OnHint(self);</OnHint>
+          <OnEvent>TemplateBtnOtherEquip_OnEvent(self, event, arg);</OnEvent>
+        </Scripts>
+      </Button>
+    </Templates>
+  </Theme>
+  <Script file="frm_itemLook_ex.lua"/>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="104,192,300,370" Name="frmItemlookEx" Show="false">
+      <Label Inherit="" Location="12,38,264,300" Name="background222" Show="true">
+      <BackgroundImage File="cgz_design23" Source="3,3,307,364"/>
+      </Label>
+	  <Label Inherit="bg1" Location="11,20,266,324" Name="858" Show="true" Size=""/>
+      <Label Inherit="" Location="73,57,140,230" Name="18176" Show="true"/>
+	  <Label Inherit="" Location="5,256,246,66" Name="12609" Show="false" Size="">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="5,321,246,7" Name="1746" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="0,327,256,23" Name="12662" Show="false" Size="">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="TemplateNormalTitle" Location="4,1,280,50" Name="14021" Show="true"/>
+       <Label Inherit="" Location="19,40,103,220" Name="CGZ1212" Show="true">
+       <BackgroundImage File="cgz_design1" Source="0,252,103,220"/>
+       </Label>
+	   <Label Inherit="" Location="125,270,124,45" Name="CGZ2222" Show="true">
+       <BackgroundImage File="cgz_design1" Source="164,465,124,45"/>
+       </Label>
+	   <Label Inherit="" Location="35,265,53,56" Name="CGZ3333" Show="true">
+       <BackgroundImage File="cgz_design1" Source="110,465,53,56"/>
+       </Label>
+	  <Label Inherit="" Location="19,40,40,40" Name="16884" Show="false">
+        <BackgroundImage File="tz_011" Source="133,28,40,40"/>
+      </Label>
+      <Label Inherit="" Location="25,114,40,40" Name="17094" Show="false">
+        <BackgroundImage File="tz_011" Source="44,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="25,162,40,40" Name="17235" Show="false">
+        <BackgroundImage File="tz_011" Source="0,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="25,212,40,40" Name="17303" Show="false">
+        <BackgroundImage File="tz_011" Source="88,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="25,262,40,40" Name="17450" Show="false">
+        <BackgroundImage File="tz_011" Source="44,115,40,39"/>
+      </Label>
+      <Label Inherit="" Location="72,292,40,40" Name="17520" Show="false">
+        <BackgroundImage File="tz_011" Source="178,115,40,39"/>
+      </Label>
+      <Label Inherit="" Location="122,292,40,40" Name="17591" Show="false">
+        <BackgroundImage File="tz_011" Source="133,115,40,39"/>
+      </Label>
+      <Label Inherit="" Location="171,292,40,40" Name="17747" Show="false">
+        <BackgroundImage File="tz_011" Source="88,115,40,39"/>
+      </Label>
+      <Label Inherit="" Location="219,64,40,40" Name="18311" Show="false">
+        <BackgroundImage File="tz_011" Source="178,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="219,113,40,40" Name="18385" Show="false">
+        <BackgroundImage File="tz_011" Source="224,29,40,40"/>
+      </Label>
+      <Label Inherit="" Location="219,164,40,40" Name="18460" Show="false">
+        <BackgroundImage File="tz_011" Source="224,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="219,212,40,40" Name="18536" Show="false">
+        <BackgroundImage File="tz_011" Source="133,70,40,40"/>
+      </Label>
+      <Label Inherit="" Location="219,262,40,40" Name="18707" Show="false">
+        <BackgroundImage File="tz_011" Source="178,29,40,39"/>
+      </Label>
+      <Button Inherit="TemplateBtnOtherEquip" Location="37,64,32,32" Name="btPart0"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="37,100,32,32" Name="btPart1"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="37,137,32,32" Name="btPart2"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="37,173,32,32" Name="btPart3"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="37,208,32,32" Name="btPart4"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="135,276,34,34" Name="btPart5"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="172,276,34,34" Name="btPart6"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="208,276,34,34" Name="btPart7"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="74,64,32,32" Name="btPart8"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="74,100,32,32" Name="btPart9"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="74,137,32,32" Name="btPart10"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="74,173,32,32" Name="btPart11"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="74,208,32,32" Name="btPart12"/>
+	  <Button Inherit="TemplateBtnOtherEquip" Location="45,272,32,32" Name="btPart13"/>
+      <TitleBarButton Location="11,6,290,28" TextFont="$L:1$" TextSize="$L:3$"/>
+      <CloseButton Location="246,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <ModelView Inherit="" Location="125,60,130,220" Name="modelOther" Pick="false" Show="true"/>
+      <Button Inherit="" Location="198,225,54,54" Name="btTurnLeft" Show="true">
+        <NormalImage File="cgz_design2" Source="455,66,54,54"/>
+        <PushedImage File="cgz_design2" Source="351,155,51,51"/>
+        <Scripts>
+          <OnLDown>local model = SAPI.GetSibling(self, "modelOther"); model:SetTurnSpeed(0, 0, -0.5); model:StartTurnModel();</OnLDown>
+          <OnLUp>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLUp>
+          <OnLeave>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLeave>
+        </Scripts>
+      </Button>
+      <Button Inherit="" Location="135,225,54,54" Name="btTurnRight" Show="true">
+        <NormalImage File="cgz_design2" Source="455,6,54,54"/>
+        <PushedImage File="cgz_design2" Source="298,155,51,51"/>
+        <Scripts>
+          <OnLDown>local model = SAPI.GetSibling(self, "modelOther"); model:SetTurnSpeed(0, 0, 0.5); model:StartTurnModel();</OnLDown>
+          <OnLUp>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLUp>
+          <OnLeave>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLeave>
+        </Scripts>
+      </Button>
+	  	<Label Inherit="" Location="84,20,120,18" Name="Name44" Show="true">
+          <BackgroundImage File="cgz_design25_1" Source="26,11,203,29"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="84,-5,120,68" Name="584" Show="false" Text="$L:846$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Scripts>
+        <OnLoad>layWorld_frmItemlookEx_OnLoad(self);</OnLoad>
+        <OnEvent>layWorld_frmItemlookEx_OnEvent(self, event, arg);</OnEvent>
+        <OnShow>layWorld_frmItemlookEx_OnShow(self);</OnShow>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

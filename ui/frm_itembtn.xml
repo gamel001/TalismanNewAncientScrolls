@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+	<Script file="./ui/action_button.lua"/>
+	<Layer Name="layWorld" Show="true">
+		<CheckButton Name="dummy" Location="10,10,32,32" Inherit="ItemBtn" Show="true">
+			<Scripts>
+				<OnLClick>
+			       OnClick_ActionButton(self);
+			    </OnLClick>
+				<OnRClick>
+			       OnClick_ActionButton(self);
+			    </OnRClick>
+				<OnHint>
+			       OnHint_ActionButton(self);
+			    </OnHint>
+				<OnDragOut>
+			        OnDragOut_ActionButton(self);
+			    </OnDragOut>
+			</Scripts>
+		</CheckButton>
+	</Layer>
+</Ui>

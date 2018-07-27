@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_Build_ex.lua"/>
+  <Layer Name="layWorld" Show="true">
+    <Form DragIn="true" Inherit="" Location="479,383,300,355" Name="frmBuildEx" Show="false">
+	  <Label Inherit="" Location="14,7,274,343" Name="1356" Show="fals">
+      <BackgroundImage File="cgz_bgbuild" Source="0,0,237,358" Transparency="0.8"/>
+      </Label>
+      <Label Inherit="bg1" Location="11,17,280,335" Name="1251" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="4,1,294,50" Name="10282" Show="true"/>
+      <Label Inherit="" Location="-2,256,256,75" Name="1285" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Button Inherit="PushButton" Location="41,306,70,20" Name="btOK" Show="true" Text="$L:504$">
+        <Scripts>
+          <OnLClick>layWorld_frmBuildEx_btOK_OnLClick()</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="PushButton" Location="193,306,70,20" Name="btCancel" Show="true" Text="$L:505$">
+        <Scripts>
+          <OnLClick>layWorld_frmBuildEx_btCancel_OnLClick()</OnLClick>
+        </Scripts>
+      </Button>
+      <Anchors/>
+	  	<Label Inherit="" Location="120,14,67,20" Name="Name24" Show="true">
+          <BackgroundImage File="cgz_design25" Source="481,460,135,29"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="90,-5,120,68" Name="1229" Show="false" Text="$L:506$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="" Location="77,109,50,50" Name="CGZBGI1" Show="true">
+      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+      </Label>
+	  <Label Inherit="" Location="189,109,50,50" Name="CGZBGII1" Show="true">
+      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+      </Label>
+	  <Button DragIn="true" DragOut="true" Inherit="" Location="81,114,42,42" Name="btBuildLeft" Show="true">
+        <BackgroundImage File="" Source=""/>
+        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
+		<PushedImage File="" Source=""/>
+        <Hint/>
+        <Scripts>
+          <OnHint>layWorld_frmBuildEx_btBuildLeft_OnHint(self)</OnHint>
+          <OnDragIn>layWorld_frmBuildEx_btBuildLeft_OnDragIn(drag)</OnDragIn>
+          <OnDragNull>layWorld_frmBuildEx_btBuildLeft_OnDragNull(self)</OnDragNull>
+        </Scripts>
+      </Button>
+      <Button DragIn="true" DragOut="true" Inherit="" Location="193,114,42,42" Name="btBuildRight" Show="true">
+        <BackgroundImage File="" Source=""/>
+        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
+		<PushedImage File="" Source=""/>
+        <Hint/>
+        <Scripts>
+          <OnHint>layWorld_frmBuildEx_btBuildRight_OnHint(self)</OnHint>
+          <OnDragIn>layWorld_frmBuildEx_btBuildRight_OnDragIn(drag)</OnDragIn>
+          <OnDragNull>layWorld_frmBuildEx_btBuildRight_OnDragNull(self)</OnDragNull>
+        </Scripts>
+      </Button>
+      <Label Inherit="bg3" Location="83,215,182,67" Name="4077" Show="true"/>
+      <EditBox BackgroundColor="#ee000000" EnableInput="false" Inherit="" Location="87,219,175,60" MultiLine="true" Name="lbBuildTip" Show="true" Text="1111111111" WordWrap="true"/>
+      <Label Inherit="" Location="42,227,36,16" Name="lbBuildName" Show="true" Text="$L:507$"/>
+      <TitleBarButton Location="11,2,280,28"/>
+      <CloseButton Location="259,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <Scripts>
+        <OnLoad>self:RegisterScriptEventNotify("CEV_ITEM_IDENTIFY_RESULT")
+			self:RegisterScriptEventNotify("CEV_ITEM_IDENTIFY_SHOW")
+			self:RegisterScriptEventNotify("bag_item_update")
+			self:RegisterScriptEventNotify("bag_item_removed")</OnLoad>
+        <OnShow>uiRegisterEscWidget(self)</OnShow>
+        <OnEvent>if event == "CEV_ITEM_IDENTIFY_RESULT" then
+				layWorld_frmBuildEx__Result(arg)
+			elseif event == "CEV_ITEM_IDENTIFY_SHOW" then
+				if self:getVisible() then
+					return
+				end
+				layWorld_frmBuildEx_Show(self)
+			elseif event == "bag_item_update" then
+				layWorld_frmBuildEx_OnEventItemUpDate(self, arg)
+			elseif event == "bag_item_removed" then
+				layWorld_frmBuildEx_Refresh()
+			end</OnEvent>
+        <OnDragIn>layWorld_frmBuildEx_OnDragIn(drag)</OnDragIn>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

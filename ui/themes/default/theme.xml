@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+	<Theme Name="Default">
+
+		<WidgetsDefaultAttrib Description="Widget的默认属性">
+			<Form>
+			</Form>
+		</WidgetsDefaultAttrib>
+
+		<Templates Description="模板Widget">
+	
+	<ModelView Inherit="" Name="TemplateModelViewEditor" MouseDClick="true">
+	  <Scripts>
+		<OnMouseMove>
+			if self:IsCaptured() then
+				if uiIsKeyPressed("CTRL") then
+					self:SetCameraEyeOffset(delta_y/20, 0, -delta_x/20, false);
+				elseif uiIsKeyPressed("SHIFT") then
+					self:MoveCamera(-delta_x/6,delta_y/6,0);
+				end
+			end
+		</OnMouseMove>
+		<OnMouseWheel>
+			self:SetCameraEyeOffset(0, delta/80, 0, false);
+		</OnMouseWheel>
+		<OnLDClick>
+			local Eye = self:GetCameraEye();
+			local LookAt = self:GetCameraLookAt();
+			local name = self:getName();
+			self = uiGetglobal(name);
+			uiEditorAttrSetAttributeEx(self, "Camera", "Eye", string.format("%.2f,%.2f,%.2f", Eye.x, Eye.y, Eye.z), false);
+			self = uiGetglobal(name);
+			uiEditorAttrSetAttributeEx(self, "Camera", "IsEyePosition", tostring(Eye.IsPosition), false);
+			self = uiGetglobal(name);
+			uiEditorAttrSetAttributeEx(self, "Camera", "LookAt", string.format("%.2f,%.2f,%.2f", LookAt.x, LookAt.y, LookAt.z), true);
+		</OnLDClick>
+	  </Scripts>
+	</ModelView>
+		
+    <Button Inherit="" Name="TemplateShortcut" Size="" Location="40,40,32,32" DragIn="true" DragOut="false" Show="true">
+      <BackgroundImage File="cgz_box"/>
+	  <Scripts>
+		<OnLoad>
+			self:Set("NewShortcut", true);
+			self:Set("DragOut_MouseMove", true);
+			self:Set("DragOut_LeftButton", false);
+			self:Set("DragOut_RightButton", false);
+		</OnLoad>
+		<OnDragIn>
+			local dragIn = uiGetglobal(drag);
+			if dragIn then uiDragIn(self, drag, false) end</OnDragIn>
+		<OnLClick>uiShortcutActive(self);</OnLClick>
+		<OnRClick>uiShortcutActive(self);</OnRClick>
+		<OnDragOut>uiDragOut(self);</OnDragOut>
+		<OnDragNull>uiDragNull(self);</OnDragNull>
+	  </Scripts>
+    </Button>
+	<Button Inherit="TemplateShortcut" Name="TemplateShortcutStatic" DragIn="false" DragOut="false">
+	  <Scripts>
+		<OnDragNull InheritTag="false"/>
+	  </Scripts>
+    </Button>
+		
+	<Widget Inherit="" Location="0,0,300,300" Name="TemplateLayerFull" Show="true" MouseEvent="true" MouseMove="true" Pick="false">
+      <Anchors>
+        <Anchor point="LEFT"/>
+        <Anchor point="TOP"/>
+        <Anchor point="RIGHT"/>
+        <Anchor point="BOTTOM"/>
+      </Anchors>
+	</Widget>
+	<Widget Inherit="" Location="0,0,300,300" Name="TemplateLayerNormal" Show="true" MouseEvent="true" MouseMove="true" Pick="false">
+	</Widget>
+
+
+  <Label Inherit="" Location="10,10,294,57" Name="TemplateNormalTitle" Show="true" Size="294,57">
+    <Label Inherit="" Location="18,0,122,57" Name="lbcenter" Show="true" Size="0,57">
+      <BackgroundImage File="cgz_design4" Source="380,410,4,57"/>
+      <Anchors>
+        <Anchor point="TOP"/>
+        <Anchor offset="13,0" point="LEFT"/>
+        <Anchor offset="-13,0" point="RIGHT"/>
+      </Anchors>
+    </Label>
+    <Label Inherit="" Location="0,0,122,57" Name="lbleft" Show="true" Size="122,57">
+      <BackgroundImage File="cgz_design4" Source="257,410,122,57"/>
+      <Anchors>
+        <Anchor point="TOP"/>
+        <Anchor offset="7,0" point="LEFT"/>
+      </Anchors>
+    </Label>
+    <Label Inherit="" Location="116,0,122,57" Name="lbright" Show="true" Size="122,57">
+      <BackgroundImage File="cgz_design4" Source="385,410,122,57"/>
+      <Anchors>
+        <Anchor point="TOP"/>
+        <Anchor  offset="-6,0" point="RIGHT"/>
+      </Anchors>
+    </Label>
+    <Label Inherit="" Location="18,25,128,21" Name="lbTitelText" Show="true" Size="128,21">
+      <BackgroundImage File="" Source=""/>
+      <Anchors>
+        <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lbcenter"/>
+        <Anchor point="CENTERH"/>
+      </Anchors>
+    </Label>
+  </Label>
+
+
+
+
+<Widget Inherit="" Location="222,134,200,200" Name="bg1" Show="false" Pick="false">
+    <Widgets>
+      <Widget Inherit="" Location="81,79,8,8" Name="lt" Show="true" Size="9,9" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="147,471,8,8"/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="rt" Show="true" Size="9,9" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="171,471,8,8"/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="lb" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="" Source=""/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+
+
+      <Widget Inherit="" Location="81,79,8,8" Name="rb" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="" Source=""/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+
+
+      <Widget Inherit="" Location="81,79,10,17" Name="l" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="257,468,10,13"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="lt"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,15,20" Name="r" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="497,468,10,13"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="rt"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+          <Anchor point="RIGHT" relativeTo="rt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,4,10" Name="t" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="280,498,98,10"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lt"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,11" Name="b" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="280,498,98,10"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lb"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+          <Anchor point="BOTTOM" relativeTo="lb"/>
+        </Anchors>
+      </Widget>
+      <Widget BackgroundColor="" Name="center" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_09" FillMode="REPEAT"/>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,20" Name="rb1" Show="true" Size="25,20" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="477,482,30,26"/>
+        <Anchors>
+          <Anchor point="RIGHT" relativeTo="rb"/>
+          <Anchor point="BOTTOM" relativeTo="rb"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,20" Name="lb1" Show="true" Size="25,20" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design4" Source="257,482,30,26"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="lb"/>
+          <Anchor point="BOTTOM" relativeTo="lb"/>
+        </Anchors>
+      </Widget>
+    </Widgets>
+  </Widget>
+
+<Widget Inherit="" Location="222,134,200,200" Name="bg2" Show="false" Pick="false">
+    <Widgets>
+      <Widget Inherit="" Location="81,79,8,8" Name="lt" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="tz_012" Source="233,142,8,8"/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="rt" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="tz_012" Source="250,142,8,8"/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="lb" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="tz_012" Source="263,144,8,8"/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="rb" Show="true" Size="8,8" Pick="false" Level="0">
+        <BackgroundImage File="tz_012" Source="280,144,8,8"/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="l" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="tz_019" FillMode="REPEAT" Source="3,0,5,8"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="lt"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="r" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="tz_020" FillMode="REPEAT" Source="0,0,8,8"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="rt" offset="2,0"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+          <Anchor point="RIGHT" relativeTo="rt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="t" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="tz_021" FillMode="REPEAT" Source="0,3,8,5"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lt"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,8,8" Name="b" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="tz_022" FillMode="REPEAT" Source="0,0,8,8"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lb" offset="0,2"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+          <Anchor point="BOTTOM" relativeTo="lb"/>
+        </Anchors>
+      </Widget>
+      <Widget BackgroundColor="" Name="center" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="tz_014" FillMode="REPEAT"/>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+        </Anchors>
+      </Widget>
+    </Widgets>
+  </Widget>
+
+<Widget Inherit="" Location="222,134,200,200" Name="bg3" Show="false" Pick="true">
+    <Widgets>
+      <Widget Inherit="" Location="81,79,25,23" Name="lt" Show="true" Size="25,23" Pick="true" Level="0">
+        <BackgroundImage File="cgz_design" Source="440,6,25,23"/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,23" Name="rt" Show="true" Size="25,23" Pick="true" Level="0">
+        <BackgroundImage File="cgz_design" Source="471,6,25,23"/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="TOP"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,23" Name="lb" Show="true" Size="25,23" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="440,35,25,23"/>
+        <Anchors>
+          <Anchor point="LEFT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,23" Name="rb" Show="true" Size="25,23" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="471,35,25,23"/>
+        <Anchors>
+          <Anchor point="RIGHT"/>
+          <Anchor point="BOTTOM"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="85,79,25,4" Name="l" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="440,30,25,4"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="lt"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,25,4" Name="r" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="471,30,25,4"/>
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="rt" offset="0,0"/>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+          <Anchor point="RIGHT" relativeTo="rt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,4,23" Name="t" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="466,6,4,23"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lt"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+          <Anchor point="BOTTOM" relativeTo="lt"/>
+        </Anchors>
+      </Widget>
+      <Widget Inherit="" Location="81,79,,23" Name="b" Show="true" Pick="false" Level="0">
+        <BackgroundImage File="cgz_design" Source="466,35,4,23"/>
+        <Anchors>
+          <Anchor point="TOP" relativeTo="lb" offset="0,0"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+          <Anchor point="BOTTOM" relativeTo="lb"/>
+        </Anchors>
+      </Widget>
+      <Widget BackgroundColor="" Name="center" Show="true" Pick="false" Level="0">
+        <BackgroundImage File=""/>
+        <Anchors>
+          <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+          <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+          <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+          <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+        </Anchors>
+      </Widget>
+    </Widgets>
+  </Widget>
+
+
+
+			<Button Name="CGZPushButtonL" Text="PushButton">
+				<NormalImage File="cgz_design2" Source="5,4,131,38" />
+				<PushedImage File="cgz_design2" Source="5,47,131,38"/>
+				<DisabledImage File="cgz_design2" Source="5,90,131,38"/>
+			</Button>
+
+
+			<Button Name="PushButton" Text="PushButton">
+				<NormalImage File="cgz_design" Source="8,253,73,28" />
+				<PushedImage File="cgz_design" Source="8,340,73,28"/>
+				<HighlightImage File="cgz_design" Source="8,282,73,28"/>
+				<DisabledImage File="cgz_design" Source="8,340,73,28"/>
+			</Button>
+			
+			<Button Name="PushButtonLong" Text="PushButton">
+				<NormalImage File="cgz_design" Source="83,253,82,28" />
+				<PushedImage File="cgz_design" Source="83,282,82,28"/>
+				<HighlightImage File="cgz_design" Source="83,282,82,28"/>
+				<DisabledImage File="cgz_design" Source="83,282,82,28"/>
+			</Button>
+
+			<Button Name="PushButtonLong2" Text="PushButton2">
+				<NormalImage File="cgz_design" Source="204,159,89,21" />
+				<PushedImage File="cgz_design" Source="204,182,89,21"/>
+				<HighlightImage File="cgz_design" Source="204,182,89,21"/>
+				<DisabledImage File="cgz_design" Source="204,182,89,21"/>
+			</Button>
+
+	
+			<Button Name="PushButtonBlue" Text="PushButton">
+				<NormalImage File="" Source="0,105,148,24" />
+				<PushedImage File="" Source="0,172,148,24"/>
+				<DisabledImage File="" Source="0,172,148,24"/>
+			</Button>
+
+			<EditBox Name="StudioEdit" >
+				<Border size="1" color="#99999999" />
+				<BackgroundImage File="" />
+			</EditBox>
+
+			<EditBox Name="DefaultEdit" ColSpacing="4" LineSpacing="4">
+				<BackgroundImage File="" />
+			</EditBox>
+
+			<CheckButton Name="DefaultChkBtn" Text="ChkBtn" BackgroundColor="#bb222222" CheckStyle="true">
+				<NormalImage File="cgz_design" Source="143,135,19,18" />
+				<HighlightCheckArea File="" />
+				<PushedImage File="cgz_design" Source="123,135,19,18" />
+				<DisabledImage File="cgz_design" Source="123,135,19,18" />
+				<CheckImage File="cgz_design" Source="123,135,19,18" />
+				<CheckDisabledImage File="cgz_design" Source="143,135,19,18" />
+			</CheckButton>
+
+			<ComboBox Name="StudioCb" EnableInput="false" >
+				<DropdownButton>
+					<NormalImage File="cgz_design" Source="442,314,15,18"/>
+					<DisabledImage File="cgz_design" Source="458,314,15,18" />
+				</DropdownButton>
+				<DropdownList BackgroundColor="#cc334422" >
+					<Border size="1" color="#ffffffff" />
+				</DropdownList>
+				<Editor>
+					<Border size="1" color="#99999999" />
+					<BackgroundImage File="tz_011" Source="84,0,160,20" />
+				</Editor>
+			</ComboBox>
+
+			<CloseButton Name="DefaultCloseBtn" Text="" Show="true" Location="0,0,21,21" >
+      <NormalImage File="cgz_design" Source="402,159,21,21"/>
+      <PushedImage File="cgz_design" Source="402,181,21,21"/>
+			</CloseButton>
+
+		  <Form Inherit="" Location="222,134,300,500" Name="TitleBarForm">
+			<TitleBarButton Size="0,18">
+			  <!--<BackgroundImage File="" Source="0,0,256,18"/>-->
+			  <Anchors>
+				<Anchor point="LEFT"/>
+				<Anchor point="RIGHT"/>
+				<Anchor point="TOP"/>
+			  </Anchors>
+			</TitleBarButton>
+			<CloseButton Size="21,21">
+			  <Anchors>
+				<Anchor point="TOP" offset="0,20"/>
+				<Anchor point="RIGHT" offset="-10,0"/>
+			  </Anchors>
+      <NormalImage File="cgz_design" Source="402,159,21,21"/>
+      <PushedImage File="cgz_design" Source="402,181,21,21"/>
+			</CloseButton>
+		  </Form>
+		  
+		  <Button Inherit="" Location="222,134,300,500" Name="TemplateButtonAsTitleBar">
+              <Scripts>
+			    <OnLDown>
+				  local x, y = uiGetWidgetRect(self);
+				  self:Set("MouseOffset", {x = mouse_x - x, y = mouse_y - y});
+				</OnLDown>
+	            <OnMouseMove>
+		          if self:IsCaptured() then
+					local target = self:Get("TARGET");
+					local allowX = self:Get("ALLOW_X");
+					local allowY = self:Get("ALLOW_Y");
+					if not target then uiError("[Theme.xml:TemplateButtonResizeForm]:NoTarget error!!!"); return; end
+					if target == "$parent" then
+						target = SAPI.GetParent(self);
+					else
+						target = uiGetglobal(target);
+					end
+					if not target then uiError("[Theme.xml:TemplateButtonResizeForm]:NoTarget error!!!"); return; end
+				    local x, y = uiGetWidgetRect(self);
+				    local offset = self:Get("MouseOffset");
+					local _x = mouse_x - (x + offset.x);
+					local _y = mouse_y - (y + offset.y);
+					if not allowX then		_x = 0;		end
+					if not allowY then		_y = 0;		end
+		            target:MoveTo_Offset(_x, _y);
+		          end
+		        </OnMouseMove>
+			  </Scripts>
+		  </Button>
+		  <Button Inherit="" Location="222,134,300,500" Name="TemplateButtonResizeForm">
+              <Scripts>
+			    <OnLDown>
+				  local x, y = uiGetWidgetRect(self);
+				  self:Set("MouseOffset", {x = mouse_x - x, y = mouse_y - y});
+				</OnLDown>
+	            <OnMouseMove>
+		          if self:IsCaptured() then
+					local ResizeType = self:Get("ResizeButtonType");
+				    local target = ResizeType.Target;
+					if not target then uiError("[Theme.xml:TemplateButtonResizeForm]:NoTarget error!!!"); return; end
+					target = uiGetglobal(target);
+					if not target then uiError("[Theme.xml:TemplateButtonResizeForm]:NoTarget error!!!"); return; end
+				    local x, y = uiGetWidgetRect(self);
+				    local offset = self:Get("MouseOffset");
+					local _x = mouse_x - (x + offset.x);
+					local _y = mouse_y - (y + offset.y);
+					local _w = 0;
+					local _h = 0;
+					if ResizeType.Left then					_w = -_x;
+					elseif ResizeType.Right then			_w =  _x;	_x = 0;
+					else									_w =   0;	_x = 0;
+					end
+					if ResizeType.Top then					_h = -_y;
+					elseif ResizeType.Bottom then			_h =  _y;	_y = 0;
+					else									_h =   0;	_y = 0;
+					end
+		            target:MoveSize_Offset(_x, _y, _w, _h);
+		          end
+		        </OnMouseMove>
+			  </Scripts>
+		  </Button>
+		  <Form Inherit="TitleBarForm" Location="222,134,200,200" Name="StandardWindowForm" MaxSize="200,200" MinSize="100,100">
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_LeftTop" Size="10,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="LEFT"/>
+				<Anchor point="TOP"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Left=true,Top=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_RightTop" Size="10,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="RIGHT"/>
+				<Anchor point="TOP"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Top=true,Right=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_RightBottom" Size="10,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="RIGHT"/>
+				<Anchor point="BOTTOM"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Right=true,Bottom=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_LeftBottom" Size="10,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="LEFT"/>
+				<Anchor point="BOTTOM"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Left=true,Bottom=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_Left" Size="10,0" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="LEFT"/>
+				<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="Resize_LeftTop"/>
+				<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="Resize_LeftBottom"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Left=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_Top" Size="0,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="TOP"/>
+				<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="Resize_LeftTop"/>
+				<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="Resize_RightTop"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Top=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_Right" Size="10,0" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="RIGHT"/>
+				<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="Resize_RightTop"/>
+				<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="Resize_RightBottom"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Right=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<Button Inherit="TemplateButtonResizeForm" Location="222,134,300,500" Name="Resize_Bottom" Size="0,10" BackgroundColor="#eeff0000">
+			  <Anchors>
+				<Anchor point="BOTTOM"/>
+				<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="Resize_LeftBottom"/>
+				<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="Resize_RightBottom"/>
+			  </Anchors>
+              <Scripts>
+			    <OnLoad>self:Set("ResizeButtonType", {Bottom=true,Target=SAPI.GetParent(self):getName()});</OnLoad>
+	          </Scripts>
+			</Button>
+			<TitleBarButton Inherit="PushButton" Size="0,18">
+			  <!--<BackgroundImage File="" Source="0,0,256,18"/>-->
+			  <Anchors>
+				<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="Resize_Left"/>
+				<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="Resize_Right"/>
+				<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="Resize_Top"/>
+			  </Anchors>
+			</TitleBarButton>
+			<CloseButton Size="21,21">
+      <NormalImage File="cgz_design" Source="402,159,21,21"/>
+      <PushedImage File="cgz_design" Source="402,181,21,21"/>
+			  <Anchors>
+				<Anchor point="TOP" offset="0,0"/>
+				<Anchor point="RIGHT" offset="-6,0"/>
+			  </Anchors>
+			</CloseButton>
+		  </Form>
+
+		  <Form Inherit="" Location="222,134,300,500" Name="NoTitleBarForm">
+			<TitleBarButton Show="false"/>
+			<CloseButton Show="false"/>
+		  </Form>
+
+			<Tree Name="Def_Tree" AutoScrollV="true" >
+				<ExpandImage File="ico02"/>
+				<ShrinkImage File="ico04"/>
+			</Tree>
+			<Tree Name="Noscroll_Tree"  >
+				<ExpandImage File="tree_arrow" Source="0,2,12,12" Blend="true"/>
+				<ShrinkImage File="tree_arrow" Source="18,0,12,12" Blend="true"/>
+			</Tree>
+
+			  <Widget Inherit="" Location="222,134,300,500" Name="" Show="true">
+			    <Widgets>
+				<Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+				  <BackgroundImage File="" Source="4,2,6,6"/>
+				  <Anchors>
+					<Anchor point="LEFT" />
+					<Anchor point="TOP" />
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+				  <BackgroundImage File="" Source="246,2,6,6"/>
+				  <Anchors>
+					<Anchor point="RIGHT" />
+					<Anchor point="TOP" />
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+				  <BackgroundImage File="" Source="4,119,6,6"/>
+				  <Anchors>
+					<Anchor point="LEFT" />
+					<Anchor point="BOTTOM" />
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+				  <BackgroundImage File="" Source="246,119,6,6"/>
+				  <Anchors>
+					<Anchor point="RIGHT" />
+					<Anchor point="BOTTOM" />
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+				  <BackgroundImage File="" Source="4,9,6,6"/>
+				  <Anchors>
+					<Anchor point="LEFT" relativeTo="lt"/>
+					<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+					<Anchor point="RIGHT" relativeTo="lt"/>
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+				  <BackgroundImage File="" Source="246,9,6,6"/>
+				  <Anchors>
+					<Anchor point="LEFT" relativeTo="rt"/>
+					<Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+					<Anchor point="RIGHT" relativeTo="rt"/>
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+				  <BackgroundImage File="" Source="9,2,6,6"/>
+				  <Anchors>
+					<Anchor point="TOP" relativeTo="lt"/>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+					<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+					<Anchor point="BOTTOM" relativeTo="lt"/>
+				  </Anchors>
+				</Widget>
+				<Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+				  <BackgroundImage File="" Source="9,119,6,6"/>
+				  <Anchors>
+					<Anchor point="TOP" relativeTo="lb"/>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+					<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+					<Anchor point="BOTTOM" relativeTo="lb"/>
+				  </Anchors>
+				</Widget>
+				<Widget Name="center" Show="true" BackgroundColor="#bb222222" >
+				  <Anchors>
+				    <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+					<Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+					<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+				  </Anchors>
+				</Widget>
+				</Widgets>
+			  </Widget>
+
+			<ScrollBarV Name="DefaultSbv" Text="" >
+				<HandleImage File="cgz_design" Source="295,179,19,24"/>
+				<TopButton>
+					<NormalImage File="cgz_design" Source="295,159,19,19" />
+					<DisabledImage File="cgz_design" Source="315,159,19,19" />
+				</TopButton>
+				<BottomButton>
+					<NormalImage File="cgz_design" Source="295,204,19,19" />
+					<DisabledImage File="cgz_design" Source="315,204,19,19" />
+				</BottomButton>
+				<ToBottomButton Show="false">
+				  <NormalImage File="cgz_design" Source="493,391,15,18"/>
+				  <PushedImage File="cgz_design" Source="493,411,15,18"/>
+				  <Flicker Cycle="2.0" Show="false">
+					<Image File="cgz_design" Source="493,391,15,18"/>
+				  </Flicker>
+				</ToBottomButton>
+			</ScrollBarV>
+
+			<ScrollBarH Name="DefaultSbh" >
+				<HandleImage File="" Source="7,9,17,15"/>
+				<LeftButton>
+					<NormalImage File="" Source="9,7,15,17" />
+					<HighlightImage File="" Source="9,7,15,17" Blend="true" Transparency="0.5" />
+					<PushedImage File="" Source="9,7,15,17" />
+					<DisabledImage File="" Source="9,7,15,17" />
+				</LeftButton>
+				<RightButton>
+					<NormalImage File="" Source="7,9,17,15" />
+					<HighlightImage File="" Source="7,9,17,15" Blend="true" Transparency="0.5" />
+					<PushedImage File="" Source="7,9,17,15" />
+					<DisabledImage File="" Source="7,9,17,15" />
+				</RightButton>
+			</ScrollBarH>
+
+			<SliderV Name="DefaultSliderV">
+				<RailwayImage File="cgz_design2" Source="2,130,45,15" />
+				<SliderBar>
+					<NormalImage File="cgz_design2" Source="50,132,13,13" />
+				</SliderBar>
+			</SliderV>
+
+			<Widget Name="BorderOut" BackgroundColor="#bb222222" >
+				<BorderImage File="" Source="4,2,248,123" bottom="6" left="6" right="6" top="6" />
+			</Widget>
+			<Widget Name="BorderIn" BackgroundColor="#bb222222" >
+				<BorderImage File="" Source="4,2,248,123" bottom="6" left="6" right="6" top="6" renderOut="false"/>
+			</Widget>
+
+		</Templates>
+
+		<SystemWidgets Description="系统内置Widgets，每一个Theme都必须包含这些Widgets">
+
+			<Layer Name="$laySystem" >
+
+			<Label Name="$DefaultHint" BackgroundColor="#bb222222" Show="false" Location="0,0,60,16" />
+
+			<ScrollBarV Name="$AutoSbv" Text="" Show="false">
+				<HandleImage File="cgz_design" Source="295,179,19,24"/>
+				<TopButton>
+					<NormalImage File="cgz_design" Source="295,159,19,19" />
+					<DisabledImage File="cgz_design" Source="315,159,19,19" />
+				</TopButton>
+				<BottomButton>
+					<NormalImage File="cgz_design" Source="295,204,19,19" />
+					<DisabledImage File="cgz_design" Source="315,204,19,19" />
+				</BottomButton>
+				<ToBottomButton Show="false">
+				  <NormalImage File="cgz_design" Source="493,391,15,18"/>
+				  <PushedImage File="cgz_design" Source="493,411,15,18"/>
+				  <Flicker Cycle="2.0" Show="false">
+					<Image File="cgz_design" Source="493,391,15,18"/>
+				  </Flicker>
+				</ToBottomButton>
+			</ScrollBarV>
+
+			<ScrollBarH Name="$AutoSbh" Text="" Show="false">
+				<HandleImage File="" Source="7,9,17,15"/>
+				<LeftButton>
+					<NormalImage File="" Source="9,7,15,17" />
+					<HighlightImage File="" Source="9,7,15,17" />
+					<PushedImage File="" Source="9,7,15,17" />
+					<DisabledImage File="" Source="9,7,15,17" />
+				</LeftButton>
+				<RightButton>
+					<NormalImage File="" Source="7,9,17,15" />
+					<HighlightImage File="" Source="7,9,17,15" />
+					<PushedImage File="" Source="7,9,17,15" />
+					<DisabledImage File="" Source="7,9,17,15" />
+				</RightButton>
+			</ScrollBarH>
+
+			<!--<PopupMenu Name="$PopupMenu" BackgroundColor="#bb222222" Show="false" Location="0,0,100,200" />-->
+
+			  <PopupMenu Inherit="" Location="129,529,100,90" Name="$PopupMenu" Show="false">
+				<MenuList HoverSelect="true" AutoScrollV="false" DrawHeader="true" AutoResize="true" BackgroundColor="#bb222222" >
+					<ColumnButton Text="MenuColumn" Width="100" TextColor="#FFFFD700" >
+					</ColumnButton>
+				</MenuList>
+				<Widgets>
+				  <Widget Inherit="" Location="81,79,16,16" Name="l" Show="true" Size="5,0">
+					<BackgroundImage File="cgz01_l" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="TOP" relativeTo="$MenuList"/>
+					  <Anchor point="BOTTOM" relativeTo="$MenuList"/>
+					  <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="$MenuList"/>
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="r" Show="true" Size="5,0">
+					<BackgroundImage File="cgz01_r" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="LEFT" relativeTo="$MenuList" relativePoint="RIGHT"/>
+					  <Anchor point="TOP" relativeTo="$MenuList"/>
+					  <Anchor point="BOTTOM" relativeTo="$MenuList"/>
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="t" Show="true" Size="0,5">
+					<BackgroundImage File="cgz01_t" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="LEFT" relativeTo="$MenuList"/>
+					  <Anchor point="RIGHT" relativeTo="$MenuList"/>
+					  <Anchor point="BOTTOM" relativeTo="$MenuList" relativePoint="TOP"/>
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="b" Show="true" Size="0,5">
+					<BackgroundImage File="cgz01_b" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="TOP" relativeTo="$MenuList" relativePoint="BOTTOM"/>
+					  <Anchor point="LEFT" relativeTo="$MenuList"/>
+					  <Anchor point="RIGHT" relativeTo="$MenuList"/>
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="lt" Show="true" Size="5,5">
+					<BackgroundImage File="cgz01_lt" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="LEFT" relativeTo="l" />
+					  <Anchor point="TOP" relativeTo="t" />
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="rt" Show="true" Size="5,5">
+					<BackgroundImage File="cgz01_rt" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="RIGHT" relativeTo="r" />
+					  <Anchor point="TOP" relativeTo="t" />
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="lb" Show="true" Size="5,5">
+					<BackgroundImage File="cgz01_lb" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="LEFT" relativeTo="l" />
+					  <Anchor point="BOTTOM" relativeTo="b" />
+					</Anchors>
+				  </Widget>
+				  <Widget Inherit="" Location="81,79,16,16" Name="rb" Show="true" Size="5,5">
+					<BackgroundImage File="cgz01_rb" Source="0,0,16,16"/>
+					<Anchors>
+					  <Anchor point="RIGHT" relativeTo="r" />
+					  <Anchor point="BOTTOM" relativeTo="b" />
+					</Anchors>
+				  </Widget>
+				</Widgets>
+				<Scripts>
+					<OnMenuSelect>
+						if not SystemPopupMenuCallBackList then return end
+						for _, FTable in ipairs(SystemPopupMenuCallBackList) do
+							FTable.F(self, select, FTable.Arg);
+						end
+					</OnMenuSelect>
+					<OnHide>
+						SAPI.RemoveDefaultPopupMenuCallBack();
+					</OnHide>
+				</Scripts>
+			  </PopupMenu>
+
+
+
+ <Form Inherit="" Location="299,273,294,230" Name="$MessageBox" Show="false" Size="294,234">
+      <Label Inherit="" Location="112,29,70,30" Name="$Title" Show="true" AlignCol="CENTER" Size="70,30"/>
+      <Label Inherit="bg1" Location="7,20,285,210" Name="$Bk1" Show="true">
+        <Label Inherit="bg3" Location="10,33,256,138" Name="1304" Show="true" Level="50"/>
+      </Label>
+      <Label Inherit="TemplateNormalTitle" Location="0,1,299,60" Name="$Bk2" Show="fals">
+      </Label>
+      <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="23,57,246,130" MultiLine="true" Name="$Message" Show="true" WordWrap="true"/>
+      <Button Inherit="PushButton" Location="123,198,80,20" Name="$Ok" Show="true" Text="$L:724$">
+		<Scripts>
+			<OnLClick>
+				local frame = SAPI.GetParent(self);
+				local messagebox = uiFindMessageBoxByForm(frame);
+				SAPI.CallWidgetCallBackFunction(messagebox, frame, "Ok");
+				SAPI.RemoveWidgetCallBack(frame);
+			</OnLClick>
+		</Scripts>
+	  </Button>
+      <Button Inherit="PushButton" Location="188,167,80,20" Name="$Cancel" Show="true" Text="$L:604$">
+		<Scripts>
+			<OnLClick>
+				local frame = SAPI.GetParent(self);
+				local messagebox = uiFindMessageBoxByForm(frame);
+				SAPI.CallWidgetCallBackFunction(messagebox, frame, "Cancel");
+				SAPI.RemoveWidgetCallBack(frame);
+			</OnLClick>
+		</Scripts>
+	  </Button>
+      <TitleBarButton Location="0,0,294,20"/>
+      <CloseButton Show="fasle"/>
+      <Anchors>
+        <Anchor offset="0,0" point="CENTERH"/>
+        <Anchor offset="0,-140" point="CENTERV"/>
+      </Anchors>
+	  <Scripts>
+		<OnHide>
+			local frame = self;
+			local messagebox = uiFindMessageBoxByForm(frame);
+			SAPI.CallWidgetCallBackFunction(messagebox, frame, "Cancel");
+			SAPI.RemoveWidgetCallBack(frame);
+		</OnHide>
+		<OnUpdate>
+			local frame = self;
+			local messagebox = uiFindMessageBoxByForm(frame);
+			SAPI.CallWidgetCallBackFunction(messagebox, frame, "Update");
+		</OnUpdate>
+	  </Scripts>
+    </Form>
+
+<Form Inherit="" Location="200,200,290,180" Name="$InputBox" Show="false" Size="290,200">
+    <Label Inherit="" Location="105,29,70,30" Name="$Title" Show="true" AlignCol="CENTER" Size="70,30"/>
+    <Label Inherit="bg1" Location="10,18,262,160" Name="$Bk1" Show="true"/>
+    <Label Inherit="TemplateNormalTitle" Location="3,1,276,60" Name="$Bk2" Show="true">
+    </Label>
+    <Button Inherit="PushButton" Location="46,146,80,20" Name="$Ok" Text="$L:603$">
+		<Scripts>
+			<OnLClick>
+				local frame = SAPI.GetParent(self);
+				local inputbox = uiFindInputBoxByForm(frame);
+				local InputContent = frame:Get("InputContent");
+				SAPI.CallWidgetCallBackFunction(inputbox, frame, "Ok", frame:Get("InputContent"));
+				SAPI.RemoveWidgetCallBack(frame);
+			</OnLClick>
+		</Scripts>
+	</Button>
+    <Button Inherit="PushButton" Location="154,146,80,20" Name="$Cancel" Text="$L:604$">
+		<Scripts>
+			<OnLClick>
+				local frame = SAPI.GetParent(self);
+				local inputbox = uiFindInputBoxByForm(frame);
+				SAPI.CallWidgetCallBackFunction(inputbox, frame, "Cancel", frame:Get("InputContent"));
+				SAPI.RemoveWidgetCallBack(frame);
+			</OnLClick>
+		</Scripts>
+	</Button>
+    <EditBox EnableInput="false" Location="31,52,220,66" MultiLine="true" Name="$Message" WordWrap="true"/>
+    <EditBox AutoScrollV="false" Inherit="" Location="29,123,220,18" MultiLine="false" Name="$Edit" Text="" WordWrap="false">
+      <Border color="#ff999999" size="1"/>
+	  <Scripts>
+	    <OnTextChanged>SAPI.GetParent(self):Set("InputContent", self:getText());</OnTextChanged>
+		<OnKeyDown>
+			if uiGetKeyName(key) == "ENTER" then
+				local frame = SAPI.GetParent(self);
+				local inputbox = uiFindInputBoxByForm(frame);
+				local InputContent = frame:Get("InputContent");
+				SAPI.CallWidgetCallBackFunction(inputbox, frame, "Ok", InputContent);
+				SAPI.RemoveWidgetCallBack(frame);
+			end
+		</OnKeyDown> 
+	  </Scripts>
+    </EditBox>
+    <Anchors>
+      <Anchor point="CENTERH"/>
+      <Anchor offset="0,-140" point="CENTERV"/>
+    </Anchors>
+    <TitleBarButton Location="0,1,286,30"/>
+    <CloseButton Location="241,14,21,21">
+      <NormalImage File="cgz_design" Source="402,159,21,21"/>
+      <PushedImage File="cgz_design" Source="402,181,21,21"/>
+    </CloseButton>
+	<Scripts>
+		<OnHide>
+			local frame = self;
+			local inputbox = uiFindInputBoxByForm(frame);
+			SAPI.CallWidgetCallBackFunction(inputbox, frame, "Cancel", frame:Get("InputContent"));
+			SAPI.RemoveWidgetCallBack(frame);
+		</OnHide>
+		<OnUpdate>
+			local frame = self;
+			local inputbox = uiFindInputBoxByForm(frame);
+			SAPI.CallWidgetCallBackFunction(inputbox, frame, "Update");
+		</OnUpdate>
+	</Scripts>
+  </Form>
+
+
+			</Layer>
+
+		</SystemWidgets>
+
+	</Theme>
+</Ui>

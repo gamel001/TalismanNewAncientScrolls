@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="479,383,300,370" Name="frmMakeStone" Show="false">
+      <Label Inherit="bg1" Location="10,20,280,335" Name="554" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="4,2,292,50" Name="15787" Show="true"/>
+      <Label Inherit="" Location="-2,256,256,75" Name="588" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="53,56,200,161" Name="719" Show="true">
+        <BackgroundImage File="tz_026" Source="0,0,200,161" Transparency="1"/>
+      </Label>
+      <Button Inherit="" Location="140,83,32,32" Name="btStoneCenter1" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+      </Button>
+      <Button Inherit="" Location="140,149,32,32" Name="btStoneCenter2" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+      </Button>
+      <Button Inherit="PushButton" Location="39,307,70,20" Name="btOK" Show="true" Text="$L:924$"/>
+      <Label Inherit="bg3" Location="87,225,173,67" Name="9360" Show="true"/>
+      <Button Inherit="PushButton" Location="190,307,70,20" Name="btCancel" Show="true" Text="$L:476$"/>
+      <Anchors/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="91,0,120,70" Name="1229" Show="true" Text="$L:922$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Button Inherit="" Location="80,83,32,32" Name="btStoneLeft" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+      </Button>
+      <Button Inherit="" Location="192,83,32,32" Name="btStoneRight" Show="true">
+        <BackgroundImage File="tz_011" Source="178,115,41,40"/>
+      </Button>
+      <EditBox BackgroundColor="#ee000000" EnableInput="false" Inherit="" Location="91,229,166,60" MultiLine="ture" Name="lbMakeStoneTip" Show="true" Text="3333333" WordWrap="true"/>
+      <Label Inherit="" Location="38,238,36,16" Name="lbPracticeName" Show="true" Text="$L:478$"/>
+      <Label Inherit="" Location="106,180,52,16" Name="570" Show="false" Text="$L:479$"/>
+      <TitleBarButton Location="10,5,280,28"/>
+      <CloseButton Location="265,33,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+    </Form>
+  </Layer>
+</Ui>

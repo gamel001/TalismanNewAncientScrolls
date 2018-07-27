@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Theme Name="frmItemlookEx">
+    <Templates>
+      <Button Inherit="" Location="1,1,36,36" MouseEvent="true" MouseMove="true" Name="TemplateBtnOtherEquip" Show="true">
+        <HighlightImage Blend="true" File="tz_010" Source="189,378,45,44"/>
+        <Hint/>
+        <Scripts>
+          <OnLoad>TemplateBtnOtherEquip_OnLoad(self);</OnLoad>
+          <OnHint>TemplateBtnOtherEquip_OnHint(self);</OnHint>
+          <OnEvent>TemplateBtnOtherEquip_OnEvent(self, event, arg);</OnEvent>
+        </Scripts>
+      </Button>
+    </Templates>
+  </Theme>
+  <Script file="frm_itemLook_ex.lua"/>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="102,38,400,375" Name="frmItemlookEx" Show="false">
+      <Label Inherit="" Location="-80,2,305,353" Name="18176" Show="true"/>
+      <Label Inherit="bg1" Location="7,8,275,360" Name="858" Show="true" Size=""/>
+        <Label Inherit="" Location="12,8,264,346" Show="true">
+          <BackgroundImage File="te_newgod1" Source="59,82,250,280"/>
+        </Label>
+	 <Label Inherit="" Location="168,40,103,260" Name="16884" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="0,252,103,260"/>
+        </Label>
+        <Label Inherit="" Location="32,308,127,50" Name="17094" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="163,463,127,50"/>
+        </Label>
+        <Label Inherit="" Location="169,308,50,50" Name="17235" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="338,461,50,50"/>
+        </Label>
+        <Label Inherit="" Location="220,308,50,50" Name="17236" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="338,461,50,50"/>
+        </Label>
+        <Label Inherit="" Location="174,310,50,50" Name="17237" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="260,280,50,50"/>
+        </Label>
+        <Label Inherit="" Location="223,312,50,50" Name="17238" Show="true">
+          <BackgroundImage File="tz_newimage03" Source="259,326,50,50"/>
+        </Label>
+      <Button Inherit="TemplateBtnOtherEquip" Location="186,63,32,32" Name="btPart0"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="186,99,32,32" Name="btPart1"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="186,135,32,32" Name="btPart2"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="186,173,32,32" Name="btPart3"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="186,209,32,32" Name="btPart4"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="42,318,32,32" Name="btPart5"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="79,318,32,32" Name="btPart6"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="116,318,32,32" Name="btPart7"/>
+	  <Button Inherit="TemplateBtnOtherEquip" Location="222,63,32,32" Name="btPart8"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="222,99,32,32" Name="btPart9"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="222,135,32,32" Name="btPart10"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="222,173,32,32" Name="btPart11"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="222,209,32,32" Name="btPart12"/>
+      <Button Inherit="TemplateBtnOtherEquip" Location="222,246,32,32" Name="btPart13"/> 
+	  <Button Inherit="TemplateBtnOtherEquip" Location="186,246,32,32" Name="btPart14"/> 
+	  <Button Inherit="TemplateBtnOtherEquip" Location="176,315,37,37" Name="btPart15"/> 
+	  <Button Inherit="TemplateBtnOtherEquip" Location="226,315,37,37" Name="btPart16"/>
+      <TitleBarButton Location="11,6,290,28" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,1,284,50" Name="14021" Show="true"/>
+      <CloseButton Location="253,8,21,21">
+      <NormalImage File="tz_newimage01" Source="402,159,21,21"/>
+      <PushedImage File="tz_newimage01" Source="402,181,21,21"/>
+      </CloseButton>
+      <ModelView Inherit="" Location="-80,2,265,303" Name="modelOther" Pick="false" Show="true"/>
+      <Button Inherit="" Location="20,239,50,50" Name="btTurnLeft" Show="true">
+        <NormalImage File="tz_newimage03" Source="50,150,50,50"/>
+        <PushedImage File="tz_newimage03" Source="50,200,50,50"/>
+        <Scripts>
+          <OnLDown>local model = SAPI.GetSibling(self, "modelOther"); model:SetTurnSpeed(0, 0, -0.5); model:StartTurnModel();</OnLDown>
+          <OnLUp>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLUp>
+          <OnLeave>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLeave>
+        </Scripts>
+      </Button>
+      <Button Inherit="" Location="120,239,50,50" Name="btTurnRight" Show="true">
+        <NormalImage File="tz_newimage03" Source="0,150,50,50"/>
+        <PushedImage File="tz_newimage03" Source="0,200,50,50"/>
+        <Scripts>
+          <OnLDown>local model = SAPI.GetSibling(self, "modelOther"); model:SetTurnSpeed(0, 0, 0.5); model:StartTurnModel();</OnLDown>
+          <OnLUp>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLUp>
+          <OnLeave>local model = SAPI.GetSibling(self, "modelOther"); model:StopTurnModel();</OnLeave>
+        </Scripts>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="84,-15,120,68" Name="584" Show="true" Text="$L:846$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Scripts>
+        <OnLoad>layWorld_frmItemlookEx_OnLoad(self);</OnLoad>
+        <OnEvent>layWorld_frmItemlookEx_OnEvent(self, event, arg);</OnEvent>
+        <OnShow>layWorld_frmItemlookEx_OnShow(self);</OnShow>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

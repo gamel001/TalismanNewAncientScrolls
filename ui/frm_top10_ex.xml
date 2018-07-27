@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_Top10_ex.lua">Script</Script>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="39,123,640,540" Name="frmRankEx" Show="false">
+	  <Label Inherit="" Location="20,103,594,390" Name="1956" Show="true">
+        <BackgroundImage File="cgz_lines_2" Source=""/>
+      </Label>		
+      <Label Inherit="bg1" Location="7,18,620,520" Name="lbBackground" Show="true"/>
+      <Label Inherit="" Location="7,331,256,224" Name="1622" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="256,-2,256,340" Name="613" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="256,329,256,224" Name="663" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="512,-2,200,340" Name="984" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="" Location="512,329,200,224" Name="1584" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <CloseButton Location="597,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <Form AlignCol="" Inherit="NoTitleBarForm" Location="16,103,605,395" Name="frmRanklist" Show="falsee" TextColor="#ee778899">
+        <Label Inherit="bg3" Location="1,-1,600,390" Name="13674" Show="true"/>
+        <ListBox AutoScrollV="true" BackgroundColor="" Inherit="" Location="5,5,595,380" Name="ltRank" Show="fals">
+          <ColumnButton AlignCol="CENTER" Name="ColBtpaiming" Text="$L:1127$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMingzi" Text="$L:1128$" TextColor="#eefff902" Width="130"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtLevel" Text="$L:1129$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMengpai" Text="$L:1130$" TextColor="#eefff902" Width="190"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtGuid" Text="$L:1157$" TextColor="#eefff902" Width="140"/>
+          <Scripts>
+            <OnRDown>layWorld_frmRankEx_frmRanklist_ltRank_OnRDown(self, mouse_x, mouse_y);</OnRDown>
+          </Scripts>
+        </ListBox>
+        <ListBox AutoScrollV="true" BackgroundColor="" Inherit="" Location="5,3,595,380" Name="ltRankFangju" Show="false">
+          <ColumnButton AlignCol="CENTER" Name="ColBtpaiming" Text="$L:1127$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMingzi" Text="$L:1128$" TextColor="#eefff902" Width="130"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtLevel" Text="$L:1129$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="RIGHT" Name="ColBtPingfen" Text="$L:1135$" TextColor="#eefff902" Width="60"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtSuoyouren" Text="$L:1136$" TextColor="#eefff902" Width="130"/>
+        </ListBox>
+        <ListBox AutoScrollV="true" BackgroundColor="" Inherit="" Location="5,4,595,380" Name="ltRankFaBao" Show="false">
+          <ColumnButton AlignCol="CENTER" Name="ColBtpaiming" Text="$L:1127$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMingzi" Text="$L:1128$" TextColor="#eefff902" Width="130"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtLevel" Text="$L:1129$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="RIGHT" Name="ColBtPingfen" Text="$L:1135$" TextColor="#eefff902" Width="60"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtSuoyouren" Text="$L:1136$" TextColor="#eefff902" Width="130"/>
+        </ListBox>
+        <ListBox AutoScrollV="true" BackgroundColor="" Inherit="" Location="5,5,595,380" Name="ltRankGod" Show="false">
+          <ColumnButton AlignCol="CENTER" Name="ColBtpaiming" Text="$L:1127$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMingzi" Text="$L:1128$" TextColor="#eefff902" Width="110"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtJingjie" Text="$L:1131$" TextColor="#eefff902" Width="140"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtMengpai" Text="$L:1130$" TextColor="#eefff902" Width="140"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtGuid" Text="$L:1157$" TextColor="#eefff902" Width="140"/>
+          <Scripts>
+            <OnRDown>layWorld_frmRankEx_frmRanklist_ltRankGod_OnRDown(self, mouse_x, mouse_y);</OnRDown>
+          </Scripts>
+        </ListBox>
+        <ListBox AutoScrollV="true" BackgroundColor="" Inherit="" Location="5,4,595,380" Name="ltRankGuild" Show="false">
+          <ColumnButton AlignCol="CENTER" Name="ColBtpaiming" Text="$L:1127$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtBanghui" Text="$L:1132$" TextColor="#eefff902" Width="120"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtLevel" Text="$L:1129$" TextColor="#eefff902" Width="50"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtFanrongdu" Text="$L:1133$" TextColor="#eefff902" Width="100"/>
+          <ColumnButton AlignCol="CENTER" Name="ColBtBangzhu" Text="$L:1134$" TextColor="#eefff902" Width="100"/>
+          <Scripts>
+            <OnRDown>layWorld_frmRankEx_frmRanklist_ltRankGuild_OnRDown(self, mouse_x, mouse_y);</OnRDown>
+          </Scripts>
+        </ListBox>
+      </Form>
+      <Label Inherit="TemplateNormalTitle" Location="0,0,634,47" Name="lbTitle" Show="true"/>
+      <Label Inherit="" Location="446,9,185,25" Name="lbTitle1" Show="false">
+        <BackgroundImage File="tz_010" Source="0,109,250,25"/>
+      </Label>
+	  	<Label Inherit="" Location="255,14,117,18" Name="Name19" Show="true">
+          <BackgroundImage File="cgz_design25" Source="6,299,235,29"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="255,-5,120,66" Name="lbTitleName" Show="false" Text="$L:852$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <TitleBarButton Location="0,7,628,28"/>
+      <CheckButton CheckStyle="false" Inherit="" Location="32,60,80,30" Name="btnLev" Show="true" Text="$L:847$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,0);</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="112,60,80,30" Name="btngod" Show="true" Text="$L:848$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,1);</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="192,60,80,30" Name="btnGuild" Show="true" Text="$L:849$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,2);</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="272,60,80,30" Name="btMainTrump" Show="true" Text="$L:1037$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,3);</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton CheckStyle="false" Inherit="" Location="352,60,80,30" Name="btDefendEquip" Show="true" Text="$L:1038$">
+        <NormalImage File="cgz_design" Source="238,255,77,24"/>
+        <CheckImage File="cgz_design" Source="238,284,77,24"/>
+        <PushedImage File="cgz_design" Source="238,284,77,24"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btnTitle_OnLClick(self,4);</OnLClick>
+        </Scripts>
+      </CheckButton>
+      <Button Inherit="" Location="440,509,22,21" Name="btPrePage" Show="true">
+        <NormalImage File="cgz_design" Source="8,159,22,21"/>
+        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+        <DisabledImage File="cgz_design" Source="8,182,22,21"/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btPrePage_OnLClick(self);</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="" Location="490,509,22,21" Name="btNextPage" Show="true">
+        <NormalImage File="cgz_design" Source="32,159,22,21"/>
+        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+        <DisabledImage File="cgz_design" Source=""/>
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btNextPage_OnLClick(self);</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="PushButton" Location="373,505,66,20" Name="btFind" Show="true" Text="$L:882$">
+        <Scripts>
+          <OnLClick>layWorld_frmRankEx_btFind_OnLClick(self);</OnLClick>
+        </Scripts>
+      </Button>
+      <Label Inherit="" Location="136,506,40,18" Name="lbRank" Show="true" Text="$L:880$"/>
+      <EditBox Inherit="DefaultEdit" Location="177,505,31,20" Name="edtRank" Show="true">
+        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      </EditBox>
+      <Label Inherit="" Location="230,506,44,18" Name="lbName" Show="true" Text="$L:881$"/>
+      <EditBox Inherit="DefaultEdit" Location="276,505,80,20" Name="edtName" Show="true">
+        <BackgroundImage File="tz_011" Source="0,0,80,20"/>
+      </EditBox>
+      <Button Inherit="" Location="244,22,66,20" Name="btFindSelf" Show="false" Text="$L:988$">
+        <DisabledImage File="" Source=""/>
+        <NormalImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+      </Button>
+      <Label Inherit="" Location="13,84,608,10" Name="53501" Show="true">
+        <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      </Label>
+      <Label Inherit="" Location="466,507,20,17" Name="16212" Show="true">
+        <BackgroundImage File="cgz_design4" Source="95,5,200,32"/>
+      </Label>
+      <Scripts>
+        <OnLoad>layWorld_frmRankEx_OnLoad(self);</OnLoad>
+        <OnEvent>layWorld_frmRankEx_OnEvent(self,event,arg);</OnEvent>
+        <OnShow>layWorld_frmRankEx_OnShow(self);</OnShow>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

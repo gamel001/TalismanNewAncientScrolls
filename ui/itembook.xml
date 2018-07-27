@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="itembook.lua">Script</Script>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="299,273,220,500" Name="itembook" Show="false" Size="260,500">
+      <Label Inherit="bg1" Location="6,30,250,470" Name="body" Show="true" Size="250,0">
+        <Anchors>
+          <Anchor point="BOTTOM"/>
+          <Anchor offset="0,17" point="TOP"/>
+          <Anchor offset="" point="CENTERH"/>
+        </Anchors>
+      </Label>
+      <TitleBarButton Location="0,0,260,18" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="-2,0,264,50" Name="lbTitle" Show="true"/>
+      <CloseButton Location="232,26,13,13" Size="226,26,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="80,24,100,20" Name="lbBookName" Show="true" Text="234234234"/>
+      <Label BackgroundColor="" Inherit="bg3" Location="17,28,230,438" Name="9662" Ortho="true" Show="true" Size="230,0">
+        <Anchors>
+          <Anchor offset="0,40" point="TOP" relativePoint="TOP" relativeTo="layWorld.itembook.body"/>
+          <Anchor offset="0,-30" point="BOTTOM" relativePoint="BOTTOM" relativeTo="layWorld.itembook.body"/>
+          <Anchor point="CENTERH"/>
+        </Anchors>
+      </Label>
+      <Label BackgroundColor="" Inherit="" Location="20,41,200,390" Name="lbAll" Show="true" Size="200,0">
+        <Label AutoSize="true" BackgroundColor="" Inherit="" Location="0,129,200,130" Name="lb2D" Show="true" Size="220,130" Text=""/>
+        <HintWidget AutoSizeV="false" BackgroundColor="" Inherit="" Location="0,260,200,130" MaxWidth="200" Name="lbText" Show="true" Size="220,130" Text="123131313"/>
+        <Anchors>
+          <Anchor offset="0,46" point="TOP" relativePoint="TOP" relativeTo="layWorld.itembook.body"/>
+          <Anchor offset="0,-40" point="BOTTOM" relativePoint="BOTTOM" relativeTo="layWorld.itembook.body"/>
+          <Anchor point="CENTERH"/>
+        </Anchors>
+        <ModelView Inherit="" Location="0,0,200,130" Name="mv3D" Ortho="true" Show="true" Size="220,130" Text="sdfsdfsdf"/>
+      </Label>
+      <Anchors>
+        <Anchor point="CENTERH"/>
+        <Anchor offset="0,100" point="TOP"/>
+      </Anchors>
+      <Scripts>
+        <OnLoad>self:RegisterScriptEventNotify("EVENT_OPEN_BOOK_TO_SHOW")</OnLoad>
+        <OnEvent>if event == "EVENT_OPEN_BOOK_TO_SHOW" then
+				layWorld_itembook_To_Show(self, arg[1], arg[2],arg[3],arg[4],arg[5],arg[6],arg[7])
+			end</OnEvent>
+      </Scripts>
+    </Form>
+  </Layer>
+</Ui>

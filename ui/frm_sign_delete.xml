@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Script file="frm_sign_delete.lua">Script</Script>
+  <Layer Name="layWorld" Show="true">
+    <Form DragIn="true" Inherit="" Location="200,170,300,370" MouseEvent="true" Name="frmSignDelete" Show="false">
+      <Label Inherit="" Location="15,40,270,314" Name="1956" Show="true">
+        <BackgroundImage File="tz_029_1" Source="0,0,306,168"/>
+      </Label>		
+      <Anchors/>
+      <Label Inherit="bg1" Location="10,20,280,335" Name="1637" Show="true"/>
+      <TitleBarButton Location="9,6,280,26"/>
+      <CloseButton Location="258,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+      <Label Inherit="TemplateNormalTitle" Location="3,1,294,50" Name="21483" Show="true"/>
+      <Label Inherit="" Location="-2,256,256,75" Name="1671" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Label Inherit="bg3" Location="35,202,230,110" Name="12681" Show="true"/>
+      <Label Inherit="" Location="124,99,50,50" Name="CGZBGI13" Show="true">
+      <BackgroundImage File="cgz_design1" Source="338,461,50,50"/>
+      </Label>
+	  <Button DragIn="true" DragOut="false" Inherit="" Location="128,103,42,42" Name="btItem" Show="true">
+        <BackgroundImage File="" Source=""/>
+        <HighlightImage File="cgz_design" Source="57,414,42,42"/>
+		<PushedImage File="" Source=""/>
+        <Hint/>
+        <Scripts>
+          <OnLoad>layWorld_frmSignDelete_btItem_OnLoad(self)</OnLoad>
+          <OnDragIn>layWorld_frmSignDelete_btItem_OnDragIn(self, drag)</OnDragIn>
+          <OnDragNull>layWorld_frmSignDelete_btItem_OnDragNull(self)</OnDragNull>
+          <OnRClick>layWorld_frmSignDelete_btItem_OnRClick(self)</OnRClick>
+          <OnHint>layWorld_frmSignDelete_btItem_OnHint(self)</OnHint>
+        </Scripts>
+      </Button>
+      <Button Inherit="PushButton" Location="56,319,75,20" Name="btOK" Show="true" Text="$L:1351$">
+        <Scripts>
+          <OnLClick>layWorld_frmSignDelete_btOK_OnLClick(self)</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="PushButton" Location="169,319,75,20" Name="btCancel" Show="true" Text="$L:1352$">
+        <Scripts>
+          <OnLClick>layWorld_frmSignDelete_btCancel_OnLClick(self)</OnLClick>
+        </Scripts>
+      </Button>
+	  	<Label Inherit="" Location="85,14,131,18" Name="Name30" Show="true">
+          <BackgroundImage File="cgz_design25" Source="691,505,263,29"/>
+        </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="90,-6,122,68" Name="1229" Show="false" Text="$L:1350$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Scripts>
+        <OnLoad>layWorld_frmSignDelete_OnLoad(self)</OnLoad>
+        <OnEvent>layWorld_frmSignDelete_OnEvent(self, event, arg)</OnEvent>
+        <OnShow>layWorld_frmSignDelete_OnShow(self)</OnShow>
+        <OnHide>layWorld_frmSignDelete_OnHide(self)</OnHide>
+      </Scripts>
+      <EditBox AutoScrollV="true" EnableInput="false" Inherit="" Location="43,208,218,98" MultiLine="true" Name="edbIndex" Show="true" Text="$L:1466$" WordWrap="true"/>
+    </Form>
+  </Layer>
+</Ui>

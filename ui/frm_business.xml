@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="104,192,294,512" Name="frmNpcShop" Show="fals">
+      <Label Inherit="bg1" Location="7,20,280,492" Name="858" Show="fals" Size=""/>
+      <Label Inherit="bg3" Location="22,47,250,430" Name="2314" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,292,50" Name="475" Show="fals"/>
+      <TitleBarButton AlignLine="CENTER" Location="0,0,294,28"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+      <Label Inherit="" Location="22,230,240,26" Name="2339" Show="true">
+        <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Label Inherit="" Location="22,443,240,26" Name="1481" Show="true">
+        <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Button Inherit="" Location="189,59,13,14" Name="btnPageUp" Show="true" Text="">
+        <NormalImage File="tz_010.tga" Source="51,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="51,399,12,14"/>
+      </Button>
+      <Button Inherit="" Location="242,59,13,14" Name="btnPageDown" Show="true" Text="">
+        <NormalImage File="tz_010.tga" Source="76,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="76,399,12,14"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="202,57,40,21" Name="labPage" Show="true" Text="$L:416$">
+        <BackgroundImage File="tz_010" Source="458,193,30,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,448,44,20" Name="goldnum" Show="true" Text="$L:417$">
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,448,24,20" Name="silvernum" Show="true" Text="$L:418$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,448,24,18" Name="coppernum" Show="true" Text="$L:419$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,235,44,20" Name="lbNpcgoldnum" Show="true" Text="$L:420$">
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,234,24,20" Name="lbNpcsilvernum" Show="true" Text="$L:421$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,235,24,20" Name="lbNpccoppernum" Show="true" Text="$L:422$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,54,147,24" Name="lbNpcname" Show="true">
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,269,147,24" Name="lbUsername" Show="true" Text="">
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
+      </Label>
+      <Button Inherit="PushButton" Location="53,479,80,22" Name="btBuy" Show="true" Text="$L:423$"/>
+      <Button Inherit="PushButton" Location="158,479,80,22" Name="490" Show="true" Text="$L:424$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,233,40,20" Name="lbSpend" Show="true" Text="$L:425$">
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,447,40,20" Name="lbTotal" Show="true" Text="$L:426$">
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="83,23,128,20" Name="9785" Show="true" Text="$L:415$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="184,276,60,20" Name="2103" Show="true" Text="1234567">
+        <BackgroundImage File="tz_010" Source="443,217,60,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="174,259,80,18" Name="2335" Show="true" Text="$L:1126$"/>
+      <Label Inherit="" Location="41,82,211,141" Name="607" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <Label Inherit="" Location="41,297,211,141" Name="1284" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <Label Inherit="" Location="10,10,70,18" Name="1534" Show="true"/>
+    </Form>
+    <Form Inherit="" Location="394,192,294,512" Name="frmSaleShop" Show="fals">
+      <Label Inherit="bg1" Location="7,20,280,492" Name="858" Show="true" Size=""/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,292,50" Name="475" Show="fals"/>
+      <Label Inherit="bg3" Location="22,47,250,430" Name="2314" Show="fals"/>
+      <TitleBarButton Location="0,0,294,28"/>
+      <Button Inherit="" Location="189,59,13,14" Name="btnPageUp" Show="true" Text="">
+        <NormalImage File="tz_010.tga" Source="51,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="51,399,12,14"/>
+      </Button>
+      <Button Inherit="" Location="242,59,13,14" Name="btnPageDown" Show="true" Text="">
+        <NormalImage File="tz_010.tga" Source="76,382,12,14"/>
+        <PushedImage File="tz_010.tga" Source="76,399,12,14"/>
+      </Button>
+      <Label Inherit="" Location="22,230,240,26" Name="2339" Show="true">
+        <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Label Inherit="" Location="22,443,240,26" Name="1481" Show="true">
+        <Label Inherit="" Location="10,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010.tga" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="58,3,24,22" Name="Jin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="134,3,24,22" Name="Yin" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="188,0,24,26" Name="Tong" Show="fals">
+          <BackgroundImage File="tz_010.tga" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="202,57,40,21" Name="labPage" Show="true" Text="$L:428$">
+        <BackgroundImage File="tz_010" Source="458,193,30,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,448,44,20" Name="goldnum" Show="true" Text="$L:429$">
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,448,24,20" Name="silvernum" Show="true" Text="$L:430$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,448,24,20" Name="coppernum" Show="true" Text="$L:431$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="107,235,44,20" Name="lbNpcgoldnum" Show="true" Text="$L:432$">
+        <BackgroundImage File="tz_010" Source="457,193,32,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="183,234,24,20" Name="lbNpcsilvernum" Show="true" Text="$L:433$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="236,235,24,20" Name="lbNpccoppernum" Show="true" Text="$L:433$">
+        <BackgroundImage File="tz_010" Source="458,193,31,21"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,54,147,24" Name="lbNpcname" Show="true">
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,269,147,24" Name="lbUsername" Show="true">
+        <BackgroundImage File="tz_010.tga" Source="181,351,147,24"/>
+      </Label>
+      <Button Inherit="PushButton" Location="57,479,80,22" Name="btSell" Show="true" Text="$L:435$"/>
+      <Button Inherit="PushButton" Location="161,479,80,22" Name="490" Show="true" Text="$L:436$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,233,40,20" Name="lbSpend" Show="true" Text="$L:437$">
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="33,447,40,20" Name="lbTotal" Show="true" Text="$L:438$">
+        <BackgroundImage File="tz_010" Source="443,267,61,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="82,23,130,20" Name="17506" Show="true" Text="$L:427$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <Label Inherit="" Location="41,82,211,141" Name="607" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <Label Inherit="" Location="40,297,211,141" Name="1425" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+    </Form>
+  </Layer>
+</Ui>

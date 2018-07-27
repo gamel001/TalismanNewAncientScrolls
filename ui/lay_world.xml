@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form ClipChildren="false" Inherit="NoTitleBarForm" Location="577,0,220,26" Name="frmMap" Show="true" Size="220,28">
+      <Label Inherit="" Location="168,1,45,23" Name="lbMapBgTop" Show="true">
+        <BackgroundImage Blend="true" File="tz_011" Source="368,438,45,23"/>
+      </Label>
+      <CheckButton Inherit="" Location="172,6,16,12" Name="cbMiniMap" Show="true" Sound="channel.wav">
+        <CheckedImage Blend="true" File="tz_011" Source="273,85,16,11"/>
+		<NormalImage Blend="true" File="tz_011" Source="272,68,16,12"/>
+        <Hint Text="$L:229$"/>
+      </CheckButton>
+      <Button Inherit="" Location="193,3,18,18" Name="btWorldMap" Show="true" Sound="bt1.wav">
+        <CheckedImage Blend="true" File="tz_011" Source="246,2,16,16"/>
+        <NormalImage Blend="true" File="tz_011" Source="216,159,16,16"/>
+        <Hint Text="$L:230$"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="4,1,164,22" Name="lbUserPos" Show="fals" Text="$L:231$" TextColor="#ffffff00">
+        <BackgroundImage File="tz_011" Source="222,438,145,22"/>
+      </Label>
+      <Anchors>
+        <Anchor point="RIGHT"/>
+      </Anchors>
+    </Form>
+    <Form Active="false" Inherit="NoTitleBarForm" Location="220,60,200,176" Name="frmMiniMap" Pick="false" Show="true" Size="277,280">
+      <Label Inherit="" Location="136,43,129,137" MouseEvent="true" MouseMove="true" Name="lbMapBg" Show="true"/>
+      <Label Inherit="" Location="62,-8,220,200" MouseEvent="false" Name="lbMapFrameBg" Pick="false" Show="true">
+        <BackgroundImage Blend="true" File="mapinsanity" Source=""/>
+      </Label>
+      <Button Inherit="" Location="252,85,19,19" Name="btZoomOut" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="ins_zoom1" Source=""/>
+        <PushedImage Blend="true" File="ins_zoom2" Source=""/>
+        <Hint Text="$L:232$"/>
+      </Button>
+      <Button Inherit="" Location="251,120,19,19" Name="btZoomIn" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="false" File="ins_zoomout1" Source=""/>
+        <PushedImage Blend="true" File="ins_zoomout2" Source=""/>
+        <Hint Text="$L:233$"/>
+      </Button>
+      <Button Inherit="" Location="123,110,21,21" Name="btReview" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="ins_info" Source=""/>
+        <PushedImage Blend="true" File="ins_info1" Source=""/>
+        <Hint Text="$L:234$"/>
+      </Button>
+      <Anchors>
+        <Anchor point="RIGHT" relativeTo="frmMap"/>
+        <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="frmMap"/>
+      </Anchors>
+      <Button Inherit="" Location="146,137,21,21" Name="btItemShop" Show="false" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="" Source="447,184,27,27"/>
+        <PushedImage Blend="true" File="tz_030" Source="302,260,21,21"/>
+        <Hint Text="$L:639$"/>
+        <Scripts>
+          <OnLClick>uiUserTogglePointShop();</OnLClick>
+        </Scripts>
+        <Flicker Cycle="2" Show="true">
+          <Image File="tz_030" Source="302,260,21,21"/>
+        </Flicker>
+      </Button>
+      <Button Inherit="" Location="129,130,21,21" Name="btLevUpGuide" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="tz_insques" Source=""/>
+        <PushedImage Blend="true" File="tz_insques1" Source=""/>
+        <Hint Text="$L:835$"/>
+        <Flicker Cycle="2" Show="true">
+          <Image File="tz_insques1" Source=""/>
+        </Flicker>
+        <Scripts>
+          <OnLoad>self:RegisterScriptEventNotify("EVENT_SelfLevelUp");</OnLoad>
+          <OnEvent>if event == "EVENT_SelfLevelUp" then self:SetFlicker(true); end</OnEvent>
+          <OnLClick>local frmNewPlayEx = uiGetglobal("layWorld.frmNewPlayEx");
+			if frmNewPlayEx:getVisible() == true then
+				frmNewPlayEx:Hide();
+			else
+				frmNewPlayEx:ShowAndFocus();
+			end
+			self:SetFlicker(false);</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="" Location="125,16,21,21" Name="btmail" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="ins_mail2" Source=""/>
+		<PushedImage Blend="true" File="" Source=""/>
+        <Hint Text="$L:834$"/>
+      </Button>
+      <Button Inherit="" Location="141,148,21,21" Name="btTop100" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="tz_insrank" Source=""/>
+        <PushedImage Blend="true" File="tz_insrank1" Source=""/>
+        <Hint Text="$L:854$"/>
+        <Scripts>
+          <OnLClick>uiRankToggleRank(EV_EXCUTE_EVENT_ON_LCLICK);</OnLClick>
+        </Scripts>
+      </Button>
+      <Button Inherit="" Location="120,87,21,21" Name="btTeachneed" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="ins_ap" Source=""/>
+        <PushedImage Blend="true" File="ins_ap1" Source=""/>
+        <Hint Text="$L:879$"/>
+      </Button>
+      <Button Inherit="" Location="159,164,21,21" Name="btFreeBuy" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="tz_insstall" Source=""/>
+        <PushedImage Blend="true" File="tz_insstall1" Source="4"/>
+        <Hint Text="$L:926$"/>
+        <Scripts>
+          <OnLClick>uiUserToggleStall();</OnLClick>
+        </Scripts>
+      </Button>
+      <Label Inherit="" Location="185,15,27,29" MouseEvent="true" MouseMove="true" Name="lbSun" Show="true">
+        <BackgroundImage File="suninsanity" Source=""/>
+      </Label>
+      <Label Inherit="" Location="185,15,27,29" MouseEvent="true" MouseMove="true" Name="lbNight" Show="false">
+        <BackgroundImage File="nightinsanity" Source=""/>
+      </Label>
+      <Button Inherit="" Location="189,164,31,26" Name="bt3C" Show="true" Sound="MapZoom.wav">
+        <NormalImage Blend="true" File="ins_pvp" Source=""/>
+        <PushedImage Blend="true" File="ins_pvp1" Source=""/>
+        <Hint Text="$L:1103$"/>
+      </Button>
+      <Button Inherit="" Location="147,16,20,20" Name="btnearby" Show="true" Sound="">
+        <NormalImage Blend="false" File="tz_insvisao" Source=""/>
+        <PushedImage Blend="true" File="tz_insvisao1" Source=""/>
+        <Hint Text="$L:1255$"/>
+        <Scripts>
+          <OnLClick>local FrmNearby = uiGetglobal("layWorld.FrmNearby"); if FrmNearby:getVisible() == true then FrmNearby:Hide() else FrmNearby:Show() end</OnLClick>
+        </Scripts>
+      </Button>
+    </Form>
+    <Form Inherit="NoTitleBarForm" Location="391,312,92,68" Name="frmPickMode" Show="false">
+      <Label Inherit="bg3" Location="0,0,92,68" Name="8523" Show="true"/>
+      <Widget Inherit="" Location="0,0,92,72" Name="wgtHint" Show="true">
+        <Widgets>
+          <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="lt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="rt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+              <Anchor point="RIGHT" relativeTo="rt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lt"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lb"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+              <Anchor point="BOTTOM" relativeTo="lb"/>
+            </Anchors>
+          </Widget>
+          <Widget BackgroundColor="#e2121212" Inherit="" Location="100,100,200,200" Name="center" Show="true">
+            <Anchors>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+            </Anchors>
+          </Widget>
+        </Widgets>
+      </Widget>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Location="6,6,80,20" Name="ckbFreeMode" Show="true" Text="$L:235$">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Location="6,26,80,20" Name="ckbRandomMode" Show="true" Text="$L:236$">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Location="6,44,80,20" Name="ckbCaptainMode" Show="true" Text="$L:237$">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+    </Form>
+    <Form Inherit="NoTitleBarForm" Location="494,312,92,68" Name="frmPickLevel" Show="false">
+      <Label BackgroundColor="#80000000" Inherit="bg3" Location="0,0,92,68" Name="6841" Show="true"/>
+      <Widget Inherit="" Location="0,0,92,72" Name="wgtHint" Show="false">
+        <Widgets>
+          <Widget Inherit="" Location="81,79,6,6" Name="lt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rt" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="TOP"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="lb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="rb" Show="true" Size="6,6">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="RIGHT"/>
+              <Anchor point="BOTTOM"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="l" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="lt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="lt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="r" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="LEFT" relativeTo="rt"/>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="rb"/>
+              <Anchor point="RIGHT" relativeTo="rt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="t" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lt"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lt"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rt"/>
+              <Anchor point="BOTTOM" relativeTo="lt"/>
+            </Anchors>
+          </Widget>
+          <Widget Inherit="" Location="81,79,20,20" Name="b" Show="true">
+            <BackgroundImage File="" Source=""/>
+            <Anchors>
+              <Anchor point="TOP" relativeTo="lb"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="lb"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="rb"/>
+              <Anchor point="BOTTOM" relativeTo="lb"/>
+            </Anchors>
+          </Widget>
+          <Widget BackgroundColor="#e2121212" Inherit="" Location="100,100,200,200" Name="center" Show="true">
+            <Anchors>
+              <Anchor point="TOP" relativePoint="BOTTOM" relativeTo="t"/>
+              <Anchor point="LEFT" relativePoint="RIGHT" relativeTo="l"/>
+              <Anchor point="RIGHT" relativePoint="LEFT" relativeTo="r"/>
+              <Anchor point="BOTTOM" relativePoint="TOP" relativeTo="b"/>
+            </Anchors>
+          </Widget>
+        </Widgets>
+      </Widget>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,6,80,20" Name="ckbGreenLevel" Show="true" Text="$L:238$" TextColor="#ff28d20b">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="5,25,80,20" Name="ckbBlueLevel" Show="true" Text="$L:239$" TextColor="#ff6c82d1">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="5,43,80,20" Name="ckbGoldLevel" Show="true" Text="$L:240$" TextColor="#ffc7a135">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+    </Form>
+    <Form Inherit="" Location="596,312,162,120" Name="frmPkMode" Pick="true" Show="false">
+      <Label BackgroundColor="#80000000" Inherit="bg3" Location="0,0,162,120" Name="6841" Show="true"/>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,8,150,20" Name="ckbMonster" Show="true" Text="$L:930$" TextColor="#ff18dd0b">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,29,150,20" Name="ckbEnemy" Show="true" Text="$L:931$" TextColor="#ff8dde00">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,50,150,20" Name="ckbTeam" Show="true" Text="$L:932$" TextColor="#ffdede00">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,71,150,20" Name="ckbGuild" Show="true" Text="$L:933$" TextColor="#ffde7d00">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <CheckButton BackgroundColor="#80000000" CheckStyle="true" Inherit="" Location="6,92,150,20" Name="ckbFree" Show="true" Text="$L:934$" TextColor="#ffd03120">
+        <CheckImage File="tz_012" Source="81,6,25,20"/>
+      </CheckButton>
+      <TitleBarButton Show="false"/>
+      <CloseButton Show="false"/>
+    </Form>
+  </Layer>
+</Ui>

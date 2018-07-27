@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form ClipChildren="false" Inherit="NoTitleBarForm" Location="0,0,768,90" Name="frSystemButton" Pick="true" Show="true" Size="828,70">
+      <Label Inherit="" Location="0,0,93,87" Name="lbBackGround1" Show="true" Size="93,87">
+        <BackgroundImage File="tz_011" Source="221,312,93,87"/>
+        <Anchors>
+          <Anchor offset="0,0" point="BOTTOM" relativePoint="BOTTOM"/>
+          <Anchor point="LEFT"/>
+        </Anchors>
+      </Label>
+      <Label Inherit="" Location="255,25,419,49" Name="lbBackGround2" Show="true" Size="419,49">
+        <Anchors>
+          <Anchor offset="0,0" point="BOTTOM" relativePoint="BOTTOM" relativeTo="lbBackGround1"/>
+          <Anchor offset="0,0" point="LEFT" relativePoint="RIGHT" relativeTo="lbBackGround1"/>
+        </Anchors>
+        <BackgroundImage File="tz_011" Source="0,463,419,49"/>
+      </Label>
+      <Label Inherit="" Location="507,21,221,49" Name="lbBackGround3" Show="fals" Size="221,49">
+        <Anchors>
+          <Anchor offset="0,0" point="BOTTOM" relativePoint="BOTTOM" relativeTo="lbBackGround2"/>
+          <Anchor offset="0,0" point="LEFT" relativePoint="RIGHT" relativeTo="lbBackGround2"/>
+        </Anchors>
+        <BackgroundImage File="tz_011" Source="0,412,221,49"/>
+      </Label>
+      <Label Inherit="" Location="600,19,74,52" Name="lbBackGround4" Show="false" Size="74,52">
+        <BackgroundImage File="" Source="0,206,74,51"/>
+      </Label>
+      <Label Inherit="" Location="728,-18,91,88" Name="lbBackGround5" Show="true" Size="91,88">
+        <BackgroundImage File="tz_011" Source="421,425,91,87"/>
+        <Anchors>
+          <Anchor offset="0,0" point="BOTTOM" relativePoint="BOTTOM"/>
+          <Anchor offset="-8,0" point="RIGHT"/>
+        </Anchors>
+      </Label>
+      <Button Location="54,30,32,32" Name="btMainShortcut1" Show="true"/>
+      <Button Location="91,30,32,32" Name="btMainShortcut2" Show="true"/>
+      <Button Location="129,30,32,32" Name="btMainShortcut3" Show="true"/>
+      <Button Location="167,30,32,32" Name="btMainShortcut4" Show="true"/>
+      <Button Location="205,30,32,32" Name="btMainShortcut5" Show="true"/>
+      <Button Location="243,30,32,32" Name="btMainShortcut6" Show="true"/>
+      <Button Location="281,30,32,32" Name="btMainShortcut7" Show="true"/>
+      <Button Location="319,30,32,32" Name="btMainShortcut8" Show="true"/>
+      <Button Location="357,30,32,32" Name="btMainShortcut9" Show="true"/>
+      <Button Location="395,30,32,32" Name="btMainShortcut0" Show="true"/>
+      <Button Inherit="" Location="431,21,23,22" Name="btUp" Show="true">
+        <NormalImage File="tz_010" Source="38,420,23,22"/>
+        <PushedImage File="tz_010" Source="241,483,23,22"/>
+        <DisabledImage File="tz_010" Source="241,483,23,22"/>
+        <Hint Text="$L:271$"/>
+      </Button>
+      <Button Inherit="" Location="431,46,23,22" Name="btDown" Show="true">
+        <NormalImage File="tz_010" Source="6,420,23,22"/>
+        <PushedImage File="tz_010" Source="275,483,23,22"/>
+        <DisabledImage File="tz_010" Source="275,483,23,22"/>
+        <Hint Text="$L:272$"/>
+      </Button>
+      <Label AlignCol="CENTER" Inherit="" Location="463,38,12,16" Name="lbPageNumber" Show="true" Text="$L:273$"/>
+      <CheckButton Inherit="" Location="487,30,32,32" Name="cbAttribute" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="0,38,30,33"/>
+        <PushedImage Blend="true" File="tz_012" Source="0,76,30,33"/>
+        <DisabledImage Blend="true" File="tz_012" Source="0,76,30,33"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:274$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="524,30,32,32" Name="cbMagicWeapon" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="79,38,30,31"/>
+        <PushedImage Blend="true" File="tz_012" Source="80,78,30,31"/>
+        <DisabledImage Blend="true" File="tz_012" Source="80,78,30,31"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:275$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="562,30,32,32" Name="cbItem" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="41,38,29,33"/>
+        <PushedImage Blend="true" File="tz_012" Source="43,76,29,33"/>
+        <DisabledImage Blend="true" File="tz_012" Source="43,76,29,33"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:276$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="600,30,32,32" Name="cbTask" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="116,36,32,34"/>
+        <PushedImage Blend="true" File="tz_012" Source="120,73,32,34"/>
+        <DisabledImage Blend="true" File="tz_012" Source="120,73,32,34"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:277$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="638,30,32,32" Name="cbFriends" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="6,1,30,32"/>
+        <PushedImage Blend="true" File="tz_012" Source="43,1,30,32"/>
+        <DisabledImage Blend="true" File="tz_012" Source="43,1,30,32"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:278$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="712,30,32,32" Name="cbSystem" Show="true">
+        <NormalImage Blend="true" File="tz_012" Source="155,41,29,30"/>
+        <PushedImage Blend="true" File="tz_012" Source="160,76,29,30"/>
+        <DisabledImage Blend="true" File="tz_012" Source="160,76,29,30"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:279$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="676,30,32,32" Name="cbGuild" Show="true">
+        <NormalImage Blend="true" File="tz_011" Source="148,378,30,30"/>
+        <PushedImage Blend="true" File="tz_011" Source="183,378,30,30"/>
+        <DisabledImage Blend="true" File="tz_011" Source="183,378,30,30"/>
+        <HighlightImage File="tz_010" Source="188,378,45,45"/>
+        <Hint Text="$L:1104$"/>
+      </CheckButton>
+      <Label Inherit="" Location="746,26,19,39" MouseEvent="true" MouseMove="true" Name="lbNetStatus" Show="true">
+        <Hint/>
+      </Label>
+      <Anchors>
+        <Anchor point="BOTTOM"/>
+        <Anchor point="CENTERH"/>
+      </Anchors>
+      <Label Inherit="" Location="97,5,512,18" Name="lbEXPLeft" Show="true">
+        <BackgroundImage File="tz_012" Source="0,495,512,17"/>
+      </Label>
+      <Label Inherit="" Location="353,7,256,18" Name="lbEXPmi" Show="false">
+        <BackgroundImage File="" Source="0,82,256,18"/>
+      </Label>
+      <Label Inherit="" Location="608,5,119,18" Name="lbEXPRight" Show="true">
+        <BackgroundImage File="tz_012" Source="393,477,119,17"/>
+      </Label>
+      <ProgressBar Inherit="" Location="137,11,550,5" Name="pbEXP" Show="true" Text="$L:280$">
+        <ProgressBarImage File="tz_012" Source="420,430,8,8"/>
+      </ProgressBar>
+      <Label Inherit="" Location="247,10,3,7" Name="lbEXPdot1" Show="false">
+        <BackgroundImage File="" Source="136,110,4,15"/>
+      </Label>
+      <Label Inherit="" Location="362,10,3,7" Name="lbEXPdot2" Show="false">
+        <BackgroundImage File="" Source="136,110,4,15"/>
+      </Label>
+      <Label Inherit="" Location="476,10,3,7" Name="lbEXPdot3" Show="false">
+        <BackgroundImage File="" Source="136,110,4,15"/>
+      </Label>
+      <Label Inherit="" Location="577,11,3,7" Name="lbEXPdot4" Show="false">
+        <BackgroundImage File="" Source="136,110,4,15"/>
+      </Label>
+      <Label Inherit="" Location="247,10,2,9" Name="582" Show="true">
+        <BackgroundImage File="tz_012" Source="383,481,2,9"/>
+      </Label>
+      <Label Inherit="" Location="357,10,2,9" Name="593" Show="true">
+        <BackgroundImage File="tz_012" Source="383,481,2,9"/>
+      </Label>
+      <Label Inherit="" Location="467,10,2,9" Name="633" Show="true">
+        <BackgroundImage File="tz_012" Source="383,481,2,9"/>
+      </Label>
+      <Label Inherit="" Location="577,10,2,9" Name="674" Show="true">
+        <BackgroundImage File="tz_012" Source="383,481,2,9"/>
+      </Label>
+    </Form>
+    <Button Inherit="" Location="4,4,32,32" Name="btShortcut1500" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-15,0" point="LEFT" relativePoint="LEFT" relativeTo="layWorld.frSystemButton"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="39,4,32,32" Name="btShortcut1501" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1500"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="74,4,32,32" Name="btShortcut1502" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1501"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="109,4,32,32" Name="btShortcut1503" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1502"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="144,4,32,32" Name="btShortcut1504" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1503"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="179,4,32,32" Name="btShortcut1505" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1504"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="214,4,32,32" Name="btShortcut1506" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1505"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="249,4,32,32" Name="btShortcut1507" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1506"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="284,4,32,32" Name="btShortcut1508" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1507"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="319,4,32,32" Name="btShortcut1509" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1508"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="354,4,32,32" Name="btShortcut1510" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1509"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="389,4,32,32" Name="btShortcut1511" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="4,0" point="LEFT" relativePoint="RIGHT" relativeTo="layWorld.btShortcut1510"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="389,4,32,32" Name="btShortcut1523" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="2,0" point="RIGHT" relativePoint="RIGHT" relativeTo="layWorld.frSystemButton"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="354,4,32,32" Name="btShortcut1522" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1523"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="319,4,32,32" Name="btShortcut1521" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1522"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="284,4,32,32" Name="btShortcut1520" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1521"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="249,4,32,32" Name="btShortcut1519" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1520"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="214,4,32,32" Name="btShortcut1518" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1519"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="179,4,32,32" Name="btShortcut1517" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1518"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="144,4,32,32" Name="btShortcut1516" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1517"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="109,4,32,32" Name="btShortcut1515" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1516"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="74,4,32,32" Name="btShortcut1514" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1515"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="39,4,32,32" Name="btShortcut1513" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1514"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,4,32,32" Name="btShortcut1512" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-25" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-4,0" point="RIGHT" relativePoint="LEFT" relativeTo="layWorld.btShortcut1513"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,4,32,32" Name="btShortcut0322" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-460" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,39,32,32" Name="btShortcut0422" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0322"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,74,32,32" Name="btShortcut0522" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0422"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="-6,109,32,32" Name="btShortcut0622" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0522"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,144,32,32" Name="btShortcut0722" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0622"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,179,32,32" Name="btShortcut0822" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0722"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,214,32,32" Name="btShortcut0922" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0822"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,249,32,32" Name="btShortcut1022" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0922"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,284,32,32" Name="btShortcut1122" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1022"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,319,32,32" Name="btShortcut1222" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1122"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,354,32,32" Name="btShortcut1322" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1222"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,389,32,32" Name="btShortcut1422" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1322"/>
+        <Anchor offset="-50,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,4,32,32" Name="btShortcut0323" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,-460" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,39,32,32" Name="btShortcut0423" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0323"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,74,32,32" Name="btShortcut0523" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0423"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,109,32,32" Name="btShortcut0623" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0523"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,144,32,32" Name="btShortcut0723" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0623"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,179,32,32" Name="btShortcut0823" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0723"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,214,32,32" Name="btShortcut0923" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0823"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,249,32,32" Name="btShortcut1023" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut0923"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,284,32,32" Name="btShortcut1123" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1023"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,319,32,32" Name="btShortcut1223" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1123"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,354,32,32" Name="btShortcut1323" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1223"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="" Location="4,389,32,32" Name="btShortcut1423" Show="true" Size="32,32">
+      <BackgroundImage File="background_box"/>
+      <Anchors>
+        <Anchor offset="0,4" point="TOP" relativePoint="BOTTOM" relativeTo="layWorld.btShortcut1323"/>
+        <Anchor offset="-10,0" point="RIGHT"/>
+      </Anchors>
+    </Button>
+    <Label Inherit="" Location="0,0,250,32" MouseEvent="true" MouseMove="true" Name="frmPetCtrl" Show="false" Size="270,26">
+      <Button Inherit="" Location="0,0,26,26" Name="attack" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:364$"/>
+      </Button>
+      <Button Inherit="" Location="27,0,26,26" Name="return" Show="true">
+        <BackgroundImage File="pet_return.tga"/>
+        <HighlightImage File="tz_010" Source="188,378,46,46"/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:365$"/>
+      </Button>
+      <CheckButton Inherit="" Location="54,0,26,26" Name="defence" Show="true">
+        <BackgroundImage File="pet_defence"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <CheckImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:366$"/>
+      </CheckButton>
+      <CheckButton Inherit="" Location="81,0,26,26" Name="passive" Show="true">
+        <BackgroundImage File="pet_passive"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <CheckImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:367$"/>
+      </CheckButton>
+      <Anchors>
+        <Anchor offset="0,5" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="-200,0" point="RIGHT" relativePoint="RIGHT" relativeTo="layWorld.frSystemButton"/>
+      </Anchors>
+      <Button Inherit="" Location="131,0,26,26" Name="btnSkill1" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+        <CoverModel File="ui_autocast" Offset="0,0,0" Rotate="4.7,0,0" Scale="1.8,1.8,1.8"/>
+      </Button>
+      <Button Inherit="" Location="158,0,26,26" Name="btnSkill2" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+        <CoverModel File="ui_autocast" Offset="0,0,0" Rotate="4.7,0,0" Scale="1.8,1.8,1.8"/>
+      </Button>
+      <Button Inherit="" Location="185,0,26,26" Name="btnSkill3" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+        <CoverModel File="ui_autocast" Offset="0,0,0" Rotate="4.7,0,0" Scale="1.8,1.8,1.8"/>
+      </Button>
+      <Button Inherit="" Location="212,0,26,26" Name="btnSkill4" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+        <CoverModel File="ui_autocast" Offset="0,0,0" Rotate="4.7,0,0" Scale="1.8,1.8,1.8"/>
+      </Button>
+      <Button Inherit="" Location="239,0,26,26" Name="btnSkill5" Show="true">
+        <BackgroundImage File="pet_attack.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="" Source=""/>
+        <CoverModel File="ui_autocast" Offset="0,0,0" Rotate="4.7,0,0" Scale="1.8,1.8,1.8"/>
+      </Button>
+    </Label>
+    <Label Inherit="" Location="0,0,152,32" MouseEvent="true" MouseMove="true" Name="frmPetCall" Show="fals" Size="55,26">
+      <Button Inherit="" Location="0,0,26,26" Name="release" Show="true">
+        <BackgroundImage File="pet_release.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:368$"/>
+      </Button>
+      <Button Inherit="" Location="27,0,26,26" Name="recall" Show="true">
+        <BackgroundImage File="pet_recall.tga"/>
+        <HighlightImage File="" Source=""/>
+        <PushedImage File="tz_010" Source="188,378,46,46"/>
+        <Hint Text="$L:369$"/>
+      </Button>
+      <Anchors>
+        <Anchor offset="0,5" point="BOTTOM" relativePoint="TOP" relativeTo="layWorld.frSystemButton"/>
+        <Anchor offset="300,0" point="LEFT" relativePoint="LEFT" relativeTo="layWorld.frSystemButton"/>
+      </Anchors>
+    </Label>
+  </Layer>
+</Ui>

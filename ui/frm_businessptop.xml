@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="104,192,294,512" Name="frmBToP" Show="true">
+      <Label Inherit="bg1" Location="7,20,280,492" Name="lbPlayerBg" Show="true" Size=""/>
+      <Label Inherit="TemplateNormalTitle" Location="1,1,292,50" Name="lbUserbg" Show="true"/>
+      <Label Inherit="bg3" Location="22,47,250,430" Name="6349" Show="true"/>
+      <Label Inherit="" Location="41,82,211,141" Name="590" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <Label Inherit="" Location="41,299,211,141" Name="728" Show="true">
+        <BackgroundImage File="tz_011" Source="299,2,211,141"/>
+      </Label>
+      <Label Inherit="" Location="27,230,240,26" Name="1194" Show="true">
+        <Label Inherit="" Location="0,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="23,3,24,22" Name="Jin" Show="true">
+          <BackgroundImage File="tz_010" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="97,3,24,22" Name="Yin" Show="true">
+          <BackgroundImage File="tz_010" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="158,0,24,26" Name="Tong" Show="true">
+          <BackgroundImage File="tz_010" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Label Inherit="" Location="27,445,240,26" Name="1842" Show="true">
+        <Label Inherit="" Location="0,3,24,20" Name="Shi" Show="false">
+          <BackgroundImage File="tz_010" Source="383,490,24,20"/>
+        </Label>
+        <Label Inherit="" Location="23,3,24,22" Name="Jin" Show="true">
+          <BackgroundImage File="tz_010" Source="413,488,24,22"/>
+        </Label>
+        <Label Inherit="" LineSpacing="3" Location="98,3,24,22" Name="Yin" Show="true">
+          <BackgroundImage File="tz_010" Source="445,488,24,22"/>
+        </Label>
+        <Label Inherit="" Location="160,0,24,26" Name="Tong" Show="true">
+          <BackgroundImage File="tz_010" Source="476,485,24,26"/>
+        </Label>
+      </Label>
+      <Label BackgroundColor="#6633dd33" Inherit="" Location="32,76,230,190" Name="lbLockState1" Show="false"/>
+      <Label BackgroundColor="#6633dd33" Inherit="" Location="32,292,230,186" Name="lbLockState2" Show="false"/>
+      <TitleBarButton Location="0,0,294,30"/>
+      <Label Inherit="" Location="77,450,44,20" Name="1770" Show="true">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" EnableInput="true" Inherit="" LineSpacing="4" Location="77,452,44,22" Name="lbUsergoldnum" Show="true"/>
+      <Label Inherit="" Location="152,450,30,20" Name="1707" Show="true">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" EnableInput="true" Inherit="" LineSpacing="4" Location="152,452,30,22" Name="lbUsersilvernum" Show="true"/>
+      <Label Inherit="" Location="215,450,30,20" Name="10475" Show="true">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <EditBox AlignCol="CENTER" AlignLine="CENTER" EnableInput="true" Inherit="" LineSpacing="4" Location="215,452,30,22" Name="lbUsercoppernum" Show="true"/>
+      <EditBox AlignCol="CENTER" Enable="false" EnableInput="true" Inherit="" LineSpacing="6" Location="51,450,40,20" Name="lbUserDimond" Show="false">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </EditBox>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="76,235,44,20" Name="lbPlayergoldnum" Show="true" Text="$L:461$">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="151,235,30,20" Name="lbPlayersilvernum" Show="true" Text="$L:462$">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="211,235,30,20" Name="lbPlayercoppernum" Show="true" Text="$L:463$">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,56,147,24" Name="lbPlayername" Show="true">
+        <BackgroundImage File="tz_010" Source="181,351,147,24"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="51,235,40,20" Name="lbPlayerDimond" Show="false" Text="$L:461$">
+        <BackgroundImage File="tz_010" Source="458,193,30,20"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="28,271,147,24" Name="lbUsername" Show="true">
+        <BackgroundImage File="tz_010" Source="181,351,147,24"/>
+      </Label>
+      <Button Inherit="PushButton" Location="163,479,80,22" Name="btBuy" Show="true" Text="$L:464$"/>
+      <Button Inherit="PushButton" Location="52,479,80,22" Name="btCheck" Show="true" Text="$L:465$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="83,0,128,70" Name="22104" Show="true" Text="$L:460$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <CloseButton Location="264,29,13,13">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+    </Form>
+  </Layer>
+</Ui>

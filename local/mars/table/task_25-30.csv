@@ -1,0 +1,52 @@
+number,string,,number,string,number,number,number,number,number,number,number,string,cmd,cmd,cmd,cmd,cmd,cmd,number,number;num,number;num,number;num,number;num,number;num,number;num,number;num,number;num,string,number,number,number;num,number;num,,cmd,,cmd,cmd,,,
+任务编号,名称,所属势力,任务等级,任务难度,单次任务,"重复任务每天
+最大完成次数",重复任务每日前三次奖励加成,团队自动接受,团队共享,最小接受等级,最大接受等级,门派要求,额外接受要求,任务接受后指令,额外完成要求,完成要求,任务完成指令,任务取消指令,完成时间限制,杀死npc,杀死npc数量,收集道具,收集道具数量,道具掉落npc,掉落道具,道具掉落率,最大掉落数量,交互类型,相关npc,相关npc数量,使用道具,使用道具数量,xxx,任务固定奖励,任务固定奖励,任务选择奖励,任务随机奖励,门派专有奖励,向导屏蔽,
+ID,,force,lev,dif,once,day_num,day_rate,team_accept,team_shared,accept_min_lev,accept_max_lev,accept_party,accept_req,accept_exe,extra_finish_req,finish_req,finish_exe,cancel_exe,time_limit,kill_npc_id,kill_npc_num,get_item_id,get_item_num,item_drop_npcid,item_drop_id,item_drop_rate,item_drop_num,related_type,related_npcid,related_npcnum,use_item_id,use_item_num,,reward_fix_exp,reward_fix,reward_select,reward_random,party_reward,mask,
+1700,父亲的怪病,35,26,0,1,,,,1,25,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(3700);AddNimbus(1850);AddMoney(570),,,,,0,
+1701,采草药,35,26,0,1,,,,1,25,99,all,CheckTaskFinished(1700),,,,,,0,0,0,5000,20,5534,5000,1,20,,0,,0,99,20 ,AddExp(7400);AddNimbus(3700);AddMoney(1140),,,,,0,
+1702,林中的怪蝎,35,26,0,1,,,,1,25,99,all,CheckTaskFinished(1700),,,,,,0,0,0,5001,15,5518,5001,0.5,15,,0,,0,99,25 ,AddExp(9250);AddNimbus(4625);AddMoney(1425),,,,,0,
+1703,治标不治本的药,35,26,0,1,,,,1,25,99,all,"CheckTaskFinished(1702)
+GetTaskItemSpace >= 1","AddItem (5002,1)",,,,,0,0,0,5002,1,0,5002,0,0,,0,,0,99,10 ,AddExp(3700);AddNimbus(1850);AddMoney(570),,,,,0,
+1704,转机,35,27,0,1,,,,1,26,99,all,CheckTaskFinished(1703),,,,"RemoveItem (5004,1)","RemoveItem (5004,1)",0,0,0,5004,1,5532,5004,1,1,,0,,5004,1,20 ,AddExp(7600);AddNimbus(3800);AddMoney(1140),,,,,0,
+1705,奇效灵药,35,27,0,1,,,,1,26,99,all,"CheckTaskFinished(1704)
+GetTaskItemSpace >= 1","AddItem (5004,1)",,,,,0,0,0,0,0,0,0,0,0,,0,,5004,1,10 ,AddExp(3800);AddNimbus(1900);AddMoney(570),,,,,0,
+1706,灵药的来历,35,27,0,1,,,,1,26,99,all,CheckTaskFinished(1704),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(3800);AddNimbus(1900);AddMoney(570),,,,,0,
+1707,疑窦丛生,35,27,0,1,,,,1,26,99,all,CheckTaskFinished(1706),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(3800);AddNimbus(1900);AddMoney(570),,,,,0,
+1708,裘友仁的工具箱,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1707),,,,,,0,0,0,5005,15,5519,5005,0.5,15,,0,,0,99,20 ,AddExp(7800);AddNimbus(3900);AddMoney(1200),,,,,0,
+1709,仙人的宝剑,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1708),,,,,,0,0,0,5006,1,5520,5006,0.05,1,,0,,0,99,25 ,AddExp(9750);AddNimbus(4875);AddMoney(1500),,,,,0,
+1710,验真伪,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1709),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(7800);AddNimbus(3900);AddMoney(1200),,,,,0,
+1711,真假剑阵,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1710),,,,,,0,0,0,5007,20,5535,5007,1,20,,0,,0,99,20 ,AddExp(7800);AddNimbus(3900);AddMoney(1200),,,,,0,
+1712,元磁真力,35,29,0,1,,,,1,28,99,all,"CheckTaskFinished(1711)
+GetTaskItemSpace >= 1","AddItem (5008,1)",,,"RemoveItem (5008,1);","RemoveItem (5008,1);",0,0,0,0,0,0,0,0,0,,0,,5008,1,15 ,AddExp(6000);AddNimbus(3000);AddMoney(900),,,,,0,
+1713,裘友仁遇险,35,29,0,1,,,,1,28,99,all,CheckTaskFinished(1712),,,,,,0,5521,30,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(4000);AddNimbus(2000);AddMoney(600),,,,,0,
+1714,致病的原因,35,29,0,1,,,,1,28,99,all,CheckTaskFinished(1713),,,,,,0,0,0,5009,20,5522,5009,0.5,20,,0,,0,99,25 ,AddExp(10000);AddNimbus(5000);AddMoney(1500),,,,,0,
+1715,惩戒巨骗,35,29,1,1,,,,1,28,99,all,CheckTaskFinished(1714),,,,,,0,0,0,0,0,0,0,0,0,4,5532,1,0,99,30 ,AddExp(12000);AddNimbus(6000);AddMoney(1800),,,,,0,
+1716,主谋露面,35,30,0,1,,,,1,29,99,all,CheckTaskFinished(1715),,,,,,0,5523,30,0,0,0,0,0,0,,0,,0,99,25 ,AddExp(10250);AddNimbus(5125);AddMoney(1575),,,,,0,
+1717,魔头的禁区,35,30,0,1,,,,1,29,99,all,CheckTaskFinished(1716),,,,,,0,0,0,5010,15,5560,5010,1,15,,0,,0,99,25 ,AddExp(10250);AddNimbus(5125);AddMoney(1575),,,,,0,
+1718,狐妖本性,35,30,1,1,,,,1,29,99,all,CheckTaskFinished(1717),,,,,,0,5533,1,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(12300);AddNimbus(6150);AddMoney(1890),,,,,0,
+1719,真正的解药,35,30,0,1,,,,1,29,99,all,CheckTaskFinished(1717),,,,,,0,0,0,5010,15,5536,5010,0.5,15,,0,,0,99,25 ,AddExp(10250);AddNimbus(5125);AddMoney(1575),,,,,0,
+1720,转危为安,35,30,0,1,,,,1,29,99,all,"CheckTaskFinished(1717)
+GetTaskItemSpace >= 1","AddItem (5011,1)",,,"RemoveItem (5011,1)","RemoveItem (5011,1)",0,0,0,0,0,0,0,0,0,,0,,5011,1,15 ,AddExp(6150);AddNimbus(3075);AddMoney(945),,,,,0,
+1721,捉迷藏,35,26,0,1,,,,1,25,99,all,,,,,"RemoveItem (5020,1);
+RemoveItem (5021,1);
+RemoveItem (5022,1);","RemoveItem (5020,1);
+RemoveItem (5021,1);
+RemoveItem (5022,1);",0,0,0,5020;5021;5022;,1;1;1,0,0,0,0,,0,,0,99,10 ,AddExp(3700);AddNimbus(1850);AddMoney(570),,,,,0,
+1722,捉迷藏二,35,26,0,1,,,,1,25,99,all,CheckTaskFinished(1721),"AddItem (5023,1)",,,"RemoveItem (5023,1)","RemoveItem (5023,1);",0,0,0,0,0,0,0,0,0,,0,,5023,1,12 ,AddExp(4440);AddNimbus(2220);AddMoney(684),,,,,0,
+1723,帮收果实,35,27,0,1,,,,1,26,99,all,,,,,,,0,0,0,5012,10,5538,5012,1,10,,0,,0,99,12 ,AddExp(4560);AddNimbus(2280);AddMoney(684),,,,,0,
+1724,树虫,35,27,0,1,,,,1,26,99,all,,,,,,,0,5525,30,0,0,0,0,0,0,,0,,0,99,25 ,AddExp(9500);AddNimbus(4750);AddMoney(1425),,,,,0,
+1725,山中仓,35,28,0,1,,,,1,27,99,all,,,,,,,0,5526,30,5017,10,5539,5017,1,10,,0,,0,99,35 ,AddExp(13650);AddNimbus(6825);AddMoney(2100),,,,,0,
+1726,帮忙收网,35,27,0,1,,,,1,26,99,all,,,,GetTaskItemSpace >= 1,"AddItem (5014,1)",,0,0,0,5013,10,5537,5013,1,10,,0,,0,99,15 ,AddExp(5700);AddNimbus(2850);AddMoney(855),,,,,0,
+1727,水怪的骚扰,35,27,0,1,,,,1,26,99,all,,,,,,,0,5524,30,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(7600);AddNimbus(3800);AddMoney(1140),,,,,0,
+1728,水怪的巢穴,35,27,1,1,,,,1,26,99,all,CheckTaskFinished(1727),,,,,,0,5531,1,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(11400);AddNimbus(5700);AddMoney(1710),,,,,0,
+1729,厨子的最爱,35,28,0,1,,,,1,27,99,all,,,,,,,0,0,0,5014,1,5505,5014,1,1,,0,,0,99,12 ,AddExp(4680);AddNimbus(2340);AddMoney(720),,,,,0,
+1730,化解恩怨,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1729),"AddItem (5018,1)",,,"RemoveItem (5018,1);","RemoveItem (5018,1);",0,0,0,0,0,0,0,0,0,,0,,0,99,12 ,AddExp(4680);AddNimbus(2340);AddMoney(720),,,,,0,
+1731,菜园,35,28,0,1,,,,1,27,99,all,CheckTaskFinished(1730),,,,,,0,5514,20,0,0,0,0,0,0,,0,,0,99,20 ,AddExp(7800);AddNimbus(3900);AddMoney(1200),,,,,0,
+1732,丢失的发钗,35,26,0,1,,,,1,25,99,all,,,,,,,0,0,0,5025,1,5524,5025,0.05,1,,0,,0,99,23 ,AddExp(8510);AddNimbus(4255);AddMoney(1311),,,,,0,
+1733,难言之隐,35,26,0,1,,,,1,25,99,all,CheckTaskFinished(1732),,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,5 ,AddExp(1850);AddNimbus(925);AddMoney(285),,,,,0,
+1734,花灯之乡,15,26,0,1,,,,1,25,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,12 ,AddExp(4440);AddNimbus(2220);AddMoney(684),,,,,0,
+1735,送药,16,26,0,1,,,,1,25,99,all,,,,,,,0,0,0,0,0,0,0,0,0,,0,,0,99,10 ,AddExp(3700);AddNimbus(1850);AddMoney(570),,,,,0,
+1736,来历诡异的妖怪,37,29,11,1,,,,1,28,99,all,,,,,,,0,5529;5530,15;15,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(12000);AddNimbus(6000);AddMoney(1800),,,,,0,
+1737,紫阳鸩鸟,37,28,11,1,,,,1,27,99,all,,,,,,,0,0,0,5024,10,5528,5024,0.5,10,,0,,0,99,30 ,AddExp(11700);AddNimbus(5850);AddMoney(1800),,,,,0,
+1738,狐妖的宿命,37,30,11,1,,,,1,29,99,all,CheckTaskFinished(1718),,,,,,0,5549,1,0,0,0,0,0,0,,0,,0,99,35 ,AddExp(14350);AddNimbus(7175);AddMoney(2205),,,,,0,
+1739,冥炎魔鼎,37,27,11,1,,,,1,26,99,all,,,,,,,0,5527,18,0,0,0,0,0,0,,0,,0,99,30 ,AddExp(11400);AddNimbus(5700);AddMoney(1710),,,,,0,

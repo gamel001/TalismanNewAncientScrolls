@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="280,206,300,370" Name="frmLookFreeShop" Show="false">
+      <Label Inherit="bg1" Location="11,21,280,280" Name="543" Show="fals"/>
+      <Label Inherit="TemplateNormalTitle" Location="5,2,292,50" Name="15437" Show="true"/>
+      <TitleBarButton Location="0,5,300,28" TextFont="$L:1$" TextSize="$L:18$"/>
+      <CloseButton Location="265,31,14,14">
+        <NormalImage File="tz_010" Source="120,383,13,13"/>
+        <PushedImage File="tz_010" Source="98,383,13,13"/>
+      </CloseButton>
+      <Label AlignCol="CENTER" AlignLine="CENTER" ColSpacing="6" Inherit="" LineSpacing="3" Location="49,58,207,24" Name="lbShopAD" Show="true" Text="1111111">
+        <BackgroundImage File="tz_010" Source="252,323,207,24"/>
+      </Label>
+      <Label Inherit="bg3" Location="42,91,218,149" Name="22782" Show="true"/>
+      <Label Inherit="" Location="45,95,213,141" Name="620" Show="true">
+        <BackgroundImage File="tz_011" Source="298,2,213,141"/>
+      </Label>
+      <Label Inherit="" Location="-1,256,256,22" Name="848" Show="false">
+        <BackgroundImage File="" Source=""/>
+      </Label>
+      <Button Inherit="PushButton" Location="45,257,100,20" Name="btStallTalk" Show="true" Text="$L:969$"/>
+      <Button Inherit="PushButton" Location="155,257,100,20" Name="btClose" Show="true" Text="$L:965$"/>
+      <Label AlignCol="CENTER" Inherit="" Location="91,0,120,70" Name="lbStallOwner" Show="true" Text="" AlignLine="CENTER"/>
+    </Form>
+  </Layer>
+</Ui>

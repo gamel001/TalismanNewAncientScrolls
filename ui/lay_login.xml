@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layLogin" Show="true">
+    <Button Inherit="PushButtonLong" Location="886,690,120,35" Name="btReturn" Show="true" Size="120,35" Text="$L:191$">
+      <Anchors>
+        <Anchor offset="-20,0" point="RIGHT"/>
+        <Anchor offset="0,-66" point="BOTTOM"/>
+      </Anchors>
+    </Button>
+    <Button Inherit="PushButtonLong" Location="886,657,120,35" Name="btSystem" Show="true" Size="120,35" Text="$L:192$">
+      <Anchors>
+        <Anchor offset="-20,0" point="RIGHT"/>
+        <Anchor offset="0,-4" point="BOTTOM" relativePoint="TOP" relativeTo="layLogin.btReturn"/>
+      </Anchors>
+      <Scripts>
+        <OnLoad>self:RegisterScriptEventNotify("ReceiveRoleInfoList");</OnLoad>
+        <OnEvent>local frmVedioEx=uiGetglobal("frmVedioEx"); frmVedioEx:Hide();</OnEvent>
+        <OnLClick>layWorld_frmSystemMenuEx_btVideoSetting_OnLClick(nil);</OnLClick>
+      </Scripts>
+   </Button>
+    <Button Inherit="PushButtonLong" Location="152,142,110,35" Name="btCreateAccount" Show="true" Size="120,35" Text="$L:196$">
+      <Anchors>
+        <Anchor offset="-20,0" point="RIGHT"/>
+        <Anchor offset="0,-44" point="BOTTOM" relativePoint="TOP" relativeTo="layLogin.btReturn"/>
+      </Anchors>
+    </Button>
+    <Form FadeInTime="2" Inherit="NoTitleBarForm" Location="380,300,530,170" Name="frmLogin" Show="true" Size="530,170">
+       <BackgroundImage File="tz_land" Source="0,0,530,170"/>
+      <Anchors>7
+        <Anchor point="CENTERH"/>
+        <Anchor offset="0,70" point="CENTERV"/>
+      </Anchors>
+      <Label Inherit="" Location="175,94,18,18" Name="1267" Show="true">
+        <BackgroundImage File="tz_newimage01" Source="76,133,21,21"/>  //打勾的地方
+      </Label>
+      <EditBox ColSpacing="4" LineSpacing="4" Location="190,43,190,22" Name="edtUsername" Show="true">   //填写账号
+      </EditBox>
+      <EditBox ColSpacing="4" LineSpacing="7" Location="190,70,190,22" Name="edtPassword" Password="true" Show="true"> //填写密码
+      </EditBox>
+      <CheckButton AlignCol="" Location="175,95,18,14" Name="ckbRememberPassword" Show="true" Text="">
+        <CheckImage File="tz_newimage01" Source="122,133,21,21" />    //勾勾
+      </CheckButton>
+       <Button Location="" Location="200,115,130,35" Name="btOK" Show="true">
+               <NormalImage File="tz_resources" Source="5,5,135,40"/>
+               <PushedImage File="tz_resources" Source="5,48,135,40"/>
+               <DisabledImage File="tz_resources" Source="5,91,135,40"/>
+       </Button>
+    </Form>
+    <Label Inherit="" Location="385,40,256,256" Name="lbGameName1" Show="true" Size="256,256">
+      <Anchors>
+        <Anchor offset="0,-10" point="BOTTOM" relativePoint="TOP" relativeTo="layLogin.frmLogin"/>
+        <Anchor offset="-0,0" point="LEFT" relativePoint="LEFT" relativeTo="layLogin.frmLogin"/>
+      </Anchors>
+      <BackgroundImage File="tm001_1"/>
+    </Label>
+    <Label Inherit="" Location="634,175,256,256" Name="lbGameName2" Show="true" Size="256,256">
+      <BackgroundImage File="tm001_1"/>
+      <Anchors>
+        <Anchor offset="0,-10" point="BOTTOM" relativePoint="TOP" relativeTo="layLogin.frmLogin"/>
+        <Anchor offset="0,0" point="LEFT" relativePoint="RIGHT" relativeTo="lbGameName1"/>
+      </Anchors>
+    </Label>
+    <Label Inherit="" Location="0,874,2048,64" Name="lbLoginBottom" Show="true" Size="2048,64">
+      <Label BackgroundColor="#33000000" Inherit="" Location="0,24,1280,40" Name="653" Show="true"/>
+      <BackgroundImage File="bottom_bg"/>
+      <Label AlignLine="CENTER" Inherit="" Location="18,33,1270,24" Name="lbCompanyName" Show="true" Text=""/>
+      <Label Inherit="" Location="7,922,100,18" Name="1155" Show="true" Text="$L:1152$" TextColor="#eefffc00"/>
+      <Anchors>
+        <Anchor offset="0,46" point="BOTTOM" relativeTo="layLogin.btReturn"/>
+        <Anchor offset="0,0" point="BOTTOM"/>
+        <Anchor/>
+      </Anchors>
+    </Label>
+    <Label Inherit="" Location="10,10,85,20" Name="578" Show="false"/>
+    <Form Location="144,477,380,50" Name="frmLoginInfo" Show="false" Size="380,50">
+      <Button Inherit="PushButton" Location="294,14,70,22" Name="btcancle" Show="true" Text="$L:1191$"/>
+      <Anchors>
+        <Anchor point="CENTERH"/>
+        <Anchor offset="0,35" point="CENTERV"/>
+      </Anchors>
+    </Form>
+  </Layer>
+</Ui>

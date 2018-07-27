@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ui>
+  <Layer Name="layWorld" Show="true">
+    <Form Inherit="" Location="458,210,450,512" Name="frMake" Show="true">	
+      <Label Inherit="bg1" Location="7,20,436,490" Name="846" Show="true"/>
+      <Label Inherit="TemplateNormalTitle" Location="0,1,450,50" Name="905" Show="fals"/>
+      <Label Inherit="" Location="24,292,246,140" Name="4021" Show="true"/>
+      	<Label Inherit="" Location="14,75,423,320" Name="BGCraft2" Show="true">
+          <BackgroundImage File="cgz_craft_02" Source="0,0,483,521"/>
+        </Label>
+	  <Label Inherit="" Location="100,70,244,321" Name="BGCraft" Show="true">
+          <BackgroundImage File="cgz_craft_01" Source="110,90,244,321"/>
+        </Label>	  
+      <Label Inherit="" Location="13,70,423,10" Name="CraftLine" Show="true">
+        <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      </Label>		
+      <Label Inherit="" Location="13,392,423,10" Name="CraftLine2" Show="true">
+        <BackgroundImage File="cgz_design4" Source="380,498,4,10"/>
+      </Label>			  
+	  <Label Inherit="bg3" Location="28,78,395,115" Name="2347" Show="true"/>
+      <Label Inherit="bg3" Location="28,410,395,92" Name="2572" Show="true"/>
+      	<Label Inherit="" Location="166,8,116,27" Name="Name38" Show="true">
+          <BackgroundImage File="cgz_design25_2" Source="41,36,116,41"/>
+        </Label> 	
+      	<Label Inherit="" Location="55,45,350,28" Name="Name39" Show="true">
+          <BackgroundImage File="cgz_design25_2" Source="229,40,523,40"/>
+        </Label> 		
+	  <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="83,0,130,68" Name="lbTitle" Show="false" Text="$L:571$" TextFont="$L:1$" TextSize="$L:3$"/>
+      <ListBox AutoScrollV="true" Inherit="" Location="31,95,389,82" Name="lstMakeItem" Show="true"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="30,55,60,20" Name="599" Show="false" Text="$L:572$">
+        <BackgroundImage File="tz_010" Source="315,196,92,24"/>
+      </Label>
+      <Button Inherit="" Location="202,201,36,36" Name="btMakeItem" Show="true">
+        <BackgroundImage File="cgz_design" Source="57,414,42,42"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="139,247,160,24" Name="lbMakeItemName" Show="true" Text="$L:573$">
+        <BackgroundImage File="cgz_design4" Source="93,2,204,37"/>
+      </Label>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="29,281,60,22" Name="1326" Show="false" Text="$L:574$">
+        <BackgroundImage File="tz_010" Source="315,196,92,24"/>
+      </Label>
+      	<Label Inherit="" Location="120,370,192,28" Name="Name40" Show="true">
+          <BackgroundImage File="cgz_design25_2" Source="42,125,192,34"/>
+        </Label> 	  
+      <Button Inherit="" Location="70,415,36,36" Name="btMake1" Show="true">
+        <BackgroundImage File="cgz_design" Source="76,372,40,40"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="120,416,100,34" Name="lbMake1" Show="true"/>
+      <Button Inherit="" Location="272,415,36,36" Name="btMake2" Show="true">
+        <BackgroundImage File="cgz_design" Source="76,372,40,40"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="326,416,100,34" Name="lbMake2" Show="true"/>
+      <Button Inherit="" Location="70,454,36,36" Name="btMake3" Show="true">
+        <BackgroundImage File="cgz_design" Source="76,372,40,40"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="120,455,100,34" Name="lbMake3" Show="true"/>
+      <Button Inherit="" Location="272,454,36,36" Name="btMake4" Show="true">
+        <BackgroundImage File="cgz_design" Source="76,372,40,40"/>
+      </Button>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="326,455,100,34" Name="lbMake4" Show="true"/>
+      <Button Inherit="PushButton" Location="26,295,70,26" Name="btMakeAll" Show="true" Text="$L:575$"/>
+      <Button Inherit="PushButton" Location="105,326,45,26" Name="bt_Make" Show="true" Text="$L:576$"/>
+      <Button Inherit="PushButton" Location="152,326,52,26" Name="bt_Cancel" Show="true" Text="$L:577$"/>
+      <Label AlignCol="CENTER" AlignLine="CENTER" Inherit="" Location="45,330,30,20" Name="lbMakeItemNumber" Show="true" Text="$L:578$">
+        <BackgroundImage File="cgz_design4" Source="93,2,204,37"/>
+      </Label>
+      <Button Inherit="" Location="24,330,22,21" Name="btMakeLeft" Show="true">
+        <NormalImage File="cgz_design" Source="8,159,22,21"/>
+        <PushedImage File="cgz_design" Source="8,182,22,21"/>
+      </Button>
+      <Button Inherit="" Location="76,330,22,21" Name="btMakeRight" Show="true">
+        <NormalImage File="cgz_design" Source="32,159,22,21"/>
+        <PushedImage File="cgz_design" Source="32,182,22,21"/>
+      </Button>
+      <TitleBarButton Location="0,-1,450,30" Show="true"/>
+      <CloseButton Location="412,14,21,21">
+        <NormalImage File="cgz_design" Source="402,159,21,21"/>
+        <PushedImage File="cgz_design" Source="402,203,21,21"/>
+      </CloseButton>
+    </Form>
+  </Layer>
+</Ui>
